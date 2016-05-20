@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
-		DE720C911CEF9C7F00097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C901CEF9C7F00097862 /* ViewController.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
 		DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */; };
 		DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE720C981CEF9C7F00097862 /* Assets.xcassets */; };
 		DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */; };
 		DE720CA71CEF9C7F00097862 /* AaruushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CA61CEF9C7F00097862 /* AaruushTests.swift */; };
 		DE720CB21CEF9C7F00097862 /* AaruushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */; };
+		DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CBF1CEF9D5200097862 /* SecondViewController.swift */; };
+		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
+		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
+		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
+		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE720C901CEF9C7F00097862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE720C931CEF9C7F00097862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE720C961CEF9C7F00097862 /* Aaruush.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aaruush.xcdatamodel; sourceTree = "<group>"; };
 		DE720C981CEF9C7F00097862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		DE720CAD1CEF9C7F00097862 /* AaruushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaruushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaruushUITests.swift; sourceTree = "<group>"; };
 		DE720CB31CEF9C7F00097862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE720CBF1CEF9D5200097862 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78D28A0C79DF02998C7BD7CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */,
+				0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEFB959FC2C8D52A974F10C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE720C821CEF9C7E00097862 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +109,8 @@
 				DE720CA51CEF9C7F00097862 /* AaruushTests */,
 				DE720CB01CEF9C7F00097862 /* AaruushUITests */,
 				DE720C8C1CEF9C7E00097862 /* Products */,
+				78D28A0C79DF02998C7BD7CC /* Pods */,
+				BEFB959FC2C8D52A974F10C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
-				DE720C901CEF9C7F00097862 /* ViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
+				DE720CC01CEF9D5200097862 /* Stars.swift */,
+				DE720CC11CEF9D5200097862 /* ViewController.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
 				DE720C9D1CEF9C7F00097862 /* Info.plist */,
@@ -135,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE720CB61CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "Aaruush" */;
 			buildPhases = (
+				5BA6B4B2FA1543B15EB9A14F /* Check Pods Manifest.lock */,
 				DE720C871CEF9C7E00097862 /* Sources */,
 				DE720C881CEF9C7E00097862 /* Frameworks */,
 				DE720C891CEF9C7E00097862 /* Resources */,
+				1CEFAFC373DFF503FFB03920 /* Embed Pods Frameworks */,
+				190B7693A0FE5B974D0E56CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,14 +287,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		190B7693A0FE5B974D0E56CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CEFAFC373DFF503FFB03920 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BA6B4B2FA1543B15EB9A14F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE720C871CEF9C7E00097862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE720C911CEF9C7F00097862 /* ViewController.swift in Sources */,
+				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
+				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +484,7 @@
 		};
 		DE720CB71CEF9C7F00097862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Aaruush/Info.plist;
@@ -412,6 +496,7 @@
 		};
 		DE720CB81CEF9C7F00097862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Aaruush/Info.plist;
@@ -486,6 +571,7 @@
 				DE720CB81CEF9C7F00097862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE720CB91CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +580,7 @@
 				DE720CBB1CEF9C7F00097862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE720CBC1CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +589,7 @@
 				DE720CBE1CEF9C7F00097862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

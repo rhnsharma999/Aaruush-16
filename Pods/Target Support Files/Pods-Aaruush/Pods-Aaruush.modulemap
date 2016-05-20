@@ -1,0 +1,6 @@
+framework module Pods_Aaruush {
+  umbrella header "Pods-Aaruush-umbrella.h"
+
+  export *
+  module * { export * }
+}

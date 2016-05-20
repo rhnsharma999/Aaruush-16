@@ -1,0 +1,13 @@
+PODS:
+  - LTMorphingLabel (0.2.0)
+  - StarWars (1.0)
+
+DEPENDENCIES:
+  - LTMorphingLabel
+  - StarWars (~> 1.0)
+
+SPEC CHECKSUMS:
+  LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
+  StarWars: 01f1731789f738f64c6a9533c209213aaf465014
+
+COCOAPODS: 0.39.0
