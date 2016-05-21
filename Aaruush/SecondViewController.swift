@@ -13,6 +13,10 @@ class SecondViewController: UIViewController {
     @IBOutlet var balloon1:UIImageView!
     @IBOutlet var balloon2:UIImageView!
     @IBOutlet var balloon3:UIImageView!
+    
+    @IBOutlet var smallBalloon1:UIImageView!
+    @IBOutlet var smallBalloon2:UIImageView!
+    
 
     @IBOutlet var sunImage: UIImageView!
     override func viewDidLoad() {
@@ -39,6 +43,19 @@ class SecondViewController: UIViewController {
             
             }, completion: nil)
         
+        
+        
+        UIView.animateWithDuration(3, delay: 0.0, options: [.Autoreverse,.Repeat], animations: {
+            self.smallBalloon1.center.y += 20;
+            
+            
+            }, completion: nil)
+        
+        UIView.animateWithDuration(3, delay: 0.0, options: [.Autoreverse,.Repeat], animations: {
+            self.smallBalloon2.center.y += 20;
+            
+            
+            }, completion: nil)
         
         
         UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations:
