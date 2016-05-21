@@ -8,6 +8,7 @@
 
 import UIKit
 import StarWars
+import LTMorphingLabel
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     
@@ -15,14 +16,20 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var firstLogo: UILabel!
+    @IBOutlet var firstLogo: LTMorphingLabel!
      @IBOutlet var secondLogo: UILabel!
      @IBOutlet var signInButton: UIButton!
     override func viewDidLoad() {
         
+        
+        
+        //rounded edges
         signInButton.layer.borderWidth = 2;
         signInButton.layer.borderColor = UIColor.yellowColor().CGColor
         signInButton.layer.cornerRadius = 10;
+        
+        
+       
         
         
         super.viewDidLoad()
@@ -38,22 +45,24 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     override func viewWillAppear(animated: Bool)
     {
         
-    
+    //making all elements transparent so that they are hidden.
         imageView.alpha = 0.0;
         firstLogo.alpha = 0.0;
         secondLogo.alpha = 0.0;
         signInButton.alpha = 0.0;
         
         
-        
-       
+        firstLogo.morphingEffect = .Scale //workaround for a bug
+       firstLogo.text = "Aaruush"         //because of bug, intially label is hidden, this prevents it.
         
     }
    
     override func viewDidAppear(animated: Bool)
     {
         
+       
         
+       
        
         
         UIView.animateWithDuration(0.5, delay: 0.5, options: [.CurveEaseOut], animations: {
@@ -68,6 +77,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
                 UIView.animateWithDuration(0.5, delay: 0.0, options: [.CurveEaseOut], animations: {
                     
                     self.firstLogo.alpha = 1.0
+                   
                     
                     }, completion:
                     
@@ -83,7 +93,10 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
                                 
                                 UIView.animateWithDuration(0.5, delay: 0.0, options: [.CurveEaseOut], animations:
                                     {
-                                    
+                                        
+                                        self.firstLogo.morphingEffect = .Anvil
+                                        
+                                        self.firstLogo.text = "Aaruush 10th Edition"
                                     self.signInButton.alpha = 1.0
                                      
                                     
@@ -114,7 +127,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let vc = segue.destinationViewController;
-        vc.transitioningDelegate = self;
+        vc.transitioningDelegate = self; //for fallapart dismiss transition
         
         
         
