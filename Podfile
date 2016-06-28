@@ -6,6 +6,7 @@ use_frameworks!
 target 'Aaruush' do
 pod 'StarWars', '~> 1.0'
 pod 'LTMorphingLabel'
+pod 'SwiftyButton'
 
 end
 
@@ -16,4 +17,5 @@ end
 target 'AaruushUITests' do
 
 end
+
 

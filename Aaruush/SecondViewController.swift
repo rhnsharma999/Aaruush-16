@@ -110,6 +110,9 @@ class SecondViewController: UIViewController {
 
     @IBAction func goBack(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+       // self.navigationController?.popViewControllerAnimated(true);
+        
+    
     }
     /*
     // MARK: - Navigation

@@ -1,13 +1,21 @@
 PODS:
   - LTMorphingLabel (0.2.0)
+  - PureLayout (3.0.2)
   - StarWars (1.0)
+  - SwiftyButton (0.4.0):
+    - SwiftyButton/CustomContent (= 0.4.0)
+  - SwiftyButton/CustomContent (0.4.0):
+    - PureLayout (~> 3.0)
 
 DEPENDENCIES:
   - LTMorphingLabel
   - StarWars (~> 1.0)
+  - SwiftyButton
 
 SPEC CHECKSUMS:
   LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
+  SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
 
 COCOAPODS: 0.39.0

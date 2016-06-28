@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>StarWars.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6446745B8BC1CC8B66945F056BD2B71B</key>
+		<key>134F82D734139FF45C5D688C4468CA94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2F107C93594A4BD8DA390D392C3C5B2</key>
+		<key>443D8972227CD9465F072A8A3D1EFEED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53E73407FB38BDB910EDAEEC79B8CBBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D02F144F23C35B7A92E6BEDEA6B50169</key>
 		<dict>
 			<key>primary</key>
 			<true/>
