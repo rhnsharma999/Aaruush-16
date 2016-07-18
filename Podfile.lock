@@ -1,4 +1,5 @@
 PODS:
+  - FoldingCell (1.0.0)
   - LTMorphingLabel (0.2.0)
   - PureLayout (3.0.2)
   - StarWars (1.0)
@@ -8,11 +9,13 @@ PODS:
     - PureLayout (~> 3.0)
 
 DEPENDENCIES:
+  - FoldingCell
   - LTMorphingLabel
   - StarWars (~> 1.0)
   - SwiftyButton
 
 SPEC CHECKSUMS:
+  FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
   LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014

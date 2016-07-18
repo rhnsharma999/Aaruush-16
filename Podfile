@@ -7,6 +7,7 @@ target 'Aaruush' do
 pod 'StarWars', '~> 1.0'
 pod 'LTMorphingLabel'
 pod 'SwiftyButton'
+pod 'FoldingCell'
 
 end
 

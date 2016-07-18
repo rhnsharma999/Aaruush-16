@@ -84,12 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Aaruush/FoldingCell.framework"
   install_framework "Pods-Aaruush/LTMorphingLabel.framework"
   install_framework "Pods-Aaruush/PureLayout.framework"
   install_framework "Pods-Aaruush/StarWars.framework"
   install_framework "Pods-Aaruush/SwiftyButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Aaruush/FoldingCell.framework"
   install_framework "Pods-Aaruush/LTMorphingLabel.framework"
   install_framework "Pods-Aaruush/PureLayout.framework"
   install_framework "Pods-Aaruush/StarWars.framework"
