@@ -15,7 +15,11 @@ class EventsTableViewCell: FoldingCell {
     @IBOutlet var containerViewMainTitle: UILabel!
     @IBOutlet var containerViewDescription: UITextView!
     override func awakeFromNib() {
+        
+        self.containerView.backgroundColor = UIColor.clearColor()
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 

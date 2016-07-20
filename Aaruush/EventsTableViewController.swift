@@ -11,6 +11,8 @@ import FoldingCell
 
 class EventsTableViewController: UITableViewController {
     
+    var MyView:Stars!
+    
     var rows:Int!
     var imgArray = ["bob the builder","clash of clans","green house"];
     var titleArray = ["bob the builder","clash of clans","green house"];
@@ -29,8 +31,8 @@ class EventsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.backgroundColor = UIColor(rgb:0x007096)
         
+        self.tableView.backgroundColor = UIColor.clearColor()
         for _ in 0...3 {
             cellHeights.append(kCloseCellHeight)
         }

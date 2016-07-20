@@ -20,6 +20,7 @@
 		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
 		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
+		DEAA5FB41D3FE690002C71C8 /* baseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */; };
 		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */,
 				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
 				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
 				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DEAA5FB41D3FE690002C71C8 /* baseViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,

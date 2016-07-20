@@ -85,27 +85,47 @@
                         <outlet property="imageView" destination="uqy-Qs-tuA" id="33K-vB-J7M"/>
                         <outlet property="secondLogo" destination="tow-Rb-NGz" id="wHr-7l-DCk"/>
                         <outlet property="signInButton" destination="utq-Dd-u3Q" id="p2C-LK-tpu"/>
-                        <segue destination="yuI-9B-pqX" kind="show" identifier="login" id="eyY-Bh-cfw"/>
+                        <segue destination="99N-3D-Yu9" kind="show" identifier="login" id="xm0-Hl-CJ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834" y="366"/>
+            <point key="canvasLocation" x="2646" y="366"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="oOF-kZ-5df">
+            <objects>
+                <viewController id="99N-3D-Yu9" customClass="baseViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="63F-NK-Uzf"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTJ-N5-vGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5jq-62-lBG" customClass="Stars" customModule="Aaruush" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h96-we-ddI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnY-pJ-zR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.5" y="1152.5"/>
         </scene>
         <!--Events Table View Controller-->
         <scene sceneID="UFO-hq-5zt">
             <objects>
-                <tableViewController id="NHS-RX-zgN" customClass="EventsTableViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="691" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hg0-mM-0cz">
+                <tableViewController storyboardIdentifier="oneView" id="NHS-RX-zgN" customClass="EventsTableViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="627" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hg0-mM-0cz" customClass="stars">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="691" id="rFM-rl-X2f" customClass="EventsTableViewCell" customModule="Aaruush" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="691"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="627" id="rFM-rl-X2f" customClass="EventsTableViewCell" customModule="Aaruush" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="627"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFM-rl-X2f" id="lMx-gg-7f2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="691"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqG-Za-9op">
@@ -128,7 +148,7 @@
                                                             </state>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bob the builder" translatesAutoresizingMaskIntoConstraints="NO" id="BYK-sq-bZ1">
                                                     <rect key="frame" x="0.0" y="49" width="359" height="167"/>
@@ -259,6 +279,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="GqG-Za-9op" firstAttribute="leading" secondItem="lMx-gg-7f2" secondAttribute="leadingMargin" id="6l2-ud-vcg"/>
                                         <constraint firstItem="GqG-Za-9op" firstAttribute="top" secondItem="lMx-gg-7f2" secondAttribute="topMargin" constant="150" id="NR3-iD-Wly"/>
@@ -299,12 +320,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHd-rf-XOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382.5" y="317"/>
+            <point key="canvasLocation" x="5006.5" y="317"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="VHx-HL-FQa">
             <objects>
-                <viewController id="S01-O6-l1N" customClass="SecondViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="twoView" id="S01-O6-l1N" customClass="SecondViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xsv-6d-0DV"/>
                         <viewControllerLayoutGuide type="bottom" id="VdT-my-pic"/>
@@ -495,7 +516,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAh-Ah-YAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4130.5" y="392.5"/>
+            <point key="canvasLocation" x="5670.5" y="392.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mmo-lT-DE2">
@@ -656,25 +677,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z17-d4-ayd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4457.5" y="392.5"/>
+            <point key="canvasLocation" x="6081.5" y="392.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bNb-Y1-vxq">
+        <!--Domains Events View Controller-->
+        <scene sceneID="Y0R-y9-KEd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yuI-9B-pqX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aoR-i6-ikh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController id="y4i-WC-T8O" customClass="DomainsEventsViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gws-gD-FND"/>
+                        <viewControllerLayoutGuide type="bottom" id="AWS-eR-iTs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUL-GG-rTu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvZ-o2-Znd" customClass="VBPiledView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="NHS-RX-zgN" kind="relationship" relationship="rootViewController" id="Ka7-eA-OGY"/>
+                        <outlet property="piledView" destination="YvZ-o2-Znd" id="hS2-wi-lcW"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="psF-xL-pxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fT9-VA-CAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="318"/>
+            <point key="canvasLocation" x="3301.5" y="1175.5"/>
         </scene>
     </scenes>
     <resources>
