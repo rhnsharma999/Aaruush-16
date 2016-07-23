@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
+		DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */; };
+		DE2C7A771D43DA590061FFA8 /* DomainsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */; };
+		DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
@@ -20,7 +23,6 @@
 		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
 		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
-		DEAA5FB41D3FE690002C71C8 /* baseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */; };
 		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,9 @@
 		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewController.swift; sourceTree = "<group>"; };
+		DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomainsCollectionCell.xib; sourceTree = "<group>"; };
+		DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +69,6 @@
 		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
-		DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +141,9 @@
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
-				DEAA5FB31D3FE690002C71C8 /* baseViewController.swift */,
+				DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */,
+				DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */,
+				DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */,
 				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
 				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
 				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
+				DE2C7A771D43DA590061FFA8 /* DomainsCollectionCell.xib in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
 				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
 			);
@@ -354,11 +361,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
-				DEAA5FB41D3FE690002C71C8 /* baseViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
+				DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
 				DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */,
+				DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */,
 				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,

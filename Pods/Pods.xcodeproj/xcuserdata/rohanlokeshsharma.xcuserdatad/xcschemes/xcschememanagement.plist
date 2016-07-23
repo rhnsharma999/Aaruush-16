@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PageMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Aaruush.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TRMosaicLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -47,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21C461B0CAD90DE64B07A5D212C5F829</key>
+		<key>1470259927698A9A0C6085DF26687B2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33DA7716E5827273E8B092A5382B21F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EFC54F268C606EA5861F16A8F54E46F</key>
+		<key>D8946BAC499EA8C817A843875D739D5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C61694F945150E215AF2B300A8B8FD6</key>
+		<key>E0C603AF79FBE4C6C4158343FBBD4246</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94DA4BD83A33FF1F2F8B409E86129EA6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F0A26269C63748B78DDD7A0F856E1994</key>
+		<key>E7737A0EB3913B5011875ABF367751AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
