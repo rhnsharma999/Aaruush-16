@@ -31,14 +31,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         signInButton.layer.cornerRadius = 10;
         
         
-        
-      //  let navigationController = UINavigationController()
-        navigationController?.delegate = RZTransitionsManager.shared()
-      
-        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZZoomAlphaAnimationController()
-        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCardSlideAnimationController()
- 
-        
+  
         
         
         super.viewDidLoad()

@@ -23,6 +23,7 @@
 		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
 		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
 		DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */; };
+		DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0AB1D4401740005804A /* AaruushViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
 		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightsCollectionViewController.swift; sourceTree = "<group>"; };
+		DE7FC0AB1D4401740005804A /* AaruushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AaruushViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				DE720C8D1CEF9C7F00097862 /* Aaruush */,
+				DE7FC0AA1D43FE740005804A /* Tools */,
+				DE7FC0A91D43FE430005804A /* Extras (for now) */,
 				DE720CA51CEF9C7F00097862 /* AaruushTests */,
 				DE720CB01CEF9C7F00097862 /* AaruushUITests */,
 				DE720C8C1CEF9C7E00097862 /* Products */,
@@ -143,16 +147,12 @@
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
 				DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */,
 				DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */,
 				DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */,
 				DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */,
-				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
-				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
-				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
-				DE720CC01CEF9D5200097862 /* Stars.swift */,
 				DE720CC11CEF9D5200097862 /* ViewController.swift */,
-				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
 				DE720C9D1CEF9C7F00097862 /* Info.plist */,
@@ -177,6 +177,27 @@
 				DE720CB31CEF9C7F00097862 /* Info.plist */,
 			);
 			path = AaruushUITests;
+			sourceTree = "<group>";
+		};
+		DE7FC0A91D43FE430005804A /* Extras (for now) */ = {
+			isa = PBXGroup;
+			children = (
+				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
+				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
+				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
+			);
+			name = "Extras (for now)";
+			path = Aaruush;
+			sourceTree = "<group>";
+		};
+		DE7FC0AA1D43FE740005804A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DE720CC01CEF9D5200097862 /* Stars.swift */,
+				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
+			);
+			name = Tools;
+			path = Aaruush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +386,7 @@
 			files = (
 				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
 				DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
