@@ -8,6 +8,7 @@
 
 import UIKit
 import TRMosaicLayout
+import RZTransitions
 
 
 
@@ -16,6 +17,7 @@ class DomainsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         
+        navigationController?.delegate = RZTransitionsManager.shared()
         photos = ["highlights","domains","workshops","sponsors","patrons1","team","wa"];
         
         
@@ -83,6 +85,18 @@ class DomainsCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                              fromViewController:self.dynamicType,
+                                                              toViewController:HighlightsCollectionViewController.self,
+                                                              forAction:.PushPop)
+        self.performSegueWithIdentifier("selectOption", sender: nil);
+        
+        
+    }
 
     // MARK: UICollectionViewDelegate
 
@@ -116,7 +130,9 @@ class DomainsCollectionViewController: UICollectionViewController {
     */
   
 
+    
 }
+
 
 
 

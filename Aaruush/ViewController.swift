@@ -9,8 +9,10 @@
 import UIKit
 import StarWars
 import LTMorphingLabel
+import RZTransitions
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
+    
     
     var a = 1;
     
@@ -29,7 +31,14 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         signInButton.layer.cornerRadius = 10;
         
         
-       
+        
+      //  let navigationController = UINavigationController()
+        navigationController?.delegate = RZTransitionsManager.shared()
+      
+        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZZoomAlphaAnimationController()
+        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCardSlideAnimationController()
+ 
+        
         
         
         super.viewDidLoad()
@@ -44,6 +53,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
    
     override func viewWillAppear(animated: Bool)
     {
+        self.navigationController?.navigationBar.hidden = true;
         
     //making all elements transparent so that they are hidden.
         imageView.alpha = 0.0;
@@ -56,7 +66,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
        firstLogo.text = "Aaruush"         //because of bug, intially label is hidden, this prevents it.
         
     }
-   
+    override func viewDidDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
     override func viewDidAppear(animated: Bool)
     {
         
@@ -128,6 +140,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     {
         let vc = segue.destinationViewController;
         vc.transitioningDelegate = self; //for fallapart dismiss transition
+        
+        
         
         
         

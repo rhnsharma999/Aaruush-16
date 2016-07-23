@@ -9,6 +9,7 @@ pod 'LTMorphingLabel'
 pod 'SwiftyButton'
 pod 'FoldingCell'
 pod 'TRMosaicLayout'
+pod 'RZTransitions'
 
 
 end
