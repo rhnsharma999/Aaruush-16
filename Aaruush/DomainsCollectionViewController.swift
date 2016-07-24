@@ -43,16 +43,16 @@ class DomainsCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "credits")
+        {
+            var vc = segue.destinationViewController as! DetailViewController
+            vc.nameToShow = "Powered By Webarch";
+            vc.photoToShow = "wa"
+        }
     }
-    */
-
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -89,11 +89,41 @@ class DomainsCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
-                                                              fromViewController:self.dynamicType,
-                                                              toViewController:HighlightsCollectionViewController.self,
-                                                              forAction:.PushPop)
-        self.performSegueWithIdentifier("selectOption", sender: nil);
+        
+       
+        if(indexPath.row==5)
+        {
+            
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:TeamCollectionViewController.self,
+                                                                  forAction:.PushPop)
+             performSegueWithIdentifier("team", sender: self);
+        }
+        else if(indexPath.row==6)
+        {
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:DetailViewController.self,
+                                                                  forAction:.PushPop)
+            
+            performSegueWithIdentifier("credits", sender: self);
+            
+            
+        }
+        else
+        {
+            
+            
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:HighlightsCollectionViewController.self,
+                                                                  forAction:.PushPop)
+            performSegueWithIdentifier("selectOption", sender: self);
+            
+        }
+        
+       
         
         
     }

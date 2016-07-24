@@ -14,4 +14,7 @@ class DomainsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var photoTitle: UILabel!
     
     @IBOutlet var photo: UIImageView!
+    
+    
+    
 }

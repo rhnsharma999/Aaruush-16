@@ -1,5 +1,5 @@
 //
-//  HighlightsCollectionViewController.swift
+//  TeamCollectionViewController.swift
 //  Aaruush
 //
 //  Created by Rohan Lokesh Sharma on 24/07/16.
@@ -9,26 +9,24 @@
 import UIKit
 import TRMosaicLayout
 
-class HighlightsCollectionViewController: UICollectionViewController {
-    var photos = ["highlights","domains","workshops","sponsors","patrons1","team","wa"];
+private let reuseIdentifier = "cell"
+
+class TeamCollectionViewController: UICollectionViewController {
+    
+    var selectedIndex:String!
+    
+    let data = ["krishna","sai_teja","vishnu","nandu","vijay","mahesh","anvesh","jaswanth","aditya","sridhar","aman","avinash","abhilash","udit","govinda", "jagadeesh","ashok","vamsinath","veda","yeshwanth","vinitha","kirtika","vinayak","ankit","anusha","rahul","vijayanurag","sai_kishore","pranshu","harish","koti","avinash2", "bharath","palash","harshit","harshad","shashank","aman_johri"]
 
     override func viewDidLoad() {
-        
-        
-        
-        self.collectionView?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: "cell");
         super.viewDidLoad()
-        
+
         let mosaicLayout = TRMosaicLayout()
         self.collectionView?.collectionViewLayout = mosaicLayout
         mosaicLayout.delegate = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
         
-        // Do any additional setup after loading the view.
+
+        self.collectionView?.registerNib(UINib(nibName: "TeamCell",bundle: nil), forCellWithReuseIdentifier: "cell");
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,31 +50,40 @@ class HighlightsCollectionViewController: UICollectionViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+        var vc = segue.destinationViewController as! DetailViewController
+        vc.photoToShow = selectedIndex
+        vc.nameToShow = selectedIndex
+    }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 9
+        return data.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DomainsCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TeamCollectionViewCell
         
-        if(indexPath.row<7)
-        {
-            cell.photoTitle.text = "";
-            cell.photo.image = UIImage(named:photos[indexPath.row]);
-            cell.backgroundColor = UIColor.grayColor()
-            
-        }
-        else
-        {
-            cell.photo.image = UIImage(named:"blank" );
-        }
+        cell.photo.image = UIImage(named: data[indexPath.row]);
+        
+    
+        // Configure the cell
     
         return cell
     }
 
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        
+       selectedIndex = data[indexPath.row]
+        performSegueWithIdentifier("detail", sender: self);
+        
+        
+    }
     // MARK: UICollectionViewDelegate
 
     /*
@@ -110,8 +117,7 @@ class HighlightsCollectionViewController: UICollectionViewController {
 
 }
 
-
-extension HighlightsCollectionViewController: TRMosaicLayoutDelegate {
+extension TeamCollectionViewController: TRMosaicLayoutDelegate {
     
     func collectionView(collectionView:UICollectionView, mosaicCellSizeTypeAtIndexPath indexPath:NSIndexPath) -> TRMosaicCellType {
         // I recommend setting every third cell as .Big to get the best layout

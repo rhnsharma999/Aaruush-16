@@ -10,9 +10,17 @@ import UIKit
 import RZTransitions
 
 class AaruushViewController: UIViewController {
+    
+    var gesture:UISwipeGestureRecognizer!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackOpaque;
+        
+        gesture = UISwipeGestureRecognizer(target: self, action: #selector(AaruushViewController.doSegue))
+        gesture.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(gesture)
 
         // Do any additional setup after loading the view.
     }
@@ -32,7 +40,19 @@ class AaruushViewController: UIViewController {
         
         self.performSegueWithIdentifier("someSegue", sender: self)
     }
-
+    
+    
+    func doSegue()
+    {
+        navigationController?.delegate = RZTransitionsManager.shared()
+        
+        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZZoomAlphaAnimationController()
+        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCardSlideAnimationController()
+        
+        
+        self.performSegueWithIdentifier("someSegue", sender:self)
+    }
+    
     /*
     // MARK: - Navigation
 
