@@ -54,7 +54,7 @@ class TeamCollectionViewController: UICollectionViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         
-        var vc = segue.destinationViewController as! DetailViewController
+        let vc = segue.destinationViewController as! DetailViewController
         vc.photoToShow = selectedIndex
         vc.nameToShow = selectedIndex
     }

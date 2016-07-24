@@ -10,8 +10,10 @@ import UIKit
 import StarWars
 import LTMorphingLabel
 import RZTransitions
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
+class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBSDKLoginButtonDelegate{
     
     
     var a = 1;
@@ -35,8 +37,41 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if (FBSDKAccessToken.currentAccessToken() == nil){
+            print("not logged in...")
+        }
+        else{
+            print("logged in...")
+        }
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = ["public_profile","email","user_friends"]
+        loginButton.delegate = self
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
+}
+    
+    // MARK: - Facebook login methods
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if error == nil{
+            print("login complete...")
+            self.performSegueWithIdentifier("toLogin", sender: self)
+//            UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
+//            UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in
+            //})
+
+        }
+        else{
+            print(error.localizedDescription)
+        }
     }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("user logged out...")
+    }
+    
+    
 
     
     override func didReceiveMemoryWarning() {
@@ -114,15 +149,6 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
    
   
     @IBAction func signIn(sender: AnyObject) {
-        
-        UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
-        
-        UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in
-            
-            self.performSegueWithIdentifier("login", sender: self)
-        
-        
-        })
         
         
     }
