@@ -32,23 +32,23 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         signInButton.layer.borderColor = UIColor.yellowColor().CGColor
         signInButton.layer.cornerRadius = 10;
         
-        
-  
+          
         
         
         super.viewDidLoad()
         
-        if (FBSDKAccessToken.currentAccessToken() == nil){
+        if (FBSDKAccessToken.currentAccessToken() == nil)
+        {
             print("not logged in...")
         }
-        else{
+        else
+        {
+            self.performSegueWithIdentifier("toLogin", sender: self);
+            
+            
             print("logged in...")
         }
-        let loginButton = FBSDKLoginButton()
-        loginButton.readPermissions = ["public_profile","email","user_friends"]
-        loginButton.delegate = self
-        loginButton.center = self.view.center
-        self.view.addSubview(loginButton)
+       
 }
     
     // MARK: - Facebook login methods
@@ -57,9 +57,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         if error == nil{
             print("login complete...")
             self.performSegueWithIdentifier("toLogin", sender: self)
-//            UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
-//            UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in
-            //})
+
 
         }
         else{
@@ -148,9 +146,33 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     }
    
   
-    @IBAction func signIn(sender: AnyObject) {
+    @IBAction func signIn(sender: AnyObject)
+    {
+        
+      UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
+    UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
         
         
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
+            if (error == nil)
+            {
+                self.performSegueWithIdentifier("toLogin", sender: self);
+                
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+               /* if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    
+                }*/
+            }
+            else
+            {
+                print("error");
+                
+            }
+        }
+       
+
     }
     
     
