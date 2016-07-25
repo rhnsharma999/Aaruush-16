@@ -10,6 +10,7 @@ import UIKit
 import RZTransitions
 
 class AaruushViewController: UIViewController {
+ 
     
     var gesture:UISwipeGestureRecognizer!
     
@@ -18,6 +19,9 @@ class AaruushViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackOpaque;
         
+        
+     
+        
         gesture = UISwipeGestureRecognizer(target: self, action: #selector(AaruushViewController.doSegue))
         gesture.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(gesture)
@@ -25,6 +29,19 @@ class AaruushViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true;
+        
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

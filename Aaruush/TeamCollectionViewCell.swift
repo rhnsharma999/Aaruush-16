@@ -12,6 +12,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var photo: UIImageView!
     
+    @IBOutlet var name: UILabel!
     
    
 }

@@ -155,15 +155,22 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
+            
+            
+            self.performSegueWithIdentifier("toLogin", sender: self);
+            
+            let fbloginresult : FBSDKLoginManagerLoginResult = result
+            /* if(fbloginresult.grantedPermissions.contains("email"))
+             {
+             
+             }*/
+            print(fbloginresult)
+            
+            
+            
             if (error == nil)
             {
-                self.performSegueWithIdentifier("toLogin", sender: self);
                 
-                let fbloginresult : FBSDKLoginManagerLoginResult = result
-               /* if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    
-                }*/
             }
             else
             {

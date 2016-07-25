@@ -100,25 +100,65 @@
                         <viewControllerLayoutGuide type="top" id="mQn-jQ-XeH"/>
                         <viewControllerLayoutGuide type="bottom" id="Z2w-bA-qZU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7h6-Gb-fru">
+                    <view key="view" contentMode="scaleToFill" id="7h6-Gb-fru" customClass="Stars" customModule="Aaruush" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2R-7n-eWs">
-                                <rect key="frame" x="58" y="281" width="259" height="106"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6M-f5-44o">
-                                <rect key="frame" x="152" y="481" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6M-f5-44o">
+                                <rect key="frame" x="284" y="617" width="63" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="New-Kc-Clq"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tum-db-HQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="--&gt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goToMenu:" destination="RpC-eA-Dtv" eventType="touchUpInside" id="kC1-83-bFL"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w6d-DH-slx">
+                                <rect key="frame" x="20" y="353" width="341" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w6d-DH-slx" secondAttribute="height" multiplier="341:256" id="4VK-t3-hDz"/>
+                                </constraints>
+                                <string key="text">Aaruush the annual techno management festival of SRM University, Chennai India.                                      The word "Aaruush" means "in crude terms, The first rays of the sun".This technical fest consists of various science and technology and manangement based copetitions, symposia, events, guest lectures, video conferences, exhibitions, demonstrations and workshops. It's rather customary held over four days and four nights during the odd semester at SRM University.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="aaruush" translatesAutoresizingMaskIntoConstraints="NO" id="EBY-vh-PY7">
+                                <rect key="frame" x="70" y="83" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EBY-vh-PY7" secondAttribute="height" multiplier="15:8" id="KUj-mw-Ya6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aaruush" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbp-Fv-LBG">
+                                <rect key="frame" x="20" y="219" width="335" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gbp-Fv-LBG" secondAttribute="height" multiplier="335:59" id="Fzs-jV-5J6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gbp-Fv-LBG" firstAttribute="leading" secondItem="7h6-Gb-fru" secondAttribute="leadingMargin" id="2Kg-Lg-t4R"/>
+                            <constraint firstItem="gbp-Fv-LBG" firstAttribute="trailing" secondItem="7h6-Gb-fru" secondAttribute="trailingMargin" id="B51-6Z-exa"/>
+                            <constraint firstItem="EBY-vh-PY7" firstAttribute="leading" secondItem="7h6-Gb-fru" secondAttribute="leadingMargin" constant="50" id="C8N-0M-gk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EBY-vh-PY7" secondAttribute="trailing" constant="45" id="GKo-dB-pV3"/>
+                            <constraint firstItem="w6d-DH-slx" firstAttribute="leading" secondItem="7h6-Gb-fru" secondAttribute="leadingMargin" id="IaD-K0-OPm"/>
+                            <constraint firstItem="gbp-Fv-LBG" firstAttribute="top" secondItem="EBY-vh-PY7" secondAttribute="bottom" constant="8" id="Jes-Xu-6sK"/>
+                            <constraint firstItem="Z2w-bA-qZU" firstAttribute="top" secondItem="w6d-DH-slx" secondAttribute="bottom" constant="58" id="Ohm-As-V3S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p6M-f5-44o" secondAttribute="trailing" constant="8" id="UyP-VW-dLU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w6d-DH-slx" secondAttribute="trailing" constant="-6" id="hGG-jL-FUS"/>
+                            <constraint firstItem="EBY-vh-PY7" firstAttribute="top" secondItem="mQn-jQ-XeH" secondAttribute="bottom" constant="19" id="hQ4-YH-usH"/>
+                            <constraint firstItem="Z2w-bA-qZU" firstAttribute="top" secondItem="p6M-f5-44o" secondAttribute="bottom" constant="20" id="mPZ-IQ-pXP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofk-jn-1LM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

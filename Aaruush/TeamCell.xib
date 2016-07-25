@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,17 +17,27 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mSl-dX-i3w">
                         <rect key="frame" x="0.0" y="0.0" width="262" height="214"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="04O-LX-QgF">
+                        <rect key="frame" x="0.0" y="165" width="262" height="49"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="04O-LX-QgF" secondAttribute="bottom" id="0UD-HB-j5K"/>
                 <constraint firstAttribute="bottom" secondItem="mSl-dX-i3w" secondAttribute="bottom" id="175-2n-HMM"/>
                 <constraint firstItem="mSl-dX-i3w" firstAttribute="top" secondItem="vWl-Yw-11M" secondAttribute="top" id="7dp-PC-SV9"/>
                 <constraint firstItem="mSl-dX-i3w" firstAttribute="leading" secondItem="vWl-Yw-11M" secondAttribute="leading" id="8tO-BW-MJ3"/>
+                <constraint firstItem="04O-LX-QgF" firstAttribute="leading" secondItem="vWl-Yw-11M" secondAttribute="leading" id="GFX-l6-uTg"/>
                 <constraint firstAttribute="trailing" secondItem="mSl-dX-i3w" secondAttribute="trailing" id="JpU-aS-FKp"/>
+                <constraint firstAttribute="trailing" secondItem="04O-LX-QgF" secondAttribute="trailing" id="xr5-hw-YLP"/>
             </constraints>
             <size key="customSize" width="262" height="214"/>
             <connections>
+                <outlet property="name" destination="04O-LX-QgF" id="c1D-cn-CgW"/>
                 <outlet property="photo" destination="mSl-dX-i3w" id="1xy-gj-cPj"/>
             </connections>
             <point key="canvasLocation" x="483" y="377"/>

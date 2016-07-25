@@ -69,6 +69,8 @@ class TeamCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TeamCollectionViewCell
         
         cell.photo.image = UIImage(named: data[indexPath.row]);
+        cell.name.text = data[indexPath.row];
+        
         
     
         // Configure the cell
