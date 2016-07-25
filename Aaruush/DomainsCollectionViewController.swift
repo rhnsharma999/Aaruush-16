@@ -111,6 +111,15 @@ class DomainsCollectionViewController: UICollectionViewController {
             
             
         }
+            
+        else if (indexPath.row == 1)
+        {
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:TeamCollectionViewController.self,
+                                                                  forAction:.PushPop)
+            performSegueWithIdentifier("toDomains", sender: self)
+        }
         else
         {
             

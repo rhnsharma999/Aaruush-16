@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B559B261D46812300FAF65D /* DCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B559B251D46812300FAF65D /* DCollectionViewController.swift */; };
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
 		1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */; };
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
@@ -56,6 +57,7 @@
 		00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
 		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
+		1B559B251D46812300FAF65D /* DCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCollectionViewController.swift; sourceTree = "<group>"; };
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */,
 				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
@@ -295,7 +298,7 @@
 				TargetAttributes = {
 					DE720C8A1CEF9C7E00097862 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DF8NGUWUSH;
+						DevelopmentTeam = WWQ3TCE7VU;
 					};
 					DE720CA11CEF9C7F00097862 = {
 						CreatedOnToolsVersion = 7.3;
@@ -418,6 +421,7 @@
 				DE7FC0AE1D4492040005804A /* TeamCollectionViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
 				DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */,
+				1B559B261D46812300FAF65D /* DCollectionViewController.swift in Sources */,
 				DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */,
 				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
@@ -574,7 +578,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WebarchAaruush16;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -594,7 +598,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WebarchAaruush16;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
