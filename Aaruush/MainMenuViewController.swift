@@ -15,16 +15,19 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     @IBOutlet var myCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        myCollection.reloadData()
+        
         
         myCollection.delegate = self;
         myCollection.dataSource = self;
+        //self.navigationController?.navigationBar.alpha = 0.0
         
         
         navigationController?.delegate = RZTransitionsManager.shared()
         photos = ["highlights","domains","workshops","sponsors","patrons1","team","wa"];
         
         
-        self.myCollection?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: "cell");
+        self.myCollection?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: "cell1");
         myCollection.backgroundColor = UIColor.clearColor();
         
         
@@ -33,6 +36,20 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidLayoutSubviews() {
+        
+        
+        
+        
+        
+        
+        
+       
+        myCollection.reloadData()
+    }
+    override func viewDidAppear(animated: Bool) {
+        myCollection.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,7 +76,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! DomainsCollectionViewCell
+        let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! DomainsCollectionViewCell
         
         cell.photo.image = UIImage(named: photos[indexPath.row]);
         cell.photoTitle.text = photos[indexPath.row];
@@ -71,9 +88,11 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width/2, height: self.view.bounds.width/2);
+        return CGSize(width: self.view.frame.width/2, height: self.view.frame.width/2);
         
     }
+    
+
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 10;
@@ -131,6 +150,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             //performSegueWithIdentifier("selectOption", sender: self);
             
         }
+        
+        
         
         
         

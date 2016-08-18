@@ -21,8 +21,8 @@ class AaruushViewController: UIViewController {
         aboutInfo.alpha = 0.0
         
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackOpaque;
-        
+      
+         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
         
      
         

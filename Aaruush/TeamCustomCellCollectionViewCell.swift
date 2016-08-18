@@ -20,5 +20,14 @@ class TeamCustomCellCollectionViewCell: UICollectionViewCell {
         myImage.layer.borderColor = UIColor.whiteColor().CGColor;
         myImage.layer.borderWidth = 2
         
+        
+        if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            myImage.transform = CGAffineTransformMakeScale(0.8, 0.8)
+            myImage.center.x -= 10
+        }
+        
     }
+    
+   
 }

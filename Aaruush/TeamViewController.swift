@@ -19,7 +19,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         myCollection.backgroundColor = UIColor.clearColor();
         
-        myCollection.registerNib(UINib(nibName: "TeamCustomCell",bundle: nil), forCellWithReuseIdentifier: "cell");
+        
+       
+            myCollection?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
+        myCollection.registerNib(UINib(nibName: "TeamCustomCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s6);
         
         
         myCollection.delegate = self;
@@ -47,22 +50,41 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TeamCustomCellCollectionViewCell
+        
+        let cell1 = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! DomainsCollectionViewCell
+            
+            
+        
+        
+        
+        cell1.photo.image = UIImage(named: data[indexPath.row]);
+        cell1.photoTitle.text=data[indexPath.row];
+        cell1.backgroundColor  = UIColor.clearColor();
+        
         cell.myImage.image = UIImage(named: data[indexPath.row]);
         cell.myLabel.text = data[indexPath.row];
         cell.backgroundColor  = UIColor.clearColor();
         
+        if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            return cell1;
+            
+            
+        }
         
-        return cell;
+        else
+        {
+            return cell;}
         
     }
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10;
+        return 30;
         
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width/2, height: self.view.bounds.width/2);
+        return CGSize(width: self.myCollection.frame.width/2, height: self.myCollection.frame.width/2);
         
     }
 

@@ -15,10 +15,18 @@ class DomainsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var photo: UIImageView!
     
+    
+    
      
     override func layoutSubviews() {
         photo.layer.cornerRadius = photoTitle.bounds.width/2;
         photo.layer.masksToBounds = true;
+        
+      /*  if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            photo.transform = CGAffineTransformMakeScale(0.8, 0.8)
+            photo.center.x -= 10
+        }*/
     }
     
     

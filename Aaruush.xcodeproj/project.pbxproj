@@ -33,6 +33,7 @@
 		DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */; };
 		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
+		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
 		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
 		DEAF0F201D65E8B0002923C1 /* TeamCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */; };
 		DEAF0F221D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */; };
@@ -93,6 +94,7 @@
 		DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCustomCell.xib; sourceTree = "<group>"; };
 		DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		DE720C8D1CEF9C7F00097862 /* Aaruush */ = {
 			isa = PBXGroup;
 			children = (
+				DEA12BCB1D6612790058EE4D /* Reusable.swift */,
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */,
 				DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */,
@@ -437,6 +440,7 @@
 				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
 				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
 				DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */,
