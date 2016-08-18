@@ -25,7 +25,7 @@ class DomainsCollectionViewController: UICollectionViewController {
         self.collectionView?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: "cell");
         
         let mosaicLayout = TRMosaicLayout()
-        self.collectionView?.collectionViewLayout = mosaicLayout
+    //    self.collectionView?.collectionViewLayout = mosaicLayout
         mosaicLayout.delegate = self
         super.viewDidLoad()
 
@@ -73,7 +73,10 @@ class DomainsCollectionViewController: UICollectionViewController {
         {
             cell.photoTitle.text = "";
             cell.photo.image = UIImage(named:photos[indexPath.row]);
-            cell.backgroundColor = UIColor.grayColor()
+            cell.photo.layer.cornerRadius = cell.photo.frame.width/2;
+            cell.photo.layer.masksToBounds = true
+            cell.backgroundColor = UIColor.clearColor()
+            
             
         }
         else
@@ -86,6 +89,8 @@ class DomainsCollectionViewController: UICollectionViewController {
         return cell
     }
     
+  
+    
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -96,7 +101,7 @@ class DomainsCollectionViewController: UICollectionViewController {
             
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:TeamCollectionViewController.self,
+                                                                  toViewController:TeamViewController.self,
                                                                   forAction:.PushPop)
              performSegueWithIdentifier("team", sender: self);
         }
@@ -116,7 +121,7 @@ class DomainsCollectionViewController: UICollectionViewController {
         {
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:TeamCollectionViewController.self,
+                                                                  toViewController:DCollectionViewController.self,
                                                                   forAction:.PushPop)
             performSegueWithIdentifier("toDomains", sender: self)
         }

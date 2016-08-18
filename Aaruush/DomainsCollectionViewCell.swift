@@ -15,6 +15,11 @@ class DomainsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var photo: UIImageView!
     
+     
+    override func layoutSubviews() {
+        photo.layer.cornerRadius = photoTitle.bounds.width/2;
+        photo.layer.masksToBounds = true;
+    }
     
     
 }

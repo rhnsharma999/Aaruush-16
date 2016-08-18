@@ -33,6 +33,10 @@
 		DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */; };
 		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
+		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
+		DEAF0F201D65E8B0002923C1 /* TeamCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */; };
+		DEAF0F221D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */; };
+		DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */; };
 		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCustomCell.xib; sourceTree = "<group>"; };
+		DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 				1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */,
 				1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */,
 				DE720C8D1CEF9C7F00097862 /* Aaruush */,
+				DEAF0F231D65EBB8002923C1 /* toBeDeleted */,
 				DE7FC0AA1D43FE740005804A /* Tools */,
 				DE7FC0A91D43FE430005804A /* Extras (for now) */,
 				DE720CA51CEF9C7F00097862 /* AaruushTests */,
@@ -168,17 +177,17 @@
 			isa = PBXGroup;
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
+				DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */,
+				DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */,
+				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
+				DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */,
+				DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
-				DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */,
 				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
 				DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */,
-				DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */,
-				DE7FC0AF1D4495D60005804A /* TeamCell.xib */,
-				DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */,
-				DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */,
-				DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */,
 				DE720CC11CEF9D5200097862 /* ViewController.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
@@ -224,6 +233,18 @@
 				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
 			);
 			name = Tools;
+			path = Aaruush;
+			sourceTree = "<group>";
+		};
+		DEAF0F231D65EBB8002923C1 /* toBeDeleted */ = {
+			isa = PBXGroup;
+			children = (
+				DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */,
+				DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */,
+				DE7FC0AF1D4495D60005804A /* TeamCell.xib */,
+				DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */,
+			);
+			name = toBeDeleted;
 			path = Aaruush;
 			sourceTree = "<group>";
 		};
@@ -298,7 +319,7 @@
 				TargetAttributes = {
 					DE720C8A1CEF9C7E00097862 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = WWQ3TCE7VU;
+						DevelopmentTeam = DF8NGUWUSH;
 					};
 					DE720CA11CEF9C7F00097862 = {
 						CreatedOnToolsVersion = 7.3;
@@ -340,6 +361,7 @@
 				DE2C7A771D43DA590061FFA8 /* DomainsCollectionCell.xib in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
 				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
+				DEAF0F201D65E8B0002923C1 /* TeamCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +434,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
 				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
 				DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */,
+				DEAF0F221D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE7FC0AE1D4492040005804A /* TeamCollectionViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
@@ -427,6 +451,7 @@
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
 				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
+				DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */,
 				DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,7 +603,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Webarch-Aaruush16";
+				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -598,7 +623,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Webarch-Aaruush16";
+				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

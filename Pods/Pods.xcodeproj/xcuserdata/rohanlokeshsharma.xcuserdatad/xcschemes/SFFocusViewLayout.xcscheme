@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DCC3520F4B5BD8CE4B88506A'
-               BlueprintName = 'FoldingCell'
+               BlueprintIdentifier = '271D35C5F3D40C9EBB06628C'
+               BlueprintName = 'SFFocusViewLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FoldingCell.framework'>
+               BuildableName = 'SFFocusViewLayout.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

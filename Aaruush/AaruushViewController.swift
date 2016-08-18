@@ -12,10 +12,14 @@ import RZTransitions
 class AaruushViewController: UIViewController {
  
     
+    @IBOutlet var aboutInfo: UITextView!
     var gesture:UISwipeGestureRecognizer!
     
 
     override func viewDidLoad() {
+        
+        aboutInfo.alpha = 0.0
+        
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackOpaque;
         
@@ -70,6 +74,24 @@ class AaruushViewController: UIViewController {
         self.performSegueWithIdentifier("someSegue", sender:self)
     }
     
+    @IBAction func showAbout(sender: AnyObject) {
+        
+        UIView.animateWithDuration(0.5, animations: {
+            
+           if(self.aboutInfo.alpha==1.0)
+           {
+            self.aboutInfo.alpha=0.0
+            }
+            else
+           {
+             self.aboutInfo.alpha=1.0
+            
+            }
+            
+            
+            }, completion: nil);
+        
+    }
     /*
     // MARK: - Navigation
 

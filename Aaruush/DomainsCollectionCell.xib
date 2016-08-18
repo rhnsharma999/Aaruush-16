@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,42 +9,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="s8L-Cr-cMt" customClass="DomainsCollectionViewCell" customModule="Aaruush" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="269" height="229"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="269" height="229"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXo-iD-Otp">
-                        <rect key="frame" x="0.0" y="0.0" width="269" height="229"/>
+                        <rect key="frame" x="25" y="8" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GXo-iD-Otp" secondAttribute="height" multiplier="1:1" id="Qpq-DB-Lgb"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTT-J2-7if">
-                        <rect key="frame" x="0.0" y="168" width="269" height="61"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="zTT-J2-7if" secondAttribute="height" multiplier="269:61" id="fp5-tr-2Fm"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="25" y="162" width="150" height="30"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="GXo-iD-Otp" secondAttribute="trailing" id="2fM-kx-Viq"/>
-                <constraint firstAttribute="trailing" secondItem="zTT-J2-7if" secondAttribute="trailing" id="STo-ad-OhN"/>
-                <constraint firstItem="GXo-iD-Otp" firstAttribute="top" secondItem="s8L-Cr-cMt" secondAttribute="top" id="g5l-A9-PDP"/>
-                <constraint firstAttribute="bottom" secondItem="GXo-iD-Otp" secondAttribute="bottom" id="hHN-Hh-LMf"/>
-                <constraint firstAttribute="bottom" secondItem="zTT-J2-7if" secondAttribute="bottom" id="uPm-ea-f5j"/>
-                <constraint firstItem="zTT-J2-7if" firstAttribute="leading" secondItem="s8L-Cr-cMt" secondAttribute="leading" id="yjB-gq-1kG"/>
-                <constraint firstItem="GXo-iD-Otp" firstAttribute="leading" secondItem="s8L-Cr-cMt" secondAttribute="leading" id="zPV-Ho-kGb"/>
+                <constraint firstAttribute="trailing" secondItem="zTT-J2-7if" secondAttribute="trailing" constant="25" id="23b-14-JGh"/>
+                <constraint firstAttribute="trailing" secondItem="GXo-iD-Otp" secondAttribute="trailing" constant="25" id="CGM-b8-Yzx"/>
+                <constraint firstItem="zTT-J2-7if" firstAttribute="leading" secondItem="s8L-Cr-cMt" secondAttribute="leading" constant="25" id="HDk-UF-mKl"/>
+                <constraint firstAttribute="bottom" secondItem="zTT-J2-7if" secondAttribute="bottom" constant="8" id="f8e-oP-tvG"/>
+                <constraint firstItem="zTT-J2-7if" firstAttribute="top" secondItem="GXo-iD-Otp" secondAttribute="bottom" constant="4" id="tHV-Xo-8Wd"/>
+                <constraint firstItem="GXo-iD-Otp" firstAttribute="top" secondItem="s8L-Cr-cMt" secondAttribute="top" constant="8" id="ubt-Pq-sIc"/>
+                <constraint firstItem="GXo-iD-Otp" firstAttribute="leading" secondItem="s8L-Cr-cMt" secondAttribute="leading" constant="25" id="yxC-Gv-zCA"/>
             </constraints>
             <size key="customSize" width="269" height="229"/>
             <connections>
                 <outlet property="photo" destination="GXo-iD-Otp" id="J8M-1Y-oP7"/>
                 <outlet property="photoTitle" destination="zTT-J2-7if" id="hqI-ah-CG9"/>
             </connections>
-            <point key="canvasLocation" x="393.5" y="348.5"/>
+            <point key="canvasLocation" x="393" y="348"/>
         </collectionViewCell>
     </objects>
 </document>
