@@ -9,6 +9,13 @@
 import UIKit
 
 class TeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    
+    let transition = ZoomAnimator()
+    
+    
+    
+    var selectedImage:String!
 
     @IBOutlet var myCollection: UICollectionView!
     
@@ -16,6 +23,9 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     override func viewDidLoad() {
         
+        
+        
+        //self.navigationController?.transitioningDelegate = self;
         
         myCollection.backgroundColor = UIColor.clearColor();
         
@@ -78,6 +88,13 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        selectedImage = data[indexPath.row];
+        
+        self.performSegueWithIdentifier("details", sender: self);
+        
+    }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 30;
@@ -87,15 +104,34 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         return CGSize(width: self.myCollection.frame.width/2, height: self.myCollection.frame.width/2);
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if(segue.identifier == "details")
+        {
+            let vc = segue.destinationViewController as! ProfileViewController
+         //   vc.transitioningDelegate = self;
+            
+            vc.image = selectedImage;
+            
+        }
+        
     }
-    */
+
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transition;
+        
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
+    }
+ 
 
 }
+
+/*extension TeamViewController: UIViewControllerTransitioningDelegate {
+    
+}*/

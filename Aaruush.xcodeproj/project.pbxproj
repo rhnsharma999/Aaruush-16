@@ -32,6 +32,8 @@
 		DE7FC0B01D4495D60005804A /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7FC0AF1D4495D60005804A /* TeamCell.xib */; };
 		DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */; };
 		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
+		DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */; };
+		DE843B791D66FF2B00E0AA17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
 		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
 		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
@@ -93,6 +95,8 @@
 		DE7FC0AF1D4495D60005804A /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
+		DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				DE720CC01CEF9D5200097862 /* Stars.swift */,
+				DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */,
 				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
 			);
 			name = Tools;
@@ -452,6 +458,7 @@
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
+				DE843B791D66FF2B00E0AA17 /* ProfileViewController.swift in Sources */,
 				DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */,
 				DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
@@ -463,6 +470,7 @@
 				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
 				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
+				DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */,
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
 				DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */,
 				DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */,

@@ -8,10 +8,13 @@
 
 import UIKit
 
+public var fr = CGRectMake(0, 0, 0, 0);
+
 class SixSWalaCell: UICollectionViewCell {
     
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myImage: UIImageView!
+    
     
     
     override func layoutSubviews() {
@@ -19,6 +22,9 @@ class SixSWalaCell: UICollectionViewCell {
         myImage.layer.masksToBounds = true;
         myImage.layer.borderColor = UIColor.whiteColor().CGColor;
         myImage.layer.borderWidth = 2
+        
+        fr = self.myImage.frame;
+        
         
         
     

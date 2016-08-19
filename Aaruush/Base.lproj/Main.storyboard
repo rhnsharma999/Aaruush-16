@@ -414,11 +414,85 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myCollection" destination="j3d-5s-ChV" id="I4Y-rx-uUk"/>
+                        <segue destination="ysG-aE-JCc" kind="presentation" identifier="details" id="6ZD-Mi-tPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSe-oK-oDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5885.5" y="1238.5"/>
+            <point key="canvasLocation" x="5856.5" y="1212.5"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="0rs-Bm-Haw">
+            <objects>
+                <viewController storyboardIdentifier="profile" id="ysG-aE-JCc" customClass="ProfileViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tMB-lB-Wba"/>
+                        <viewControllerLayoutGuide type="bottom" id="2iQ-ry-2GE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mmb-7H-fr2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lol1" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-WC-jXv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfs-NU-xuH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XPO-eF-fdz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-5e-Pic">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Some name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMi-yP-mje">
+                                            <rect key="frame" x="8" y="397" width="367" height="53"/>
+                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Q3-Az-1UT">
+                                            <rect key="frame" x="149" y="458" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="goBack:" destination="ysG-aE-JCc" eventType="touchUpInside" id="M3W-AW-eLh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="rMi-yP-mje" secondAttribute="trailing" id="H7f-jf-7Z4"/>
+                                        <constraint firstItem="rMi-yP-mje" firstAttribute="leading" secondItem="XPO-eF-fdz" secondAttribute="leading" constant="8" id="I7c-yw-m8D"/>
+                                        <constraint firstAttribute="trailing" secondItem="gTS-5e-Pic" secondAttribute="trailing" id="LFw-nn-qhD"/>
+                                        <constraint firstItem="gTS-5e-Pic" firstAttribute="top" secondItem="XPO-eF-fdz" secondAttribute="top" id="Obl-AZ-1MY"/>
+                                        <constraint firstAttribute="bottom" secondItem="rMi-yP-mje" secondAttribute="bottom" constant="217" id="h0w-0c-5VC"/>
+                                        <constraint firstItem="gTS-5e-Pic" firstAttribute="leading" secondItem="XPO-eF-fdz" secondAttribute="leading" id="r7o-ZS-qrr"/>
+                                        <constraint firstItem="rMi-yP-mje" firstAttribute="top" secondItem="gTS-5e-Pic" secondAttribute="bottom" constant="43" id="yQt-2o-riF"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2iQ-ry-2GE" firstAttribute="top" secondItem="0fg-WC-jXv" secondAttribute="bottom" id="8LF-dM-jYV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0fg-WC-jXv" secondAttribute="trailing" constant="-20" id="Snh-hp-xsD"/>
+                            <constraint firstItem="0fg-WC-jXv" firstAttribute="leading" secondItem="Mmb-7H-fr2" secondAttribute="leadingMargin" constant="-20" id="Ufk-Ui-bDD"/>
+                            <constraint firstItem="0fg-WC-jXv" firstAttribute="top" secondItem="Mmb-7H-fr2" secondAttribute="topMargin" id="Uog-LW-SaK"/>
+                            <constraint firstItem="Mfs-NU-xuH" firstAttribute="leading" secondItem="Mmb-7H-fr2" secondAttribute="leadingMargin" constant="-20" id="Wob-tA-Nb1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mfs-NU-xuH" secondAttribute="trailing" constant="-20" id="gjo-gb-66k"/>
+                            <constraint firstItem="Mfs-NU-xuH" firstAttribute="top" secondItem="Mmb-7H-fr2" secondAttribute="topMargin" id="mm7-Sh-7Qy"/>
+                            <constraint firstItem="2iQ-ry-2GE" firstAttribute="top" secondItem="Mfs-NU-xuH" secondAttribute="bottom" id="zzC-1U-acw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="name" destination="rMi-yP-mje" id="Ohz-gE-AdS"/>
+                        <outlet property="profileImage" destination="gTS-5e-Pic" id="224-jl-8cC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgV-Sk-ETZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6009.5" y="2082.5"/>
         </scene>
         <!--Highlights Collection View Controller-->
         <scene sceneID="uOp-v0-5Vh">
