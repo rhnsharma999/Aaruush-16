@@ -224,7 +224,7 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ne-pJ-aP7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oPa-jp-KsY">
                                     <size key="itemSize" width="50" height="50"/>
@@ -247,10 +247,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1ne-pJ-aP7" firstAttribute="top" secondItem="MSo-rw-xBe" secondAttribute="topMargin" id="63d-if-69z"/>
-                            <constraint firstItem="Mht-Jg-Yyg" firstAttribute="top" secondItem="1ne-pJ-aP7" secondAttribute="bottom" id="gxT-Ia-h3h"/>
-                            <constraint firstItem="1ne-pJ-aP7" firstAttribute="leading" secondItem="MSo-rw-xBe" secondAttribute="leadingMargin" constant="-20" id="tbC-Mk-Bxo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1ne-pJ-aP7" secondAttribute="trailing" constant="-20" id="xaG-LI-7Xr"/>
+                            <constraint firstItem="1ne-pJ-aP7" firstAttribute="leading" secondItem="MSo-rw-xBe" secondAttribute="leadingMargin" constant="-20" id="3Cf-Vw-3YP"/>
+                            <constraint firstItem="1ne-pJ-aP7" firstAttribute="top" secondItem="BaK-eS-bq3" secondAttribute="bottom" id="c5E-BO-8BM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ne-pJ-aP7" secondAttribute="trailing" constant="-20" id="iIQ-Cr-xPI"/>
+                            <constraint firstItem="Mht-Jg-Yyg" firstAttribute="top" secondItem="1ne-pJ-aP7" secondAttribute="bottom" id="mLg-gk-yx6"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -374,7 +374,7 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j3d-5s-ChV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="F8V-sq-nJc">
                                     <size key="itemSize" width="50" height="50"/>
@@ -400,15 +400,15 @@
                             <constraint firstItem="joU-xF-4kS" firstAttribute="top" secondItem="sp8-if-WWA" secondAttribute="bottom" id="2aN-wi-46a"/>
                             <constraint firstItem="LSO-Te-aL6" firstAttribute="top" secondItem="UvA-sh-13a" secondAttribute="bottom" constant="-64" id="3ED-O4-U7B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sp8-if-WWA" secondAttribute="trailing" constant="-20" id="5Ee-kM-F2S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j3d-5s-ChV" secondAttribute="trailing" constant="-20" id="Ewn-Mh-lUG"/>
-                            <constraint firstItem="j3d-5s-ChV" firstAttribute="top" secondItem="UvA-sh-13a" secondAttribute="bottom" constant="-64" id="IqW-s1-tfW"/>
-                            <constraint firstItem="joU-xF-4kS" firstAttribute="top" secondItem="j3d-5s-ChV" secondAttribute="bottom" id="JHK-HU-FgQ"/>
                             <constraint firstItem="sp8-if-WWA" firstAttribute="top" secondItem="UvA-sh-13a" secondAttribute="bottom" constant="-64" id="JsJ-of-ymK"/>
                             <constraint firstItem="LSO-Te-aL6" firstAttribute="leading" secondItem="2mU-zh-zdS" secondAttribute="leadingMargin" constant="-20" id="MMZ-2x-Jus"/>
                             <constraint firstItem="joU-xF-4kS" firstAttribute="top" secondItem="LSO-Te-aL6" secondAttribute="bottom" id="QGF-0N-pTj"/>
+                            <constraint firstItem="joU-xF-4kS" firstAttribute="top" secondItem="j3d-5s-ChV" secondAttribute="bottom" id="QOj-JN-UHy"/>
                             <constraint firstItem="sp8-if-WWA" firstAttribute="leading" secondItem="2mU-zh-zdS" secondAttribute="leadingMargin" constant="-20" id="dwu-hw-MRk"/>
+                            <constraint firstItem="j3d-5s-ChV" firstAttribute="leading" secondItem="2mU-zh-zdS" secondAttribute="leadingMargin" constant="-20" id="eTu-7V-5Go"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LSO-Te-aL6" secondAttribute="trailing" constant="-20" id="h6z-7B-qDL"/>
-                            <constraint firstItem="j3d-5s-ChV" firstAttribute="leading" secondItem="2mU-zh-zdS" secondAttribute="leadingMargin" constant="-20" id="qz9-bM-fk9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j3d-5s-ChV" secondAttribute="trailing" constant="-20" id="vM9-QZ-zEo"/>
+                            <constraint firstItem="j3d-5s-ChV" firstAttribute="top" secondItem="UvA-sh-13a" secondAttribute="bottom" id="y6d-1x-1yN"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

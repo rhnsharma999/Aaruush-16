@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DomainsCollectionViewCell: UICollectionViewCell {
+class FiveSWalaCell: UICollectionViewCell {
     
     
     @IBOutlet var photoTitle: UILabel!

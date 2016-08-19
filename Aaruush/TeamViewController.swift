@@ -21,8 +21,8 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         
        
-            myCollection?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
-        myCollection.registerNib(UINib(nibName: "TeamCustomCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s6);
+            myCollection?.registerNib(UINib(nibName: "FiveSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
+        myCollection.registerNib(UINib(nibName: "SixSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s6);
         
         
         myCollection.delegate = self;
@@ -49,9 +49,9 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TeamCustomCellCollectionViewCell
+        let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SixSWalaCell
         
-        let cell1 = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! DomainsCollectionViewCell
+        let cell1 = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! FiveSWalaCell
             
             
         

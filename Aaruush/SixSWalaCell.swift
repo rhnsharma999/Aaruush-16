@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamCustomCellCollectionViewCell: UICollectionViewCell {
+class SixSWalaCell: UICollectionViewCell {
     
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myImage: UIImageView!
@@ -21,11 +21,7 @@ class TeamCustomCellCollectionViewCell: UICollectionViewCell {
         myImage.layer.borderWidth = 2
         
         
-        if(UIScreen.mainScreen().bounds.height == 568)
-        {
-            myImage.transform = CGAffineTransformMakeScale(0.8, 0.8)
-            myImage.center.x -= 10
-        }
+    
         
     }
     

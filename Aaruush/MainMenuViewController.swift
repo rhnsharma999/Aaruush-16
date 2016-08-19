@@ -27,7 +27,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         photos = ["highlights","domains","workshops","sponsors","patrons1","team","wa"];
         
         
-        self.myCollection?.registerNib(UINib(nibName: "DomainsCollectionCell",bundle: nil), forCellWithReuseIdentifier: "cell1");
+        self.myCollection?.registerNib(UINib(nibName: "FiveSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
+        self.myCollection?.registerNib(UINib(nibName: "SixSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s6);
         myCollection.backgroundColor = UIColor.clearColor();
         
         
@@ -76,26 +77,43 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! DomainsCollectionViewCell
+        let fiveScell = myCollection.dequeueReusableCellWithReuseIdentifier(Reusable.s5, forIndexPath: indexPath) as! FiveSWalaCell
+        let sixScell = myCollection.dequeueReusableCellWithReuseIdentifier(Reusable.s6, forIndexPath: indexPath) as! SixSWalaCell
         
-        cell.photo.image = UIImage(named: photos[indexPath.row]);
-        cell.photoTitle.text = photos[indexPath.row];
-        cell.backgroundColor = UIColor.clearColor();
         
-        return cell;
+        
+        
+        
+        if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            fiveScell.photo.image = UIImage(named: photos[indexPath.row]);
+            fiveScell.photoTitle.text = photos[indexPath.row];
+            fiveScell.backgroundColor = UIColor.clearColor();
+            return fiveScell;
+            
+        }
+        else
+        {
+            sixScell.myImage.image = UIImage(named:photos[indexPath.row]);
+            sixScell.myLabel.text = photos[indexPath.row];
+            sixScell.backgroundColor = UIColor.clearColor();
+            return sixScell;
+        }
+        
+        
         
         
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width/2, height: self.view.frame.width/2);
+        return CGSize(width: self.myCollection.frame.width/2, height: self.myCollection.frame.width/2);
         
     }
     
 
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10;
+        return 30;
         
     }
     

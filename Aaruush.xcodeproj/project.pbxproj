@@ -13,8 +13,8 @@
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
 		DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */; };
-		DE2C7A771D43DA590061FFA8 /* DomainsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */; };
-		DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */; };
+		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
+		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
@@ -35,8 +35,8 @@
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
 		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
 		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
-		DEAF0F201D65E8B0002923C1 /* TeamCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */; };
-		DEAF0F221D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */; };
+		DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */; };
+		DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */; };
 		DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */; };
 		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
@@ -68,8 +68,8 @@
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewController.swift; sourceTree = "<group>"; };
-		DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomainsCollectionCell.xib; sourceTree = "<group>"; };
-		DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
+		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
-		DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCustomCell.xib; sourceTree = "<group>"; };
-		DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixSWalaCell.xib; sourceTree = "<group>"; };
+		DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixSWalaCell.swift; sourceTree = "<group>"; };
 		DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +147,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE3499511D66FA9E003EF897 /* custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */,
+				DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */,
+				DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */,
+				DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */,
+			);
+			name = "custom cells";
+			path = Aaruush;
+			sourceTree = "<group>";
+		};
 		DE720C821CEF9C7E00097862 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 				1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */,
 				1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */,
 				DE720C8D1CEF9C7F00097862 /* Aaruush */,
+				DE3499511D66FA9E003EF897 /* custom cells */,
 				DEAF0F231D65EBB8002923C1 /* toBeDeleted */,
 				DE7FC0AA1D43FE740005804A /* Tools */,
 				DE7FC0A91D43FE430005804A /* Extras (for now) */,
@@ -180,11 +193,7 @@
 			children = (
 				DEA12BCB1D6612790058EE4D /* Reusable.swift */,
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
-				DEAF0F1F1D65E8B0002923C1 /* TeamCustomCell.xib */,
-				DEAF0F211D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift */,
 				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
-				DE2C7A761D43DA590061FFA8 /* DomainsCollectionCell.xib */,
-				DE2C7A781D43DA700061FFA8 /* DomainsCollectionViewCell.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
@@ -361,10 +370,10 @@
 			files = (
 				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
 				DE7FC0B01D4495D60005804A /* TeamCell.xib in Resources */,
-				DE2C7A771D43DA590061FFA8 /* DomainsCollectionCell.xib in Resources */,
+				DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
 				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
-				DEAF0F201D65E8B0002923C1 /* TeamCustomCell.xib in Resources */,
+				DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +452,8 @@
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
 				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
-				DE2C7A791D43DA700061FFA8 /* DomainsCollectionViewCell.swift in Sources */,
-				DEAF0F221D65E92C002923C1 /* TeamCustomCellCollectionViewCell.swift in Sources */,
+				DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */,
+				DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE7FC0AE1D4492040005804A /* TeamCollectionViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
