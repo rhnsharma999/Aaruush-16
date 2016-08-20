@@ -11,7 +11,7 @@ import UIKit
 class TeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
-    let transition = ZoomAnimator()
+  //  let transition = ZoomAnimator()
     
     
     
@@ -92,7 +92,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     {
         selectedImage = data[indexPath.row];
         
-        self.performSegueWithIdentifier("details", sender: self);
+       // self.performSegueWithIdentifier("details", sender: self);
         
     }
     
@@ -111,7 +111,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         if(segue.identifier == "details")
         {
             let vc = segue.destinationViewController as! ProfileViewController
-         //   vc.transitioningDelegate = self;
+          //  vc.transitioningDelegate = self;
             
             vc.image = selectedImage;
             
@@ -120,10 +120,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
 
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+   /* func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return transition;
         
-    }
+    }*/
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return nil

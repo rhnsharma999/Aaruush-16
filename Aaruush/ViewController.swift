@@ -37,6 +37,16 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
         super.viewDidLoad()
         
+        applyMotionEffect(toView: self.view, mangnitude: 10)
+        applyMotionEffect(toView: imageView, mangnitude: -20)
+        applyMotionEffect(toView: firstLogo, mangnitude: -20)
+        applyMotionEffect(toView: secondLogo, mangnitude: -20)
+        applyMotionEffect(toView: signInButton, mangnitude: -20)
+        
+        
+        
+        
+        
         if (FBSDKAccessToken.currentAccessToken() == nil)
         {
             print("not logged in...")
@@ -199,6 +209,24 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         return StarWarsGLAnimator()
     }
 
+    
+    func applyMotionEffect(toView view:UIView,mangnitude:Float)
+    {
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis);
+        xMotion.minimumRelativeValue = -mangnitude
+        xMotion.maximumRelativeValue = mangnitude
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = -mangnitude
+        yMotion.maximumRelativeValue = mangnitude
+        
+        
+        
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [xMotion,yMotion];
+        view.addMotionEffect(group)
+        
+    }
    
 
     //func animationControllerForPresentedController(presented: UIViewController, presentingController presenting:

@@ -14,6 +14,8 @@ class ZoomAnimator: NSObject,UIViewControllerAnimatedTransitioning {
     var presenting  = true
     var originFrame = CGRect.zero
     
+    var my:Bool!
+    
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration;
@@ -25,14 +27,34 @@ class ZoomAnimator: NSObject,UIViewControllerAnimatedTransitioning {
         
         
         let containerView = transitionContext.containerView()
-        let toView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! ProfileViewController
+        let toViewc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let fromViewc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+       
+        containerView?.addSubview(fromViewc.view);
+        containerView?.addSubview(toViewc.view)
         
-        let fromView = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! TeamViewController
-        let initialFrame = fr
-        let finalFrame = toView.profileImage.frame
+        //toViewc.view.hidden = true;
+        toViewc.view.center.x += toViewc.view.bounds.width;
         
-        let xscale = finalFrame.width/initialFrame.width;
-        let yscale = finalFrame.height/initialFrame.height;
+        UIView.animateWithDuration(0.5, animations: {
+            
+            
+            
+            
+            fromViewc.view.center.x -= fromViewc.view.bounds.width;
+            toViewc.view.center.x += toViewc.view.bounds.width;
+            
+            
+            
+            }, completion: {my in
+        
+        
+                transitionContext.completeTransition(true);
+                
+        
+        })
+        
+        
         
         
         
