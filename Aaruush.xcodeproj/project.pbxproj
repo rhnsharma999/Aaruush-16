@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B559B261D46812300FAF65D /* DCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B559B251D46812300FAF65D /* DCollectionViewController.swift */; };
+		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
 		1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */; };
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
@@ -65,6 +66,7 @@
 		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
 		1B559B251D46812300FAF65D /* DCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCollectionViewController.swift; sourceTree = "<group>"; };
+		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
+				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
 				DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */,
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
+				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
 				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,

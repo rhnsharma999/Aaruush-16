@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SFFocusViewLayout.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>StarWars.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -57,7 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1ED37495294EA68187BA5756E21717F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>33FAC010DFB7BD873F7CE9CF347B8EB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34A147FC9AFA248C890C4B0898957338</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FC6B7B16FD64E47C3C6526288776754</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41927A620EB6F85009AB1D11E14DFF43</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>621AB64C2B7FE4C215D925E6409CBD6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F7FFF4678B31B83ACAED8F45A172A8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A6F82EFBEDF12F1411A56B502BD4F0B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9D57E3F26FBEB04F7F9A1AF5CCB5B43</key>
 		<dict>
 			<key>primary</key>
 			<true/>

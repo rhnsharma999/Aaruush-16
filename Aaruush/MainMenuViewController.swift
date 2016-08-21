@@ -150,7 +150,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:DCollectionViewController.self,
                                                                   forAction:.PushPop)
-           // performSegueWithIdentifier("toDomains", sender: self)
+           performSegueWithIdentifier("toDomains", sender: self)
             
             
             
