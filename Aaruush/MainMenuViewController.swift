@@ -148,7 +148,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         {
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:DCollectionViewController.self,
+                                                                  toViewController:DomainsViewController.self,
                                                                   forAction:.PushPop)
            performSegueWithIdentifier("toDomains", sender: self)
             

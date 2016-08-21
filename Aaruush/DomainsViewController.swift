@@ -39,23 +39,22 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         let cell = domainsCollectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SixSWalaCell
         let cell1 = domainsCollectionView.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! FiveSWalaCell
         
-        cell1.photo.image = UIImage(named: domainImages[indexPath.row]);
-        cell1.photoTitle.text=domainImages[indexPath.row];
-        cell1.backgroundColor  = UIColor.clearColor();
         
-        cell.myImage.image = UIImage(named: domainImages[indexPath.row]);
-        cell.myLabel.text = domainImages[indexPath.row];
-        cell.backgroundColor  = UIColor.clearColor();
+        
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
+            cell1.photo.image = UIImage(named: domainImages[indexPath.row]);
+            cell1.photoTitle.text=domainImages[indexPath.row];
+            cell1.backgroundColor  = UIColor.clearColor();
             return cell1;
-            
-            
         }
             
         else
         {
+            cell.myImage.image = UIImage(named: domainImages[indexPath.row]);
+            cell.myLabel.text = domainImages[indexPath.row];
+            cell.backgroundColor  = UIColor.clearColor();
             return cell;
         }
         

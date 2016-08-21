@@ -21,12 +21,11 @@ class FiveSWalaCell: UICollectionViewCell {
     override func layoutSubviews() {
         photo.layer.cornerRadius = photoTitle.bounds.width/2;
         photo.layer.masksToBounds = true;
+        photo.layer.borderWidth = 2;
+        photo.layer.borderColor = UIColor.whiteColor().CGColor
         
-      /*  if(UIScreen.mainScreen().bounds.height == 568)
-        {
-            photo.transform = CGAffineTransformMakeScale(0.8, 0.8)
-            photo.center.x -= 10
-        }*/
+        
+      
     }
     
     
