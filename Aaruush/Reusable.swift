@@ -13,5 +13,11 @@ class Reusable
 {
     static let s5 = "cell1"
     static let s6 = "cell"
+    static let MAIN_TO_PATRONS = "toPatrons"
+    static let MAIN_TO_DOMAINS = "toDomains";
+    static let MAIN_TO_TEAM = "team";
+    static let MAIN_TO_CREDITS = "credits"
+    static let MAIN_DOMAIN_TO_ARCH = "domainEvent"
+    
     
 }

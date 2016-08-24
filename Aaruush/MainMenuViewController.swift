@@ -142,7 +142,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:TeamViewController.self,
                                                                   forAction:.PushPop)
-            performSegueWithIdentifier("team", sender: self);
+            performSegueWithIdentifier(Reusable.MAIN_TO_TEAM, sender: self);
         }
         else if(indexPath.row==6)
         {
@@ -151,7 +151,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   toViewController:DetailViewController.self,
                                                                   forAction:.PushPop)
             
-            performSegueWithIdentifier("credits", sender: self);
+            performSegueWithIdentifier(Reusable.MAIN_TO_CREDITS, sender: self);
             
             
         }
@@ -162,7 +162,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:DomainsViewController.self,
                                                                   forAction:.PushPop)
-           performSegueWithIdentifier("toDomains", sender: self)
+           performSegueWithIdentifier(Reusable.MAIN_TO_DOMAINS, sender: self)
             
             
             
@@ -173,10 +173,11 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:PatronsViewController.self,forAction:.PushPop)
-                performSegueWithIdentifier("toPatrons", sender: self)
+                performSegueWithIdentifier(Reusable.MAIN_TO_PATRONS, sender: self)
         }
-        else
+        else //under construction, to be removed
         {
+            
             
             
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),

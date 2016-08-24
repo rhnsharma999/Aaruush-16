@@ -3,31 +3,25 @@ PODS:
   - LTMorphingLabel (0.2.0)
   - PureLayout (3.0.2)
   - RZTransitions (1.2.1)
-  - SFFocusViewLayout (3.0.0)
   - StarWars (1.0)
   - SwiftyButton (0.4.0):
     - SwiftyButton/CustomContent (= 0.4.0)
   - SwiftyButton/CustomContent (0.4.0):
     - PureLayout (~> 3.0)
-  - TRMosaicLayout (0.2.0)
 
 DEPENDENCIES:
   - FoldingCell
   - LTMorphingLabel
   - RZTransitions
-  - SFFocusViewLayout
   - StarWars (~> 1.0)
   - SwiftyButton
-  - TRMosaicLayout
 
 SPEC CHECKSUMS:
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
   LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
-  SFFocusViewLayout: 4766bec5d2214038526d5e03d08405f1f126688d
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
-  TRMosaicLayout: 2f1af0d457377ebc135912b658a65040be9e1651
 
 COCOAPODS: 0.39.0

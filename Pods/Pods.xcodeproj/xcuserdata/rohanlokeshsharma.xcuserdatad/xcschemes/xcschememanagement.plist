@@ -29,22 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SFFocusViewLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>StarWars.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SwiftyButton.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TRMosaicLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,22 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1ED37495294EA68187BA5756E21717F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>34A147FC9AFA248C890C4B0898957338</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3FC6B7B16FD64E47C3C6526288776754</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>41927A620EB6F85009AB1D11E14DFF43</key>
+		<key>19F3E7205CBDFC0DF43E6C330C81B360</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>621AB64C2B7FE4C215D925E6409CBD6D</key>
+		<key>57661459C27EC765566E688B5E7BA14C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F7FFF4678B31B83ACAED8F45A172A8F</key>
+		<key>8F8E49E1FCCEE4BFD0B0B77BB36E5143</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9D57E3F26FBEB04F7F9A1AF5CCB5B43</key>
+		<key>9AD46B7C4DC994FC367DEB48DF80105E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFFD515B8539FA8326EACAE4FBBB093D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

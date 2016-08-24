@@ -87,7 +87,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        selectedImage = domainImages[indexPath.row];
+        self.performSegueWithIdentifier(Reusable.MAIN_DOMAIN_TO_ARCH, sender: self)
         
     }
     

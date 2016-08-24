@@ -8,9 +8,7 @@ pod 'StarWars', '~> 1.0'
 pod 'LTMorphingLabel'
 pod 'SwiftyButton'
 pod 'FoldingCell'
-pod 'TRMosaicLayout'
 pod 'RZTransitions'
-pod 'SFFocusViewLayout'
 
 
 end

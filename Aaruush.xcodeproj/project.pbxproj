@@ -18,6 +18,8 @@
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
+		DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5666BB1D6E03B3000F608C /* ArchViewController.swift */; };
+		DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5666C31D6E0ED5000F608C /* iCarousel.m */; };
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
 		DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */; };
@@ -77,6 +79,10 @@
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		DE5666BB1D6E03B3000F608C /* ArchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchViewController.swift; sourceTree = "<group>"; };
+		DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aaruush-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE5666C21D6E0ED5000F608C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		DE5666C31D6E0ED5000F608C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE720C931CEF9C7F00097862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,10 +205,10 @@
 		DE720C8D1CEF9C7F00097862 /* Aaruush */ = {
 			isa = PBXGroup;
 			children = (
-				DEA12BCB1D6612790058EE4D /* Reusable.swift */,
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
 				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE5666BB1D6E03B3000F608C /* ArchViewController.swift */,
 				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
@@ -253,8 +259,12 @@
 			isa = PBXGroup;
 			children = (
 				DE720CC01CEF9D5200097862 /* Stars.swift */,
+				DEA12BCB1D6612790058EE4D /* Reusable.swift */,
+				DE5666C21D6E0ED5000F608C /* iCarousel.h */,
+				DE5666C31D6E0ED5000F608C /* iCarousel.m */,
 				DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */,
 				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
+				DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */,
 			);
 			name = Tools;
 			path = Aaruush;
@@ -462,6 +472,8 @@
 				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
 				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
+				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
 				1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */,
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
@@ -624,6 +636,7 @@
 			baseConfigurationReference = 00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -635,6 +648,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -644,6 +659,7 @@
 			baseConfigurationReference = 0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -655,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
