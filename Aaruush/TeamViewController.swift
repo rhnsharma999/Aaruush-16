@@ -62,21 +62,26 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         let cell = myCollection.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SixSWalaCell
         
         let cell1 = myCollection.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! FiveSWalaCell
-            
-            
         
+        //Animations initial setup
+        cell.transform = CGAffineTransformMakeScale(0.5,0.5);
+        cell1.transform = CGAffineTransformMakeScale(0.5, 0.5);
         
-        
-        cell1.photo.image = UIImage(named: data[indexPath.row]);
-        cell1.photoTitle.text=data[indexPath.row];
-        cell1.backgroundColor  = UIColor.clearColor();
-        
-        cell.myImage.image = UIImage(named: data[indexPath.row]);
-        cell.myLabel.text = data[indexPath.row];
-        cell.backgroundColor  = UIColor.clearColor();
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
+            cell1.photo.image = UIImage(named: data[indexPath.row]);
+            cell1.photoTitle.text=data[indexPath.row];
+            cell1.backgroundColor  = UIColor.clearColor();
+            
+            
+             //Animate to pop
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                cell1.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
             return cell1;
             
             
@@ -84,15 +89,62 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         else
         {
-            return cell;}
+            cell.myImage.image = UIImage(named: data[indexPath.row]);
+            cell.myLabel.text = data[indexPath.row];
+            cell.backgroundColor  = UIColor.clearColor();
+            
+            
+            //Animate to pop
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                cell.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
+            
+            
+            return cell;
+        }
         
     }
+    
+    
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         selectedImage = data[indexPath.row];
         
-       // self.performSegueWithIdentifier("details", sender: self);
+     /*
+        var cell = myCollection.cellForItemAtIndexPath(indexPath)
+        cell?.superview?.bringSubviewToFront(cell!);
+        
+        let cons = cell?.center
+        
+        //Experimentss----------------->>
+        
+        UIView.animateWithDuration(1.0, animations: {
+            
+            
+           
+            
+            cell?.center = self.view.center
+            cell?.transform = CGAffineTransformMakeScale(1.5, 1.5)
+            
+            
+            
+            }, completion: {(my:Bool) in
+        
+                
+             //   cell?.center = cons!
+            //    cell?.transform = CGAffineTransformIdentity
+        
+        
+        })
+        
+        
+        
+          //Experimentss----------------->>
+    */
         
     }
     
@@ -105,7 +157,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
     }
     
-    
+   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if(segue.identifier == "details")
@@ -120,14 +172,13 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
 
     
+    
    /* func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return transition;
         
     }*/
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
-    }
+   
  
 
 }

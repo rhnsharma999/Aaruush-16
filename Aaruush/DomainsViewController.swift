@@ -40,6 +40,9 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         let cell1 = domainsCollectionView.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! FiveSWalaCell
         
         
+        cell.transform = CGAffineTransformMakeScale(0.5,0.5);
+        cell1.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        
         
         
         if(UIScreen.mainScreen().bounds.height == 568)
@@ -47,7 +50,19 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell1.photo.image = UIImage(named: domainImages[indexPath.row]);
             cell1.photoTitle.text=domainImages[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                cell1.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
+            
             return cell1;
+            
+            
+            
+            
         }
             
         else
@@ -55,6 +70,16 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell.myImage.image = UIImage(named: domainImages[indexPath.row]);
             cell.myLabel.text = domainImages[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
+            
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                cell.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
+            
+            
             return cell;
         }
         

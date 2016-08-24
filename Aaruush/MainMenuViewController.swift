@@ -15,7 +15,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     @IBOutlet var myCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        myCollection.reloadData()
+        
         
         
         myCollection.delegate = self;
@@ -37,20 +37,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         // Do any additional setup after loading the view.
     }
 
-    override func viewDidLayoutSubviews() {
-        
-        
-        
-        
-        
-        
-        
-       
-        myCollection.reloadData()
-    }
-    override func viewDidAppear(animated: Bool) {
-        myCollection.reloadData()
-    }
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,7 +47,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "credits")
         {
-            var vc = segue.destinationViewController as! DetailViewController
+            let vc = segue.destinationViewController as! DetailViewController
             vc.nameToShow = "Powered By Webarch";
             vc.photoToShow = "wa"
         }
@@ -81,6 +69,12 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         let sixScell = myCollection.dequeueReusableCellWithReuseIdentifier(Reusable.s6, forIndexPath: indexPath) as! SixSWalaCell
         
         
+        //Animations initial setup
+        sixScell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        fiveScell.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        
+        
+        //initial setup end
         
         
         
@@ -89,6 +83,15 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             fiveScell.photo.image = UIImage(named: photos[indexPath.row]);
             fiveScell.photoTitle.text = photos[indexPath.row];
             fiveScell.backgroundColor = UIColor.clearColor();
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                fiveScell.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
+            
+            
             return fiveScell;
             
         }
@@ -97,6 +100,15 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             sixScell.myImage.image = UIImage(named:photos[indexPath.row]);
             sixScell.myLabel.text = photos[indexPath.row];
             sixScell.backgroundColor = UIColor.clearColor();
+            
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+                
+                sixScell.transform = CGAffineTransformIdentity
+                
+                }, completion: nil);
+            
+            
             return sixScell;
         }
         
