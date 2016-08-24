@@ -11,7 +11,7 @@ import Foundation
 
 class Reusable
 {
-    public static let s5 = "cell1"
-    public static let s6 = "cell"
+    static let s5 = "cell1"
+    static let s6 = "cell"
     
 }

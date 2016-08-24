@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var name: UILabel!
     
     
-    public var image:String!
+    var image:String!
     override func viewDidLoad() {
         
         profileImage.image = UIImage(named: image);
