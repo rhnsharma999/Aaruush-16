@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TGLParallaxCarousel
+
 
 class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate {
     
