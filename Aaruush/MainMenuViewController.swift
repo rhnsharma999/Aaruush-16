@@ -172,7 +172,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         else if(indexPath.row == 4){
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:DomainsViewController.self,forAction:.PushPop)
+                                                                  toViewController:PatronsViewController.self,forAction:.PushPop)
                 performSegueWithIdentifier("toPatrons", sender: self)
         }
         else

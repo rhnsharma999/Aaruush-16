@@ -14,7 +14,14 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     var selectedImage = ""
     
+    
+    //dummy data
+    
     let data = ["convenor","director","eo","fa"]
+    let titles =  ["Prof. Rathinam. A\nConvenor","Dr. C.Muthamizchelvan\nDirector - E & T","Mr.V.Thirumurugan\nEstate Officer","Prof.V.M.Ponniah\nFinance Advisor"];
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +56,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
         if(UIScreen.mainScreen().bounds.height == 568)
         {
             cell1.photo.image = UIImage(named: data[indexPath.row]);
-            cell1.photoTitle.text=data[indexPath.row];
+            cell1.photoTitle.text=titles[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
             
             
@@ -68,7 +75,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
         else
         {
             cell.myImage.image = UIImage(named: data[indexPath.row]);
-            cell.myLabel.text = data[indexPath.row];
+            cell.myLabel.text = titles[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
             
             

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -104,28 +104,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lol1" translatesAutoresizingMaskIntoConstraints="NO" id="9E2-Ka-L64">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lol1" translatesAutoresizingMaskIntoConstraints="NO" id="9E2-Ka-L64">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="65A-Cw-kXg">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="65A-Cw-kXg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="7ER-Tb-S1b">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7ER-Tb-S1b">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljz-n7-gGN">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="vFO-TP-DUc">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="light"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kcA-Sc-bml">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kcA-Sc-bml">
                                             <rect key="frame" x="0.0" y="65" width="375" height="602"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rbF-Uo-Qxc">
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rbF-Uo-Qxc">
                                                 <size key="itemSize" width="50" height="50"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -144,11 +134,27 @@
                                             </cells>
                                         </collectionView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="kcA-Sc-bml" secondAttribute="trailing" id="AFQ-Uw-SX1"/>
+                                        <constraint firstItem="kcA-Sc-bml" firstAttribute="leading" secondItem="7ER-Tb-S1b" secondAttribute="leading" id="Wan-TP-yoX"/>
+                                        <constraint firstItem="kcA-Sc-bml" firstAttribute="top" secondItem="7ER-Tb-S1b" secondAttribute="top" constant="65" id="kcN-Nd-8GH"/>
+                                        <constraint firstAttribute="bottom" secondItem="kcA-Sc-bml" secondAttribute="bottom" id="r6S-4B-qsH"/>
+                                    </constraints>
                                 </view>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9E2-Ka-L64" firstAttribute="leading" secondItem="uiL-pN-nNv" secondAttribute="leadingMargin" constant="-20" id="0eZ-ZE-Boo"/>
+                            <constraint firstItem="9bR-3e-VjJ" firstAttribute="top" secondItem="9E2-Ka-L64" secondAttribute="bottom" id="3L6-Yh-RDk"/>
+                            <constraint firstItem="9E2-Ka-L64" firstAttribute="top" secondItem="uiL-pN-nNv" secondAttribute="topMargin" id="6pc-sW-UP7"/>
+                            <constraint firstItem="65A-Cw-kXg" firstAttribute="top" secondItem="uiL-pN-nNv" secondAttribute="topMargin" id="Axq-yD-kSR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="65A-Cw-kXg" secondAttribute="trailing" constant="-20" id="FFR-Nr-h1Z"/>
+                            <constraint firstItem="9bR-3e-VjJ" firstAttribute="top" secondItem="65A-Cw-kXg" secondAttribute="bottom" id="O08-hn-Lmf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9E2-Ka-L64" secondAttribute="trailing" constant="-20" id="UYW-U6-JQw"/>
+                            <constraint firstItem="65A-Cw-kXg" firstAttribute="leading" secondItem="uiL-pN-nNv" secondAttribute="leadingMargin" constant="-20" id="g97-ek-VwL"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
