@@ -12,6 +12,7 @@ import UIKit
 class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate {
     
     
+    @IBOutlet var eventTitle: UILabel!
     @IBOutlet var Eventinfo: UITextView!
     let data = ["1","2","3","4"];
     
@@ -20,6 +21,11 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     @IBOutlet var myCarousel: iCarousel!
 
     override func viewDidLoad() {
+        
+        if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            self.Eventinfo.font = .systemFontOfSize(13)
+        }
         
         myCarousel.dataSource = self
         myCarousel.delegate = self
@@ -52,11 +58,17 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
  
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         
-        Eventinfo.text =  "\n You have selected index \(self.myCarousel.currentItemIndex)";
+        eventTitle.text = "Selected Index \(myCarousel.currentItemIndex+1)";
+        
         
         
     }
     
+    
+    @IBAction func goBack(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 
 
