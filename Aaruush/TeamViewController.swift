@@ -25,8 +25,6 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         
         
-        //self.navigationController?.transitioningDelegate = self;
-        
         myCollection.backgroundColor = UIColor.clearColor();
         
         
@@ -112,39 +110,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        selectedImage = data[indexPath.row];
         
-     /*
-        var cell = myCollection.cellForItemAtIndexPath(indexPath)
-        cell?.superview?.bringSubviewToFront(cell!);
-        
-        let cons = cell?.center
-        
-        //Experimentss----------------->>
-        
-        UIView.animateWithDuration(1.0, animations: {
-            
-            
-           
-            
-            cell?.center = self.view.center
-            cell?.transform = CGAffineTransformMakeScale(1.5, 1.5)
-            
-            
-            
-            }, completion: {(my:Bool) in
-        
-                
-             //   cell?.center = cons!
-            //    cell?.transform = CGAffineTransformIdentity
-        
-        
-        })
-        
-        
-        
-          //Experimentss----------------->>
-    */
         
     }
     
@@ -171,18 +137,8 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
     }
 
-    
-    
-   /* func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transition;
-        
-    }*/
-    
    
  
 
 }
 
-/*extension TeamViewController: UIViewControllerTransitioningDelegate {
-    
-}*/

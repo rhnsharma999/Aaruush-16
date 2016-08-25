@@ -10,6 +10,9 @@ import UIKit
 
 class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataSource {
     
+    //dummy data, will change later
+    let data = ["accelerobotics","application_of_gis","entreprenuer_and_business_plan","hacktrack","motor_bike_overhauling","rc_cars","trancebotics","wireless_sensor_networks"]
+    
     @IBOutlet weak var workshopCarousel: iCarousel!
     
     @IBOutlet weak var workshopLabel: UILabel!
@@ -20,7 +23,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    let data = ["accelerobotics","application_of_gis","entreprenuer_and_business_plan","hacktrack","motor_bike_overhauling","rc_cars","trancebotics","wireless_sensor_networks"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if(UIScreen.mainScreen().bounds.height == 568)

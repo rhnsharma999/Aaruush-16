@@ -39,12 +39,16 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
         super.viewDidLoad()
         
+        
+        // added parallax effect here
+        
+        //-------------------parallax effect---------------------------->
         applyMotionEffect(toView: self.view, mangnitude: 10)
         applyMotionEffect(toView: imageView, mangnitude: -20)
         applyMotionEffect(toView: firstLogo, mangnitude: -20)
         applyMotionEffect(toView: secondLogo, mangnitude: -20)
         applyMotionEffect(toView: signInButton, mangnitude: -20)
-        
+        //-------------------parallax effect---------------------------->
         
         
         
@@ -121,7 +125,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
        
        
-        
+        //-------------------animations ---------------------------->
         UIView.animateWithDuration(0.5, delay: 0.5, options: [.CurveEaseOut], animations: {
             
            self.imageView.alpha = 1.0
@@ -162,6 +166,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
                  })
             })
  
+        //-------------------animations---------------------------->
     }
    
   
@@ -219,7 +224,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     }
 
     
-    func applyMotionEffect(toView view:UIView,mangnitude:Float)
+    func applyMotionEffect(toView view:UIView,mangnitude:Float) //function for reusability parallax effect
     {
         let xMotion = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis);
         xMotion.minimumRelativeValue = -mangnitude

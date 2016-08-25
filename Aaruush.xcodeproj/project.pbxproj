@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B559B261D46812300FAF65D /* DCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B559B251D46812300FAF65D /* DCollectionViewController.swift */; };
 		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
 		1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */; };
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
@@ -15,7 +14,6 @@
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
 		1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
-		DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
@@ -31,11 +29,7 @@
 		DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CBF1CEF9D5200097862 /* SecondViewController.swift */; };
 		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
 		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
-		DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */; };
 		DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0AB1D4401740005804A /* AaruushViewController.swift */; };
-		DE7FC0AE1D4492040005804A /* TeamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */; };
-		DE7FC0B01D4495D60005804A /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7FC0AF1D4495D60005804A /* TeamCell.xib */; };
-		DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */; };
 		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
 		DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */; };
 		DE843B791D66FF2B00E0AA17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */; };
@@ -69,7 +63,6 @@
 		00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
 		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
-		1B559B251D46812300FAF65D /* DCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCollectionViewController.swift; sourceTree = "<group>"; };
 		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
 		1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronsViewController.swift; sourceTree = "<group>"; };
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -77,7 +70,6 @@
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsViewController.swift; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewController.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,11 +93,7 @@
 		DE720CBF1CEF9D5200097862 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightsCollectionViewController.swift; sourceTree = "<group>"; };
 		DE7FC0AB1D4401740005804A /* AaruushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AaruushViewController.swift; sourceTree = "<group>"; };
-		DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewController.swift; sourceTree = "<group>"; };
-		DE7FC0AF1D4495D60005804A /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
-		DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -215,11 +203,9 @@
 				DE5666BB1D6E03B3000F608C /* ArchViewController.swift */,
 				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
-				1B559B251D46812300FAF65D /* DCollectionViewController.swift */,
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
-				DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
@@ -276,10 +262,6 @@
 		DEAF0F231D65EBB8002923C1 /* toBeDeleted */ = {
 			isa = PBXGroup;
 			children = (
-				DE7FC0AD1D4492040005804A /* TeamCollectionViewController.swift */,
-				DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */,
-				DE7FC0AF1D4495D60005804A /* TeamCell.xib */,
-				DE7FC0B11D4496180005804A /* TeamCollectionViewCell.swift */,
 			);
 			name = toBeDeleted;
 			path = Aaruush;
@@ -394,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
-				DE7FC0B01D4495D60005804A /* TeamCell.xib in Resources */,
 				DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
 				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
@@ -473,7 +454,6 @@
 			files = (
 				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
 				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
-				DE7FC0A71D43F89C0005804A /* HighlightsCollectionViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
 				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
 				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
@@ -485,11 +465,8 @@
 				DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */,
 				DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */,
 				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
-				DE7FC0AE1D4492040005804A /* TeamCollectionViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
 				DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */,
-				1B559B261D46812300FAF65D /* DCollectionViewController.swift in Sources */,
-				DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */,
 				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
 				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
@@ -497,7 +474,6 @@
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
 				1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */,
 				DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */,
-				DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

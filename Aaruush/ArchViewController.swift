@@ -14,7 +14,7 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     
     @IBOutlet var eventTitle: UILabel!
     @IBOutlet var Eventinfo: UITextView!
-    let data = ["1","2","3","4"];
+    let data = ["1","2","3","4"]; //dummmy data will change later
     
     
     

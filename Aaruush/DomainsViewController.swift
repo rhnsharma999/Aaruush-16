@@ -13,9 +13,9 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     @IBOutlet weak var domainsCollectionView: UICollectionView!
     
-    var selectedImage = ""
+   
     
-    let domainImages = ["Architecture","Bluebook","Digital Design","Electrizite","Fundaz","konstruktion","machination","MAGEFFICIE","ONLINE","praesentatio","robogyan","vimanaz","x-zone","YUDDHAME"]
+    let domainImages = ["Architecture","Bluebook","Digital Design","Electrizite","Fundaz","konstruktion","machination","MAGEFFICIE","ONLINE","praesentatio","robogyan","vimanaz","x-zone","YUDDHAME"] //dummy data
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
-            cell1.photo.image = UIImage(named: domainImages[indexPath.row]);
+            cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
             cell1.photoTitle.text=domainImages[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
             
@@ -67,7 +67,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             
         else
         {
-            cell.myImage.image = UIImage(named: domainImages[indexPath.row]);
+            cell.myImage.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate threa
             cell.myLabel.text = domainImages[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
             

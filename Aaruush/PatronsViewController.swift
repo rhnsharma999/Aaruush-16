@@ -12,7 +12,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     @IBOutlet weak var patronsCollectionView: UICollectionView!
     
-    var selectedImage = ""
+   
     
     
     //dummy data
@@ -57,6 +57,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
         {
             cell1.photo.image = UIImage(named: data[indexPath.row]);
             cell1.photoTitle.text=titles[indexPath.row];
+            cell1.photoTitle.font = cell1.photoTitle.font.fontWithSize(11)
             cell1.backgroundColor  = UIColor.clearColor();
             
             
@@ -76,6 +77,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
         {
             cell.myImage.image = UIImage(named: data[indexPath.row]);
             cell.myLabel.text = titles[indexPath.row];
+             cell.myLabel.font =  cell.myLabel.font.fontWithSize(15)
             cell.backgroundColor  = UIColor.clearColor();
             
             
@@ -97,7 +99,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        selectedImage = data[indexPath.row];
+        //for now do nothing
         
         
     }
@@ -107,7 +109,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.patronsCollectionView.frame.width/2, height: self.patronsCollectionView.frame.width/2);
+        return CGSize(width: self.patronsCollectionView.frame.width/2, height: (self.patronsCollectionView.frame.width/2) + 50);
         
     }
 

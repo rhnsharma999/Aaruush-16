@@ -92,6 +92,11 @@ class AaruushViewController: UIViewController {
             }, completion: nil);
         
     }
+    
+    @IBAction func Logout(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     /*
     // MARK: - Navigation
 

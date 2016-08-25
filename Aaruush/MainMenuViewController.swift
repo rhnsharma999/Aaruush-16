@@ -186,11 +186,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             
             
             
-            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
-                                                                  fromViewController:self.dynamicType,
-                                                                  toViewController:HighlightsCollectionViewController.self,
-                                                                  forAction:.PushPop)
-            //performSegueWithIdentifier("selectOption", sender: self);
+         
             
         }
     }

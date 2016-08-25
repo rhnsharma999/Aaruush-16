@@ -15,9 +15,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTT-J2-7if">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zTT-J2-7if">
                         <rect key="frame" x="26" y="130" width="109" height="22"/>
-                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,7 +36,6 @@
                 <constraint firstItem="GXo-iD-Otp" firstAttribute="top" secondItem="s8L-Cr-cMt" secondAttribute="top" constant="8" id="B61-5v-X0r"/>
                 <constraint firstItem="zTT-J2-7if" firstAttribute="top" secondItem="GXo-iD-Otp" secondAttribute="bottom" constant="12" id="NqO-K6-FdM"/>
                 <constraint firstAttribute="trailing" secondItem="GXo-iD-Otp" secondAttribute="trailing" constant="25" id="Ovt-dw-sVG"/>
-                <constraint firstAttribute="bottom" secondItem="zTT-J2-7if" secondAttribute="bottom" constant="8" id="TGm-Cy-dfO"/>
                 <constraint firstAttribute="trailing" secondItem="zTT-J2-7if" secondAttribute="trailing" constant="25" id="TYv-VP-C2w"/>
                 <constraint firstItem="zTT-J2-7if" firstAttribute="leading" secondItem="s8L-Cr-cMt" secondAttribute="leading" constant="26" id="jb4-aq-5Iw"/>
             </constraints>
