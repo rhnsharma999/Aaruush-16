@@ -18,6 +18,7 @@ class Reusable
     static let MAIN_TO_TEAM = "team";
     static let MAIN_TO_CREDITS = "credits"
     static let MAIN_DOMAIN_TO_ARCH = "domainEvent"
+    static let MAIN_TO_WORKSHOPS = "toWorkshops"
     
     
 }

@@ -13,6 +13,7 @@
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
 		1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */; };
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
+		1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
 		DE2C7A751D43D52A0061FFA8 /* DomainsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
@@ -74,6 +75,7 @@
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsViewController.swift; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DE2C7A741D43D52A0061FFA8 /* DomainsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsCollectionViewController.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
@@ -206,8 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
+				DE720CC11CEF9D5200097862 /* ViewController.swift */,
+				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
 				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
-				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */,
 				DE5666BB1D6E03B3000F608C /* ArchViewController.swift */,
 				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
@@ -215,9 +219,8 @@
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
-				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
 				DE7FC0A61D43F89C0005804A /* HighlightsCollectionViewController.swift */,
-				DE720CC11CEF9D5200097862 /* ViewController.swift */,
+				DE720C921CEF9C7F00097862 /* Main.storyboard */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
 				DE720C9D1CEF9C7F00097862 /* Info.plist */,
@@ -492,6 +495,7 @@
 				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
 				DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */,
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
+				1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */,
 				DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */,
 				DE7FC0B21D4496180005804A /* TeamCollectionViewCell.swift in Sources */,
 			);
