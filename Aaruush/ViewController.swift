@@ -26,20 +26,11 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     
     var facebookString = ""
     override func viewDidLoad() {
-        
-        
-        
+        super.viewDidLoad()
         //rounded edges
         signInButton.layer.borderWidth = 2;
         signInButton.layer.borderColor = UIColor.yellowColor().CGColor
         signInButton.layer.cornerRadius = 10;
-        
-          
-        
-        
-        super.viewDidLoad()
-        
-        
         // added parallax effect here
         
         //-------------------parallax effect---------------------------->
@@ -49,30 +40,14 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         applyMotionEffect(toView: secondLogo, mangnitude: -20)
         applyMotionEffect(toView: signInButton, mangnitude: -20)
         //-------------------parallax effect---------------------------->
-        
-        
-        
-        
-        if (FBSDKAccessToken.currentAccessToken() == nil)
-        {
-            print("not logged in...")
-        }
-        else
-        {
-            self.performSegueWithIdentifier("toLogin", sender: self);
-            
-            
-            print("logged in...")
-        }
-       
 }
     
-    // MARK: - Facebook login methods
+    
+// MARK:  Facebook login methods
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if(facebookString == ""){
-            let alert = UIAlertController(title: "Invalid Credentials!", message: "You must log in to proceed.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Cancel ) { _ in })
+            
         }
         else{
             FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
@@ -85,11 +60,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("user logged out...")
-        let loginManager : FBSDKLoginManager = FBSDKLoginManager()
-        loginManager.logOut()
-        self.facebookString = ""
-        dismissViewControllerAnimated(true, completion: nil)
+       
     }
     
     
@@ -179,31 +150,17 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
-            
-            
-            self.performSegueWithIdentifier("toLogin", sender: self);
-            
-            let fbloginresult : FBSDKLoginManagerLoginResult = result
-            /* if(fbloginresult.grantedPermissions.contains("email"))
-             {
-             
-             }*/
-            print(fbloginresult)
-            
-            
-            
-            if (error == nil)
-            {
-                
+            if(FBSDKAccessToken.currentAccessToken() == nil){
+                let alert = UIAlertController(title: "Invalid Credentials!", message: "You must log in to proceed.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Cancel ) { _ in })
+                self.presentViewController(alert, animated: true, completion: nil)
             }
-            else
-            {
-                print("error");
-                
+            else{
+                self.performSegueWithIdentifier("toLogin", sender: self);
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+                print(fbloginresult)
             }
         }
-       
-
     }
     
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import RZTransitions
+import FBSDKLoginKit
 
 class AaruushViewController: UIViewController {
  
@@ -94,7 +95,10 @@ class AaruushViewController: UIViewController {
     }
     
     @IBAction func Logout(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        print("user logged out...")
+        let loginManager : FBSDKLoginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*
