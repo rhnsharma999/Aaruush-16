@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 
 class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate {
@@ -14,13 +15,24 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     
     @IBOutlet var eventTitle: UILabel!
     @IBOutlet var Eventinfo: UITextView!
-    let data = ["1","2","3","4"]; //dummmy data will change later
+ 
+    
+    public var receivedData = [String]()
+    public var allData: JSON!
+    
     
     
     
     @IBOutlet var myCarousel: iCarousel!
 
     override func viewDidLoad() {
+        
+        
+    
+       
+        initialSet()
+        
+        
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
@@ -44,13 +56,13 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     }
 
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return data.count;
+        return receivedData.count;
         
     }
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
-        myView.image = UIImage(named: data[index]);
+        myView.image = UIImage(named: "1");
         return myView
     }
     
@@ -58,8 +70,35 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
  
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         
-        eventTitle.text = "Selected Index \(myCarousel.currentItemIndex+1)";
+        let title = receivedData[myCarousel.currentItemIndex]
         
+        
+        
+        if let desc = allData[title]["desc"].string
+        {
+            Eventinfo.text = desc
+            
+        }
+        Eventinfo.text =  Eventinfo.text + "\n\n";
+        
+        if let rounds =  allData[title]["rounds"].string
+        {
+            Eventinfo.text = Eventinfo.text + rounds
+        
+        }
+        
+        Eventinfo.text =  Eventinfo.text + "\n\n";
+        
+        if let coords = allData[title]["coords"].string
+        {
+            Eventinfo.text = Eventinfo.text + coords
+            
+        }
+        
+        
+        
+        
+        eventTitle.text = title
         
         
     }
@@ -70,6 +109,34 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func initialSet()
+    {
+        let title = receivedData[0]
+        
+        eventTitle.text = title
+        
+        if let desc = allData[title]["desc"].string
+        {
+            Eventinfo.text = desc
+            
+        }
+        Eventinfo.text =  Eventinfo.text + "\n\n";
+        
+        if let rounds =  allData[title]["rounds"].string
+        {
+            Eventinfo.text = Eventinfo.text + rounds
+            
+        }
+        
+        Eventinfo.text =  Eventinfo.text + "\n\n";
+        
+        if let coords = allData[title]["coords"].string
+        {
+            Eventinfo.text = Eventinfo.text + coords
+            
+        }
+        
+    }
 
 
 }

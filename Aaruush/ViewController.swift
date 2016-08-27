@@ -27,6 +27,11 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     var facebookString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.performSegueWithIdentifier("toLogin", sender: self);//Remove this
+        
+        
+        
         //rounded edges
         signInButton.layer.borderWidth = 2;
         signInButton.layer.borderColor = UIColor.yellowColor().CGColor

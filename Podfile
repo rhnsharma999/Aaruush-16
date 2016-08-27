@@ -9,7 +9,9 @@ pod 'LTMorphingLabel'
 pod 'SwiftyButton'
 pod 'FoldingCell'
 pod 'RZTransitions'
-
+pod 'Alamofire', '~> 3.4'
+pod 'SwiftyJSON'
+pod 'EZLoadingActivity'
 
 end
 

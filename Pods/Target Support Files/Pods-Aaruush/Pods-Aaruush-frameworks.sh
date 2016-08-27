@@ -84,18 +84,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Aaruush/Alamofire.framework"
+  install_framework "Pods-Aaruush/EZLoadingActivity.framework"
   install_framework "Pods-Aaruush/FoldingCell.framework"
   install_framework "Pods-Aaruush/LTMorphingLabel.framework"
   install_framework "Pods-Aaruush/PureLayout.framework"
   install_framework "Pods-Aaruush/RZTransitions.framework"
   install_framework "Pods-Aaruush/StarWars.framework"
   install_framework "Pods-Aaruush/SwiftyButton.framework"
+  install_framework "Pods-Aaruush/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Aaruush/Alamofire.framework"
+  install_framework "Pods-Aaruush/EZLoadingActivity.framework"
   install_framework "Pods-Aaruush/FoldingCell.framework"
   install_framework "Pods-Aaruush/LTMorphingLabel.framework"
   install_framework "Pods-Aaruush/PureLayout.framework"
   install_framework "Pods-Aaruush/RZTransitions.framework"
   install_framework "Pods-Aaruush/StarWars.framework"
   install_framework "Pods-Aaruush/SwiftyButton.framework"
+  install_framework "Pods-Aaruush/SwiftyJSON.framework"
 fi
