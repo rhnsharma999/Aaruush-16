@@ -12,7 +12,7 @@ pod 'RZTransitions'
 pod 'Alamofire', '~> 3.4'
 pod 'SwiftyJSON'
 pod 'EZLoadingActivity'
-
+pod 'RealmSwift'
 end
 
 target 'AaruushTests' do

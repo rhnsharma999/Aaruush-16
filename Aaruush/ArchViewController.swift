@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Foundation
 
 
 class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate {
@@ -17,23 +18,31 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     @IBOutlet var Eventinfo: UITextView!
  
     
-    public var receivedData = [String]()
-    public var allData: JSON!
+    var receivedData = [String]()
+    var allData: JSON!
     
     
     
     
     @IBOutlet var myCarousel: iCarousel!
+    
+    
+     func nsAttributedString(string : String) -> NSMutableAttributedString! {
+        var attributedString : NSMutableAttributedString = NSMutableAttributedString()
+        do{
+             attributedString =  try NSMutableAttributedString(data: string.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType], documentAttributes: nil)
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: NSRange(location: 0,length: attributedString.length))
+            
+        }
+        catch{
+        }
+        
+        return attributedString
+    }
 
     override func viewDidLoad() {
-        
-        
-    
-       
+        //Eventinfo.backgroundColor = UIColor.whiteColor()
         initialSet()
-        
-        
-        
         if(UIScreen.mainScreen().bounds.height == 568)
         {
             self.Eventinfo.font = .systemFontOfSize(13)
@@ -71,36 +80,29 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         
         let title = receivedData[myCarousel.currentItemIndex]
-        
+        var localEventInfo = ""
+        eventTitle.text = title
         
         
         if let desc = allData[title]["desc"].string
         {
-            Eventinfo.text = desc
+            localEventInfo = desc
             
         }
-        Eventinfo.text =  Eventinfo.text + "\n\n";
         
         if let rounds =  allData[title]["rounds"].string
         {
-            Eventinfo.text = Eventinfo.text + rounds
-        
+            localEventInfo += rounds
         }
         
-        Eventinfo.text =  Eventinfo.text + "\n\n";
+        //Eventinfo.text =  Eventinfo.text + "\n\n";
         
         if let coords = allData[title]["coords"].string
         {
-            Eventinfo.text = Eventinfo.text + coords
-            
+            localEventInfo += coords
         }
-        
-        
-        
-        
-        eventTitle.text = title
-        
-        
+     
+        Eventinfo.attributedText = nsAttributedString(localEventInfo)
     }
     
     
@@ -114,29 +116,27 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
         let title = receivedData[0]
         
         eventTitle.text = title
+        var localEventInfo = ""
         
         if let desc = allData[title]["desc"].string
         {
-            Eventinfo.text = desc
+            localEventInfo = desc
             
         }
-        Eventinfo.text =  Eventinfo.text + "\n\n";
+        //Eventinfo.text =  Eventinfo.text + "\n\n";
         
         if let rounds =  allData[title]["rounds"].string
         {
-            Eventinfo.text = Eventinfo.text + rounds
+            localEventInfo += rounds
             
         }
-        
-        Eventinfo.text =  Eventinfo.text + "\n\n";
-        
         if let coords = allData[title]["coords"].string
         {
-            Eventinfo.text = Eventinfo.text + coords
+            localEventInfo += coords
             
         }
+        Eventinfo.attributedText = nsAttributedString(localEventInfo)
+        
         
     }
-
-
 }

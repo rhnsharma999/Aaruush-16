@@ -36,6 +36,19 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func nsAttributedString(string : String) -> NSMutableAttributedString! {
+        var attributedString : NSMutableAttributedString = NSMutableAttributedString()
+        do{
+            attributedString =  try NSMutableAttributedString(data: string.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType], documentAttributes: nil)
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: NSRange(location: 0,length: attributedString.length))
+            
+        }
+        catch{
+        }
+        
+        return attributedString
+    }
+    
     
     override func viewDidLoad() {
         
@@ -93,35 +106,32 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         let heading = titles[carousel.currentItemIndex]
         workshopLabel.text = heading
         
+        var localWorkshopInfo = ""
+        
         if let info = global_json[heading]["description"].string
         {
-            workshopInfo.text = info + "\n\n";
+            localWorkshopInfo = info
             
         }
         if let info = global_json[heading]["team"].string
         {
-            workshopInfo.text = workshopInfo.text + "\n";
-            workshopInfo.text = workshopInfo.text + info;
+            localWorkshopInfo += info
             
         }
         if let info = global_json[heading]["date"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nDate: ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+           localWorkshopInfo += info
         }
         if let info = global_json[heading]["cost"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nCost: ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+            localWorkshopInfo += info
         }
         if let info = global_json[heading]["time"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nTime : ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+            localWorkshopInfo += info
         }
+        
+        workshopInfo.attributedText = nsAttributedString(localWorkshopInfo)
         
     }
     
@@ -130,36 +140,29 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     {
         let heading = titles[0]
         workshopLabel.text = heading
+        var localWorkshopInfo = ""
         
         if let info = global_json[heading]["description"].string
         {
-            workshopInfo.text = info + "\n\n";
-            
+                localWorkshopInfo = info
         }
         if let info = global_json[heading]["team"].string
         {
-            workshopInfo.text = workshopInfo.text + "\n";
-            workshopInfo.text = workshopInfo.text + info;
-            
+            localWorkshopInfo += info
         }
         if let info = global_json[heading]["date"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nDate: ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+            localWorkshopInfo += info
         }
         if let info = global_json[heading]["cost"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nCost: ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+            localWorkshopInfo += info
         }
         if let info = global_json[heading]["time"].string
         {
-            workshopInfo.text = workshopInfo.text + "\nTime : ";
-            workshopInfo.text = workshopInfo.text + info;
-            
+                localWorkshopInfo += info
         }
+        workshopInfo.attributedText = nsAttributedString(localWorkshopInfo)
     }
     
     func getData()
@@ -175,7 +178,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
                         self.global_json = JSON(value)
                         
                         self.titles.popLast()
-                        for (key,subJson):(String,JSON) in self.global_json
+                        for (key,_):(String,JSON) in self.global_json
                         {
                             self.titles.append(key)
                         }

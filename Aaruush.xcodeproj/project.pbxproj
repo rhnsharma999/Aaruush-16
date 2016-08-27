@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC521D170485A20FE2AA6B3 /* Pods_AaruushTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */; };
 		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
 		1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */; };
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
 		1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */; };
 		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
 		1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */; };
+		3D253868BA79C366EB35B5FA /* Pods_AaruushUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */; };
+		436291EF8EAA44036BA199EB /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
@@ -39,7 +42,6 @@
 		DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */; };
 		DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */; };
 		DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */; };
-		ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +62,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
-		05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
+		098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
 		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
 		1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronsViewController.swift; sourceTree = "<group>"; };
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsViewController.swift; sourceTree = "<group>"; };
+		2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
+		80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AaruushUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AaruushTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixSWalaCell.xib; sourceTree = "<group>"; };
 		DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixSWalaCell.swift; sourceTree = "<group>"; };
 		DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +118,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED820D047C5242AF8F272CF0 /* Pods_Aaruush.framework in Frameworks */,
 				1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */,
 				1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */,
 				1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */,
+				436291EF8EAA44036BA199EB /* Pods_Aaruush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC521D170485A20FE2AA6B3 /* Pods_AaruushTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,27 +137,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D253868BA79C366EB35B5FA /* Pods_AaruushUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78D28A0C79DF02998C7BD7CC /* Pods */ = {
+		273D7782446423DB46F65428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */,
-				0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BEFB959FC2C8D52A974F10C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				05CDB8D5B8B99DB0E0555BFF /* Pods_Aaruush.framework */,
+				2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */,
+				D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */,
+				83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5EF32EBB5AACBCF9DFD0D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */,
+				263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */,
+				80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */,
+				FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */,
+				098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */,
+				D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DE3499511D66FA9E003EF897 /* custom cells */ = {
@@ -177,8 +193,8 @@
 				DE720CA51CEF9C7F00097862 /* AaruushTests */,
 				DE720CB01CEF9C7F00097862 /* AaruushUITests */,
 				DE720C8C1CEF9C7E00097862 /* Products */,
-				78D28A0C79DF02998C7BD7CC /* Pods */,
-				BEFB959FC2C8D52A974F10C0 /* Frameworks */,
+				B5EF32EBB5AACBCF9DFD0D73 /* Pods */,
+				273D7782446423DB46F65428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,12 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE720CB61CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "Aaruush" */;
 			buildPhases = (
-				5BA6B4B2FA1543B15EB9A14F /* Check Pods Manifest.lock */,
+				68588D1D49277A0F9E99B099 /* [CP] Check Pods Manifest.lock */,
 				DE720C871CEF9C7E00097862 /* Sources */,
 				DE720C881CEF9C7E00097862 /* Frameworks */,
 				DE720C891CEF9C7E00097862 /* Resources */,
-				1CEFAFC373DFF503FFB03920 /* Embed Pods Frameworks */,
-				190B7693A0FE5B974D0E56CA /* Copy Pods Resources */,
+				102256CEDF6BCB7D05A7F65E /* [CP] Embed Pods Frameworks */,
+				431894ED8F6A04CD709D28C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE720CB91CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushTests" */;
 			buildPhases = (
+				BD4D429B89B0809C85C46749 /* [CP] Check Pods Manifest.lock */,
 				DE720C9E1CEF9C7F00097862 /* Sources */,
 				DE720C9F1CEF9C7F00097862 /* Frameworks */,
 				DE720CA01CEF9C7F00097862 /* Resources */,
+				B4C849748EE26F4D345B60AF /* [CP] Embed Pods Frameworks */,
+				54A8A54F43206BA05338844A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,9 +331,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE720CBC1CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushUITests" */;
 			buildPhases = (
+				A42BD5D0584A5127AB23F23E /* [CP] Check Pods Manifest.lock */,
 				DE720CA91CEF9C7F00097862 /* Sources */,
 				DE720CAA1CEF9C7F00097862 /* Frameworks */,
 				DE720CAB1CEF9C7F00097862 /* Resources */,
+				343F84BECD25F21C4762FA8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,29 +421,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		190B7693A0FE5B974D0E56CA /* Copy Pods Resources */ = {
+		102256CEDF6BCB7D05A7F65E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CEFAFC373DFF503FFB03920 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,14 +436,104 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5BA6B4B2FA1543B15EB9A14F /* Check Pods Manifest.lock */ = {
+		343F84BECD25F21C4762FA8A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		431894ED8F6A04CD709D28C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54A8A54F43206BA05338844A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68588D1D49277A0F9E99B099 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A42BD5D0584A5127AB23F23E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4C849748EE26F4D345B60AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4D429B89B0809C85C46749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +709,7 @@
 		};
 		DE720CB71CEF9C7F00097862 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00569F6AAA47BB7A3BB1CF50 /* Pods-Aaruush.debug.xcconfig */;
+			baseConfigurationReference = 0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -636,7 +732,7 @@
 		};
 		DE720CB81CEF9C7F00097862 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0605EDCEA171900810C5873D /* Pods-Aaruush.release.xcconfig */;
+			baseConfigurationReference = 263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -658,6 +754,7 @@
 		};
 		DE720CBA1CEF9C7F00097862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AaruushTests/Info.plist;
@@ -670,6 +767,7 @@
 		};
 		DE720CBB1CEF9C7F00097862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AaruushTests/Info.plist;
@@ -682,6 +780,7 @@
 		};
 		DE720CBD1CEF9C7F00097862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AaruushUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -693,6 +792,7 @@
 		};
 		DE720CBE1CEF9C7F00097862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AaruushUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

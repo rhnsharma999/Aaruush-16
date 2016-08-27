@@ -23,6 +23,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     var global_Event_Detail:JSON!
     
     var selected:String!
+    var dummyImage = UIImage()
     //<--------------------------NEtwork data------------------------------->
     
     
@@ -34,7 +35,11 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
    
     
     
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dummyImage = UIImage(named: "image")!
+        
+    }
     
     
     
@@ -71,14 +76,15 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         let cell1 = domainsCollectionView.dequeueReusableCellWithReuseIdentifier("cell1", forIndexPath: indexPath) as! FiveSWalaCell
         
         
-        cell.transform = CGAffineTransformMakeScale(0.5,0.5);
-        cell1.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        cell.transform = CGAffineTransformMakeScale(0.5,0.5)
+        cell1.transform = CGAffineTransformMakeScale(0.5,0.5)
         
         
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
-            cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
+            //cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
+            cell1.photo.image = dummyImage
             cell1.photoTitle.text=domain_names[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
             
@@ -98,7 +104,8 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             
         else
         {
-            cell.myImage.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate threa
+            cell.myImage.image = dummyImage
+            //cell.myImage.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate threa
             cell.myLabel.text = domain_names[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
             
@@ -136,7 +143,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var svc = segue.destinationViewController as! ArchViewController
+        let svc = segue.destinationViewController as! ArchViewController
         
         svc.receivedData = global_JSON[selected]!
         svc.allData = global_Event_Detail
@@ -159,7 +166,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
                     
               
                     let json = JSON(value)
-                    for (key,subJson):(String, JSON) in json
+                    for (key,_):(String, JSON) in json
                     {
 
                         self.domain_names.append(key) //getDomainNames
