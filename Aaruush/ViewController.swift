@@ -151,8 +151,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
       UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
     UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
-        
-        
+        if(FBSDKAccessToken.currentAccessToken() != nil){
+            performSegueWithIdentifier("toLogin", sender: self)
+        }
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
             if(FBSDKAccessToken.currentAccessToken() == nil){
@@ -203,8 +204,5 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         view.addMotionEffect(group)
         
     }
-   
-
-    //func animationControllerForPresentedController(presented: UIViewController, presentingController presenting:
 }
 
