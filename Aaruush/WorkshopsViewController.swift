@@ -103,6 +103,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     }
     
     override func viewDidLayoutSubviews() {
+        self.backButton.center.x = self.view.bounds.width/2
         self.backButton.layer.cornerRadius = self.backButton.bounds.width/2
     }
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
@@ -216,7 +217,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
                 case .Failure(let error):
                     print(error)
                     MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
-                    MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Netowrk Error", mode: .Cross, animated: true)
+                    MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Network Error", mode: .Cross, animated: true)
                     self.navigationController?.navigationBar.hidden = false;
                 }
         }

@@ -70,6 +70,8 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
         self.navigationController?.navigationBar.hidden = false;
     }
     override func viewDidLayoutSubviews() {
+        
+        self.backButton.center.x = self.view.bounds.width/2
         self.backButton.layer.cornerRadius = self.backButton.bounds.width/2
     }
     
