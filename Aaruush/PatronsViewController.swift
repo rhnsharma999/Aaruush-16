@@ -24,6 +24,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
 
     override func viewDidLoad() {
+        self.navigationItem.title = "Patrons"
         super.viewDidLoad()
         patronsCollectionView.backgroundColor = UIColor.clearColor();
         patronsCollectionView.registerNib(UINib(nibName: "FiveSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);

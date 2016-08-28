@@ -19,6 +19,7 @@ class AaruushViewController: UIViewController {
 
     override func viewDidLoad() {
         
+        
         aboutInfo.alpha = 0.0
         
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class AaruushViewController: UIViewController {
 
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true;
         
     }

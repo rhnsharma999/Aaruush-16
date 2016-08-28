@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import EZLoadingActivity
+import MRProgress
+import RZTransitions
 
 
 class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -45,7 +47,10 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     override func viewDidLoad()
     {
-        EZLoadingActivity.show("Loading..",disableUI: true);
+        self.navigationItem.title = "Domains"
+         navigationController?.delegate = RZTransitionsManager.shared()
+        
+        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Loading", mode: .IndeterminateSmallDefault, animated: true)
         getData()
         getData1()
         
@@ -128,6 +133,10 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         selected = domain_names[indexPath.row]
         
+        RZTransitionsManager.shared().setAnimationController(RZZoomPushAnimationController(),
+                                                              fromViewController:self.dynamicType,
+                                                              toViewController:ArchViewController.self,forAction:.PushPop)
+        
         
         self.performSegueWithIdentifier(Reusable.MAIN_DOMAIN_TO_ARCH, sender: self)
         
@@ -191,7 +200,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
                     
                 }
             case .Failure(let error):
-                EZLoadingActivity.hide(success: false, animated: true)
+                
                 print(error)
                 
                 
@@ -212,13 +221,17 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
                 if let value = response.result.value {
                    self.global_Event_Detail = JSON(value)
   
-                    EZLoadingActivity.hide()
+                 
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true);
+                    
                     self.domainsCollectionView.reloadData()
                     
                     self.domainsCollectionView.hidden = false;
                 }
             case .Failure(let error):
                 print(error)
+                MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true);
+                MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Network Error", mode: .Cross, animated: true)
             }
         }
     }

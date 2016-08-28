@@ -17,6 +17,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         
         
+        self.navigationItem.title = "Aaruush 16"
         
         myCollection.delegate = self;
         myCollection.dataSource = self;
@@ -178,7 +179,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         else if(indexPath.row == 2){
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:PatronsViewController.self,forAction:.PushPop)
+                                                                  toViewController:WorkshopsViewController.self,forAction:.PushPop)
             performSegueWithIdentifier(Reusable.MAIN_TO_WORKSHOPS, sender: self)
         }
         else //under construction, to be removed

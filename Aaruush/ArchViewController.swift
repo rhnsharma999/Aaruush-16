@@ -14,6 +14,7 @@ import Foundation
 class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate {
     
     
+    @IBOutlet var backButton: UIButton!
     @IBOutlet var eventTitle: UILabel!
     @IBOutlet var Eventinfo: UITextView!
  
@@ -60,6 +61,18 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
 
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true;
+        
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
+    override func viewDidLayoutSubviews() {
+        self.backButton.layer.cornerRadius = self.backButton.bounds.width/2
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -108,7 +121,8 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     
     @IBAction func goBack(sender: AnyObject) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+       // self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func initialSet()

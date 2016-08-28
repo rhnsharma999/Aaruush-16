@@ -1,860 +1,2087 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0BC521D170485A20FE2AA6B3 /* Pods_AaruushTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */; };
-		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
-		1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */; };
-		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
-		1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */; };
-		1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA211D45337B001545F5 /* Bolts.framework */; };
-		1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */; };
-		3D253868BA79C366EB35B5FA /* Pods_AaruushUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */; };
-		436291EF8EAA44036BA199EB /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */; };
-		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
-		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
-		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
-		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
-		DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5666BB1D6E03B3000F608C /* ArchViewController.swift */; };
-		DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5666C31D6E0ED5000F608C /* iCarousel.m */; };
-		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
-		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
-		DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */; };
-		DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE720C981CEF9C7F00097862 /* Assets.xcassets */; };
-		DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */; };
-		DE720CA71CEF9C7F00097862 /* AaruushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CA61CEF9C7F00097862 /* AaruushTests.swift */; };
-		DE720CB21CEF9C7F00097862 /* AaruushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */; };
-		DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CBF1CEF9D5200097862 /* SecondViewController.swift */; };
-		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
-		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
-		DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0AB1D4401740005804A /* AaruushViewController.swift */; };
-		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
-		DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */; };
-		DE843B791D66FF2B00E0AA17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */; };
-		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
-		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
-		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
-		DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */; };
-		DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */; };
-		DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DE720CA31CEF9C7F00097862 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE720C831CEF9C7E00097862 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE720C8A1CEF9C7E00097862;
-			remoteInfo = Aaruush;
-		};
-		DE720CAE1CEF9C7F00097862 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE720C831CEF9C7E00097862 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE720C8A1CEF9C7E00097862;
-			remoteInfo = Aaruush;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
-		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
-		1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronsViewController.swift; sourceTree = "<group>"; };
-		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		1BF2AA211D45337B001545F5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsViewController.swift; sourceTree = "<group>"; };
-		2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aaruush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig"; sourceTree = "<group>"; };
-		80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.debug.xcconfig"; sourceTree = "<group>"; };
-		83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AaruushUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AaruushTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
-		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
-		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
-		DE5666BB1D6E03B3000F608C /* ArchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchViewController.swift; sourceTree = "<group>"; };
-		DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aaruush-Bridging-Header.h"; sourceTree = "<group>"; };
-		DE5666C21D6E0ED5000F608C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		DE5666C31D6E0ED5000F608C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE720C931CEF9C7F00097862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE720C961CEF9C7F00097862 /* Aaruush.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aaruush.xcdatamodel; sourceTree = "<group>"; };
-		DE720C981CEF9C7F00097862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE720C9B1CEF9C7F00097862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE720C9D1CEF9C7F00097862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE720CA21CEF9C7F00097862 /* AaruushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaruushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE720CA61CEF9C7F00097862 /* AaruushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaruushTests.swift; sourceTree = "<group>"; };
-		DE720CA81CEF9C7F00097862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE720CAD1CEF9C7F00097862 /* AaruushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaruushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaruushUITests.swift; sourceTree = "<group>"; };
-		DE720CB31CEF9C7F00097862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE720CBF1CEF9D5200097862 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
-		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE7FC0AB1D4401740005804A /* AaruushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AaruushViewController.swift; sourceTree = "<group>"; };
-		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
-		DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
-		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
-		DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixSWalaCell.xib; sourceTree = "<group>"; };
-		DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixSWalaCell.swift; sourceTree = "<group>"; };
-		DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		DE720C881CEF9C7E00097862 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */,
-				1BF2AA201D452ABF001545F5 /* FBSDKLoginKit.framework in Frameworks */,
-				1BF2AA221D45337B001545F5 /* Bolts.framework in Frameworks */,
-				436291EF8EAA44036BA199EB /* Pods_Aaruush.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720C9F1CEF9C7F00097862 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BC521D170485A20FE2AA6B3 /* Pods_AaruushTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720CAA1CEF9C7F00097862 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D253868BA79C366EB35B5FA /* Pods_AaruushUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		273D7782446423DB46F65428 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2435CE6F19A1717FC1B1F3C0 /* Pods_Aaruush.framework */,
-				D27895F8A560DF17E5BA180B /* Pods_AaruushTests.framework */,
-				83FDF82377C1D5327CE62C29 /* Pods_AaruushUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B5EF32EBB5AACBCF9DFD0D73 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */,
-				263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */,
-				80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */,
-				FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */,
-				098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */,
-				D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DE3499511D66FA9E003EF897 /* custom cells */ = {
-			isa = PBXGroup;
-			children = (
-				DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */,
-				DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */,
-				DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */,
-				DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */,
-			);
-			name = "custom cells";
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
-		DE720C821CEF9C7E00097862 = {
-			isa = PBXGroup;
-			children = (
-				1BF2AA211D45337B001545F5 /* Bolts.framework */,
-				1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */,
-				1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */,
-				DE720C8D1CEF9C7F00097862 /* Aaruush */,
-				DE3499511D66FA9E003EF897 /* custom cells */,
-				DEAF0F231D65EBB8002923C1 /* toBeDeleted */,
-				DE7FC0AA1D43FE740005804A /* Tools */,
-				DE7FC0A91D43FE430005804A /* Extras (for now) */,
-				DE720CA51CEF9C7F00097862 /* AaruushTests */,
-				DE720CB01CEF9C7F00097862 /* AaruushUITests */,
-				DE720C8C1CEF9C7E00097862 /* Products */,
-				B5EF32EBB5AACBCF9DFD0D73 /* Pods */,
-				273D7782446423DB46F65428 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		DE720C8C1CEF9C7E00097862 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DE720C8B1CEF9C7E00097862 /* Aaruush.app */,
-				DE720CA21CEF9C7F00097862 /* AaruushTests.xctest */,
-				DE720CAD1CEF9C7F00097862 /* AaruushUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DE720C8D1CEF9C7F00097862 /* Aaruush */ = {
-			isa = PBXGroup;
-			children = (
-				DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */,
-				DE720CC11CEF9D5200097862 /* ViewController.swift */,
-				DE7FC0AB1D4401740005804A /* AaruushViewController.swift */,
-				DEAF0F241D65EEEB002923C1 /* MainMenuViewController.swift */,
-				1BFECAA31D6EFFA000282D2E /* WorkshopsViewController.swift */,
-				DE5666BB1D6E03B3000F608C /* ArchViewController.swift */,
-				DE843B781D66FF2B00E0AA17 /* ProfileViewController.swift */,
-				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
-				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
-				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
-				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
-				DE720C921CEF9C7F00097862 /* Main.storyboard */,
-				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
-				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
-				DE720C9D1CEF9C7F00097862 /* Info.plist */,
-				DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */,
-			);
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
-		DE720CA51CEF9C7F00097862 /* AaruushTests */ = {
-			isa = PBXGroup;
-			children = (
-				DE720CA61CEF9C7F00097862 /* AaruushTests.swift */,
-				DE720CA81CEF9C7F00097862 /* Info.plist */,
-			);
-			path = AaruushTests;
-			sourceTree = "<group>";
-		};
-		DE720CB01CEF9C7F00097862 /* AaruushUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */,
-				DE720CB31CEF9C7F00097862 /* Info.plist */,
-			);
-			path = AaruushUITests;
-			sourceTree = "<group>";
-		};
-		DE7FC0A91D43FE430005804A /* Extras (for now) */ = {
-			isa = PBXGroup;
-			children = (
-				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
-				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
-				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
-			);
-			name = "Extras (for now)";
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
-		DE7FC0AA1D43FE740005804A /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				DE720CC01CEF9D5200097862 /* Stars.swift */,
-				DEA12BCB1D6612790058EE4D /* Reusable.swift */,
-				DE5666C21D6E0ED5000F608C /* iCarousel.h */,
-				DE5666C31D6E0ED5000F608C /* iCarousel.m */,
-				DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */,
-				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
-				DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */,
-			);
-			name = Tools;
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
-		DEAF0F231D65EBB8002923C1 /* toBeDeleted */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = toBeDeleted;
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		DE720C8A1CEF9C7E00097862 /* Aaruush */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE720CB61CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "Aaruush" */;
-			buildPhases = (
-				68588D1D49277A0F9E99B099 /* [CP] Check Pods Manifest.lock */,
-				DE720C871CEF9C7E00097862 /* Sources */,
-				DE720C881CEF9C7E00097862 /* Frameworks */,
-				DE720C891CEF9C7E00097862 /* Resources */,
-				102256CEDF6BCB7D05A7F65E /* [CP] Embed Pods Frameworks */,
-				431894ED8F6A04CD709D28C8 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Aaruush;
-			productName = Aaruush;
-			productReference = DE720C8B1CEF9C7E00097862 /* Aaruush.app */;
-			productType = "com.apple.product-type.application";
-		};
-		DE720CA11CEF9C7F00097862 /* AaruushTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE720CB91CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushTests" */;
-			buildPhases = (
-				BD4D429B89B0809C85C46749 /* [CP] Check Pods Manifest.lock */,
-				DE720C9E1CEF9C7F00097862 /* Sources */,
-				DE720C9F1CEF9C7F00097862 /* Frameworks */,
-				DE720CA01CEF9C7F00097862 /* Resources */,
-				B4C849748EE26F4D345B60AF /* [CP] Embed Pods Frameworks */,
-				54A8A54F43206BA05338844A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE720CA41CEF9C7F00097862 /* PBXTargetDependency */,
-			);
-			name = AaruushTests;
-			productName = AaruushTests;
-			productReference = DE720CA21CEF9C7F00097862 /* AaruushTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DE720CAC1CEF9C7F00097862 /* AaruushUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE720CBC1CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushUITests" */;
-			buildPhases = (
-				A42BD5D0584A5127AB23F23E /* [CP] Check Pods Manifest.lock */,
-				DE720CA91CEF9C7F00097862 /* Sources */,
-				DE720CAA1CEF9C7F00097862 /* Frameworks */,
-				DE720CAB1CEF9C7F00097862 /* Resources */,
-				343F84BECD25F21C4762FA8A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE720CAF1CEF9C7F00097862 /* PBXTargetDependency */,
-			);
-			name = AaruushUITests;
-			productName = AaruushUITests;
-			productReference = DE720CAD1CEF9C7F00097862 /* AaruushUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		DE720C831CEF9C7E00097862 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = rohan;
-				TargetAttributes = {
-					DE720C8A1CEF9C7E00097862 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DF8NGUWUSH;
-					};
-					DE720CA11CEF9C7F00097862 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = DE720C8A1CEF9C7E00097862;
-					};
-					DE720CAC1CEF9C7F00097862 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = DE720C8A1CEF9C7E00097862;
-					};
-				};
-			};
-			buildConfigurationList = DE720C861CEF9C7E00097862 /* Build configuration list for PBXProject "Aaruush" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = DE720C821CEF9C7E00097862;
-			productRefGroup = DE720C8C1CEF9C7E00097862 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				DE720C8A1CEF9C7E00097862 /* Aaruush */,
-				DE720CA11CEF9C7F00097862 /* AaruushTests */,
-				DE720CAC1CEF9C7F00097862 /* AaruushUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		DE720C891CEF9C7E00097862 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
-				DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */,
-				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
-				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
-				DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720CA01CEF9C7F00097862 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720CAB1CEF9C7F00097862 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		102256CEDF6BCB7D05A7F65E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		343F84BECD25F21C4762FA8A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		431894ED8F6A04CD709D28C8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		54A8A54F43206BA05338844A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68588D1D49277A0F9E99B099 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A42BD5D0584A5127AB23F23E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B4C849748EE26F4D345B60AF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD4D429B89B0809C85C46749 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		DE720C871CEF9C7E00097862 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
-				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
-				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
-				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
-				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
-				1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */,
-				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
-				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
-				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
-				DE843B791D66FF2B00E0AA17 /* ProfileViewController.swift in Sources */,
-				DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */,
-				DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */,
-				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
-				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
-				DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */,
-				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
-				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
-				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
-				DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */,
-				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
-				1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */,
-				DEAF0F251D65EEEB002923C1 /* MainMenuViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720C9E1CEF9C7F00097862 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE720CA71CEF9C7F00097862 /* AaruushTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE720CA91CEF9C7F00097862 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE720CB21CEF9C7F00097862 /* AaruushUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DE720CA41CEF9C7F00097862 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE720C8A1CEF9C7E00097862 /* Aaruush */;
-			targetProxy = DE720CA31CEF9C7F00097862 /* PBXContainerItemProxy */;
-		};
-		DE720CAF1CEF9C7F00097862 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE720C8A1CEF9C7E00097862 /* Aaruush */;
-			targetProxy = DE720CAE1CEF9C7F00097862 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DE720C921CEF9C7F00097862 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE720C931CEF9C7F00097862 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE720C9B1CEF9C7F00097862 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		DE720CB41CEF9C7F00097862 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		DE720CB51CEF9C7F00097862 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DE720CB71CEF9C7F00097862 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB48859699B0A9FD08C9F2A /* Pods-Aaruush.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Aaruush/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		DE720CB81CEF9C7F00097862 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 263DBEE8DE29E27679650FE8 /* Pods-Aaruush.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Aaruush/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		DE720CBA1CEF9C7F00097862 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80A4E765062E29BC4A6AECC6 /* Pods-AaruushTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AaruushTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush";
-			};
-			name = Debug;
-		};
-		DE720CBB1CEF9C7F00097862 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD6626DFF134F673BF63E4E0 /* Pods-AaruushTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AaruushTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush";
-			};
-			name = Release;
-		};
-		DE720CBD1CEF9C7F00097862 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 098BDB2DB350A75A89DF5B23 /* Pods-AaruushUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = AaruushUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Aaruush;
-			};
-			name = Debug;
-		};
-		DE720CBE1CEF9C7F00097862 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07A4FABFF5E992D5971B831 /* Pods-AaruushUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = AaruushUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Aaruush;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		DE720C861CEF9C7E00097862 /* Build configuration list for PBXProject "Aaruush" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE720CB41CEF9C7F00097862 /* Debug */,
-				DE720CB51CEF9C7F00097862 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE720CB61CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "Aaruush" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE720CB71CEF9C7F00097862 /* Debug */,
-				DE720CB81CEF9C7F00097862 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE720CB91CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE720CBA1CEF9C7F00097862 /* Debug */,
-				DE720CBB1CEF9C7F00097862 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE720CBC1CEF9C7F00097862 /* Build configuration list for PBXNativeTarget "AaruushUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE720CBD1CEF9C7F00097862 /* Debug */,
-				DE720CBE1CEF9C7F00097862 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DE720C961CEF9C7F00097862 /* Aaruush.xcdatamodel */,
-			);
-			currentVersion = DE720C961CEF9C7F00097862 /* Aaruush.xcdatamodel */;
-			path = Aaruush.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = DE720C831CEF9C7E00097862 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>098BDB2DB350A75A89DF5B23</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-AaruushUITests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0AB48859699B0A9FD08C9F2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Aaruush.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0BC521D170485A20FE2AA6B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D27895F8A560DF17E5BA180B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>102256CEDF6BCB7D05A7F65E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1B779B7F1D69758B00C24929</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DomainsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B779B801D69758B00C24929</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B779B7F1D69758B00C24929</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BEB677A1D6DAFCA009392EF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PatronsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BEB677B1D6DAFCA009392EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BEB677A1D6DAFCA009392EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BF2AA1D1D452AB3001545F5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>FBSDKCoreKit.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BF2AA1E1D452AB3001545F5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BF2AA1D1D452AB3001545F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BF2AA1F1D452ABF001545F5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>FBSDKLoginKit.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BF2AA201D452ABF001545F5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BF2AA1F1D452ABF001545F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BF2AA211D45337B001545F5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>Bolts.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BF2AA221D45337B001545F5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BF2AA211D45337B001545F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BFECAA31D6EFFA000282D2E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>WorkshopsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BFECAA41D6EFFA000282D2E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1BFECAA31D6EFFA000282D2E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2435CE6F19A1717FC1B1F3C0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_Aaruush.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>263DBEE8DE29E27679650FE8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Aaruush.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>273D7782446423DB46F65428</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2435CE6F19A1717FC1B1F3C0</string>
+				<string>D27895F8A560DF17E5BA180B</string>
+				<string>83FDF82377C1D5327CE62C29</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>343F84BECD25F21C4762FA8A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>3D253868BA79C366EB35B5FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83FDF82377C1D5327CE62C29</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>431894ED8F6A04CD709D28C8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>436291EF8EAA44036BA199EB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2435CE6F19A1717FC1B1F3C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>54A8A54F43206BA05338844A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>65DF84E54CF6719790F294B9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>68588D1D49277A0F9E99B099</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>80A4E765062E29BC4A6AECC6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-AaruushTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83FDF82377C1D5327CE62C29</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_AaruushUITests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A42BD5D0584A5127AB23F23E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B4C849748EE26F4D345B60AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B5EF32EBB5AACBCF9DFD0D73</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0AB48859699B0A9FD08C9F2A</string>
+				<string>263DBEE8DE29E27679650FE8</string>
+				<string>80A4E765062E29BC4A6AECC6</string>
+				<string>FD6626DFF134F673BF63E4E0</string>
+				<string>098BDB2DB350A75A89DF5B23</string>
+				<string>D07A4FABFF5E992D5971B831</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD4D429B89B0809C85C46749</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D07A4FABFF5E992D5971B831</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-AaruushUITests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D27895F8A560DF17E5BA180B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_AaruushTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DE1D6C111D1AF535004D7D24</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ColorExtension.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE1D6C121D1AF535004D7D24</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE1D6C111D1AF535004D7D24</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE2C7A761D43DA590061FFA8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>FiveSWalaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE2C7A771D43DA590061FFA8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE2C7A761D43DA590061FFA8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE2C7A781D43DA700061FFA8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FiveSWalaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE2C7A791D43DA700061FFA8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE2C7A781D43DA700061FFA8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE3499511D66FA9E003EF897</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DEAF0F1F1D65E8B0002923C1</string>
+				<string>DEAF0F211D65E92C002923C1</string>
+				<string>DE2C7A761D43DA590061FFA8</string>
+				<string>DE2C7A781D43DA700061FFA8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>custom cells</string>
+			<key>path</key>
+			<string>Aaruush</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE3F7B721D372B64007BA09E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EventsTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE3F7B731D372B64007BA09E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE3F7B721D372B64007BA09E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE5666BB1D6E03B3000F608C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ArchViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE5666BC1D6E03B3000F608C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE5666BB1D6E03B3000F608C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE5666C11D6E0ED4000F608C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Aaruush-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE5666C21D6E0ED5000F608C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>iCarousel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE5666C31D6E0ED5000F608C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>iCarousel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE5666C41D6E0ED5000F608C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE5666C31D6E0ED5000F608C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C821CEF9C7E00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BF2AA211D45337B001545F5</string>
+				<string>1BF2AA1F1D452ABF001545F5</string>
+				<string>1BF2AA1D1D452AB3001545F5</string>
+				<string>DE720C8D1CEF9C7F00097862</string>
+				<string>DE3499511D66FA9E003EF897</string>
+				<string>DEAF0F231D65EBB8002923C1</string>
+				<string>DE7FC0AA1D43FE740005804A</string>
+				<string>DE7FC0A91D43FE430005804A</string>
+				<string>DE720CA51CEF9C7F00097862</string>
+				<string>DE720CB01CEF9C7F00097862</string>
+				<string>DE720C8C1CEF9C7E00097862</string>
+				<string>B5EF32EBB5AACBCF9DFD0D73</string>
+				<string>273D7782446423DB46F65428</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C831CEF9C7E00097862</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>rohan</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>DE720C8A1CEF9C7E00097862</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>DF8NGUWUSH</string>
+					</dict>
+					<key>DE720CA11CEF9C7F00097862</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>DE720C8A1CEF9C7E00097862</string>
+					</dict>
+					<key>DE720CAC1CEF9C7F00097862</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>DE720C8A1CEF9C7E00097862</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>DE720C861CEF9C7E00097862</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>DE720C821CEF9C7E00097862</string>
+			<key>productRefGroup</key>
+			<string>DE720C8C1CEF9C7E00097862</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>DE720C8A1CEF9C7E00097862</string>
+				<string>DE720CA11CEF9C7F00097862</string>
+				<string>DE720CAC1CEF9C7F00097862</string>
+			</array>
+		</dict>
+		<key>DE720C861CEF9C7E00097862</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DE720CB41CEF9C7F00097862</string>
+				<string>DE720CB51CEF9C7F00097862</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DE720C871CEF9C7E00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DEAF0F1E1D65E83B002923C1</string>
+				<string>1B779B801D69758B00C24929</string>
+				<string>DE720CC41CEF9D5200097862</string>
+				<string>DE5666BC1D6E03B3000F608C</string>
+				<string>DE5666C41D6E0ED5000F608C</string>
+				<string>1BEB677B1D6DAFCA009392EF</string>
+				<string>DEA12BCC1D6612790058EE4D</string>
+				<string>DE7FC0AC1D4401740005804A</string>
+				<string>DE8F5DDF1D33DD3200D3079A</string>
+				<string>DE843B791D66FF2B00E0AA17</string>
+				<string>DE2C7A791D43DA700061FFA8</string>
+				<string>DEAF0F221D65E92C002923C1</string>
+				<string>DE720CC21CEF9D5200097862</string>
+				<string>DE720C971CEF9C7F00097862</string>
+				<string>DE3F7B731D372B64007BA09E</string>
+				<string>DE1D6C121D1AF535004D7D24</string>
+				<string>DE720C8F1CEF9C7F00097862</string>
+				<string>DE7FC0B41D449D190005804A</string>
+				<string>DE843B771D66FDB900E0AA17</string>
+				<string>DE720CC31CEF9D5200097862</string>
+				<string>1BFECAA41D6EFFA000282D2E</string>
+				<string>DEAF0F251D65EEEB002923C1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720C881CEF9C7E00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1BF2AA1E1D452AB3001545F5</string>
+				<string>1BF2AA201D452ABF001545F5</string>
+				<string>1BF2AA221D45337B001545F5</string>
+				<string>436291EF8EAA44036BA199EB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720C891CEF9C7E00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DE720C9C1CEF9C7F00097862</string>
+				<string>DE2C7A771D43DA590061FFA8</string>
+				<string>DE720C991CEF9C7F00097862</string>
+				<string>DE720C941CEF9C7F00097862</string>
+				<string>DEAF0F201D65E8B0002923C1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720C8A1CEF9C7E00097862</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DE720CB61CEF9C7F00097862</string>
+			<key>buildPhases</key>
+			<array>
+				<string>68588D1D49277A0F9E99B099</string>
+				<string>DE720C871CEF9C7E00097862</string>
+				<string>DE720C881CEF9C7E00097862</string>
+				<string>DE720C891CEF9C7E00097862</string>
+				<string>102256CEDF6BCB7D05A7F65E</string>
+				<string>431894ED8F6A04CD709D28C8</string>
+				<string>65DF84E54CF6719790F294B9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Aaruush</string>
+			<key>productName</key>
+			<string>Aaruush</string>
+			<key>productReference</key>
+			<string>DE720C8B1CEF9C7E00097862</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>DE720C8B1CEF9C7E00097862</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Aaruush.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DE720C8C1CEF9C7E00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720C8B1CEF9C7E00097862</string>
+				<string>DE720CA21CEF9C7F00097862</string>
+				<string>DE720CAD1CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C8D1CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720C8E1CEF9C7F00097862</string>
+				<string>DE720CC11CEF9D5200097862</string>
+				<string>DE7FC0AB1D4401740005804A</string>
+				<string>DEAF0F241D65EEEB002923C1</string>
+				<string>1BFECAA31D6EFFA000282D2E</string>
+				<string>DE5666BB1D6E03B3000F608C</string>
+				<string>DE843B781D66FF2B00E0AA17</string>
+				<string>DEAF0F1D1D65E83B002923C1</string>
+				<string>1B779B7F1D69758B00C24929</string>
+				<string>DE7FC0B31D449D190005804A</string>
+				<string>1BEB677A1D6DAFCA009392EF</string>
+				<string>DE720C921CEF9C7F00097862</string>
+				<string>DE720C981CEF9C7F00097862</string>
+				<string>DE720C9A1CEF9C7F00097862</string>
+				<string>DE720C9D1CEF9C7F00097862</string>
+				<string>DE720C951CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Aaruush</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C8E1CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C8F1CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720C8E1CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C921CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720C931CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C931CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C941CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720C921CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C951CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720C961CEF9C7F00097862</string>
+			</array>
+			<key>currentVersion</key>
+			<string>DE720C961CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>Aaruush.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>DE720C961CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>Aaruush.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C971CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720C951CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C981CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C991CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720C981CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C9A1CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720C9B1CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C9B1CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C9C1CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720C9A1CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720C9D1CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720C9E1CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DE720CA71CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720C9F1CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0BC521D170485A20FE2AA6B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720CA01CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720CA11CEF9C7F00097862</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DE720CB91CEF9C7F00097862</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BD4D429B89B0809C85C46749</string>
+				<string>DE720C9E1CEF9C7F00097862</string>
+				<string>DE720C9F1CEF9C7F00097862</string>
+				<string>DE720CA01CEF9C7F00097862</string>
+				<string>B4C849748EE26F4D345B60AF</string>
+				<string>54A8A54F43206BA05338844A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DE720CA41CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>AaruushTests</string>
+			<key>productName</key>
+			<string>AaruushTests</string>
+			<key>productReference</key>
+			<string>DE720CA21CEF9C7F00097862</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>DE720CA21CEF9C7F00097862</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>AaruushTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DE720CA31CEF9C7F00097862</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>DE720C831CEF9C7E00097862</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>DE720C8A1CEF9C7E00097862</string>
+			<key>remoteInfo</key>
+			<string>Aaruush</string>
+		</dict>
+		<key>DE720CA41CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>DE720C8A1CEF9C7E00097862</string>
+			<key>targetProxy</key>
+			<string>DE720CA31CEF9C7F00097862</string>
+		</dict>
+		<key>DE720CA51CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720CA61CEF9C7F00097862</string>
+				<string>DE720CA81CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>AaruushTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CA61CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AaruushTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CA71CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720CA61CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720CA81CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CA91CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DE720CB21CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720CAA1CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3D253868BA79C366EB35B5FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720CAB1CEF9C7F00097862</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DE720CAC1CEF9C7F00097862</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DE720CBC1CEF9C7F00097862</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A42BD5D0584A5127AB23F23E</string>
+				<string>DE720CA91CEF9C7F00097862</string>
+				<string>DE720CAA1CEF9C7F00097862</string>
+				<string>DE720CAB1CEF9C7F00097862</string>
+				<string>343F84BECD25F21C4762FA8A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DE720CAF1CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>AaruushUITests</string>
+			<key>productName</key>
+			<string>AaruushUITests</string>
+			<key>productReference</key>
+			<string>DE720CAD1CEF9C7F00097862</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>DE720CAD1CEF9C7F00097862</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>AaruushUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DE720CAE1CEF9C7F00097862</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>DE720C831CEF9C7E00097862</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>DE720C8A1CEF9C7E00097862</string>
+			<key>remoteInfo</key>
+			<string>Aaruush</string>
+		</dict>
+		<key>DE720CAF1CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>DE720C8A1CEF9C7E00097862</string>
+			<key>targetProxy</key>
+			<string>DE720CAE1CEF9C7F00097862</string>
+		</dict>
+		<key>DE720CB01CEF9C7F00097862</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720CB11CEF9C7F00097862</string>
+				<string>DE720CB31CEF9C7F00097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>AaruushUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CB11CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AaruushUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CB21CEF9C7F00097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720CB11CEF9C7F00097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720CB31CEF9C7F00097862</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CB41CEF9C7F00097862</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DE720CB51CEF9C7F00097862</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DE720CB61CEF9C7F00097862</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DE720CB71CEF9C7F00097862</string>
+				<string>DE720CB81CEF9C7F00097862</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DE720CB71CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0AB48859699B0A9FD08C9F2A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Aaruush/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Webarch-Aaruush16</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Aaruush/Aaruush-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DE720CB81CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>263DBEE8DE29E27679650FE8</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Aaruush/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>Webarch-Aaruush16</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Aaruush/Aaruush-Bridging-Header.h</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DE720CB91CEF9C7F00097862</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DE720CBA1CEF9C7F00097862</string>
+				<string>DE720CBB1CEF9C7F00097862</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DE720CBA1CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>80A4E765062E29BC4A6AECC6</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>AaruushTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>rohan.AaruushTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DE720CBB1CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FD6626DFF134F673BF63E4E0</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>AaruushTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>rohan.AaruushTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DE720CBC1CEF9C7F00097862</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DE720CBD1CEF9C7F00097862</string>
+				<string>DE720CBE1CEF9C7F00097862</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DE720CBD1CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>098BDB2DB350A75A89DF5B23</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>AaruushUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>rohan.AaruushUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Aaruush</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DE720CBE1CEF9C7F00097862</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D07A4FABFF5E992D5971B831</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>AaruushUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>rohan.AaruushUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Aaruush</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DE720CBF1CEF9D5200097862</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SecondViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CC01CEF9D5200097862</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Stars.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CC11CEF9D5200097862</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE720CC21CEF9D5200097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720CBF1CEF9D5200097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720CC31CEF9D5200097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720CC01CEF9D5200097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE720CC41CEF9D5200097862</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE720CC11CEF9D5200097862</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE7FC0A91D43FE430005804A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE3F7B721D372B64007BA09E</string>
+				<string>DE8F5DDE1D33DD3200D3079A</string>
+				<string>DE720CBF1CEF9D5200097862</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Extras (for now)</string>
+			<key>path</key>
+			<string>Aaruush</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE7FC0AA1D43FE740005804A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE720CC01CEF9D5200097862</string>
+				<string>DEA12BCB1D6612790058EE4D</string>
+				<string>DE5666C21D6E0ED5000F608C</string>
+				<string>DE5666C31D6E0ED5000F608C</string>
+				<string>DE843B761D66FDB900E0AA17</string>
+				<string>DE1D6C111D1AF535004D7D24</string>
+				<string>DE5666C11D6E0ED4000F608C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tools</string>
+			<key>path</key>
+			<string>Aaruush</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE7FC0AB1D4401740005804A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AaruushViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE7FC0AC1D4401740005804A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE7FC0AB1D4401740005804A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE7FC0B31D449D190005804A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DetailViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE7FC0B41D449D190005804A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE7FC0B31D449D190005804A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE843B761D66FDB900E0AA17</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ZoomAnimator.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE843B771D66FDB900E0AA17</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE843B761D66FDB900E0AA17</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE843B781D66FF2B00E0AA17</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ProfileViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE843B791D66FF2B00E0AA17</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE843B781D66FF2B00E0AA17</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE8F5DDE1D33DD3200D3079A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EventsTableViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE8F5DDF1D33DD3200D3079A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE8F5DDE1D33DD3200D3079A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEA12BCB1D6612790058EE4D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Reusable.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEA12BCC1D6612790058EE4D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEA12BCB1D6612790058EE4D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEAF0F1D1D65E83B002923C1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TeamViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEAF0F1E1D65E83B002923C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEAF0F1D1D65E83B002923C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEAF0F1F1D65E8B0002923C1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SixSWalaCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEAF0F201D65E8B0002923C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEAF0F1F1D65E8B0002923C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEAF0F211D65E92C002923C1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SixSWalaCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEAF0F221D65E92C002923C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEAF0F211D65E92C002923C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEAF0F231D65EBB8002923C1</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>toBeDeleted</string>
+			<key>path</key>
+			<string>Aaruush</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEAF0F241D65EEEB002923C1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MainMenuViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEAF0F251D65EEEB002923C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEAF0F241D65EEEB002923C1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FD6626DFF134F673BF63E4E0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-AaruushTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>DE720C831CEF9C7E00097862</string>
+</dict>
+</plist>

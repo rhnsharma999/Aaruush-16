@@ -9,7 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import EZLoadingActivity
+import MRProgress
+
 
 class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataSource {
     
@@ -26,14 +27,17 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     //dummy data, will change later
     let data = ["accelerobotics","application_of_gis","entreprenuer_and_business_plan","hacktrack","motor_bike_overhauling","rc_cars","trancebotics","wireless_sensor_networks"]
     
+    @IBOutlet var backgroundForCarousel: UIImageView!
     @IBOutlet weak var workshopCarousel: iCarousel!
     
     @IBOutlet weak var workshopLabel: UILabel!
 
     @IBOutlet weak var workshopInfo: UITextView!
     
+    @IBOutlet var backButton: UIButton!
     @IBAction func goBack(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func nsAttributedString(string : String) -> NSMutableAttributedString! {
@@ -50,11 +54,26 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     }
     
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true;
+        
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
+    
+    
+    
     override func viewDidLoad() {
+        
+        
+        
+        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Loading", mode: .IndeterminateSmallDefault, animated: true)
         
         self.workshopInfo.hidden = true;
         self.workshopCarousel.hidden = true;
         self.workshopLabel.hidden = true;
+        self.backgroundForCarousel.hidden = true
         
        
         if(UIScreen.mainScreen().bounds.height == 568)
@@ -63,7 +82,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         }
         
         
-        EZLoadingActivity.show("Loading...", disableUI: true)
+        
         getData()
         
         
@@ -81,6 +100,10 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         workshopCarousel.backgroundColor = UIColor.clearColor()
         workshopCarousel.pagingEnabled = true
         workshopCarousel.contentMode = .ScaleAspectFill
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.backButton.layer.cornerRadius = self.backButton.bounds.width/2
     }
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
         return titles.count
@@ -187,12 +210,14 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
                         self.workshopInfo.hidden = false;
                         self.workshopCarousel.hidden = false;
                         self.workshopLabel.hidden = false;
-                        
-                        EZLoadingActivity.hide()
+                        self.backgroundForCarousel.hidden = false
+                        MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
                     }
                 case .Failure(let error):
                     print(error)
-                    EZLoadingActivity.hide(success: false, animated: true)
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                    MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Netowrk Error", mode: .Cross, animated: true)
+                    self.navigationController?.navigationBar.hidden = false;
                 }
         }
     }
