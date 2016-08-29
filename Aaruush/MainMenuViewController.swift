@@ -8,8 +8,20 @@
 
 import UIKit
 import RZTransitions
+import SwiftyJSON
+import Alamofire
+import MRProgress
 class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    //-------------to be sent to next views--------->
+    var workshops:JSON!
+    var domains:JSON!
+    var domainDetail:JSON!
+    var to_be_sent = [String:[String]]()
+    //<------------to be sent to the next views----->
+    
+    
+    
     
     var photos = [String]()
     @IBOutlet var myCollection: UICollectionView!
@@ -34,8 +46,22 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         
         
         
+        
+        if(internetCheck()) //fetch fresh data
+        {
+            
+            getDomains()
+            getDomainDetails()
+            getWorkshops()
+  
+            
+            //print(self.domains)
+            //print(self.workshops)
+            
+            
+        }
 
-        // Do any additional setup after loading the view.
+
     }
 
    
@@ -52,6 +78,19 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             vc.nameToShow = "Powered By Webarch";
             vc.photoToShow = "wa"
         }
+        else if(segue.identifier == Reusable.MAIN_TO_WORKSHOPS)
+        {
+            let vc = segue.destinationViewController as! WorkshopsViewController
+            vc.global_json = self.workshops
+        }
+        else if(segue.identifier == Reusable.MAIN_TO_DOMAINS)
+        {
+            let vc = segue.destinationViewController as! DomainsViewController
+            vc.global_Event_Detail = self.domainDetail
+            vc.json = self.domains
+        }
+        
+        
     }
     
     
@@ -132,7 +171,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     
 
     
-     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+     {
         
         
         
@@ -163,7 +203,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:DomainsViewController.self,
                                                                   forAction:.PushPop)
-           performSegueWithIdentifier(Reusable.MAIN_TO_DOMAINS, sender: self)
+            performSegueWithIdentifier(Reusable.MAIN_TO_DOMAINS, sender:self.myCollection)
             
             
             
@@ -191,4 +231,134 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             
         }
     }
+    
+    
+    func internetCheck() ->Bool
+    {
+        let status = Reach().connectionStatus()
+        
+        switch status
+        {
+        case .Offline:
+            return false;
+           
+        case .Online(.WWAN):
+            return true;
+       
+        case .Online(.WiFi):
+            return true;
+       
+        
+        default:
+            return false;
+  
+        }
+        
+    }
+    
+    func getWorkshops()
+    {
+         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
+        
+        let url = "http://aaruush.net/testing123/eventData/workshop.json"
+        Alamofire.request(.GET, url).validate().responseJSON
+            { response in
+                switch response.result
+                {
+                case .Success:
+                    if let value = response.result.value
+                    {
+                        self.workshops = JSON(value)
+                        
+                    }
+                     MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                  
+                   
+                case .Failure(let error):
+                    print("EORRRRORORROORRORO")
+                    
+                }
+        }
+        
+        
+    }
+    func getDomains()
+    {
+        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
+        let url = "http://aaruush.net/testing123/eventData/eventData.json"
+        Alamofire.request(.GET, url).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    self.domainDetail = JSON(value)
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                   
+                  
+                }
+            case .Failure(let error):
+                 print("EORRRRORORROORRORO")
+            }
+        }
+        
+        
+    }
+    
+    func getDomainDetails()
+    {
+         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
+        let url = "http://aaruush.net/testing123/eventData/eventNames.json"
+        
+        Alamofire.request(.GET, url).validate().responseJSON
+            { response in
+                switch response.result
+                {
+                case .Success:
+                    if let value = response.result.value
+                    {
+                        
+                       self.domains = JSON(value)
+                         MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                      self.converter()
+                        
+                        print(self.to_be_sent)
+                      
+                        
+                    }
+                    
+                case .Failure(let error):
+                    
+                    print("EORRRRORORROORRORO")
+                    
+                    
+                }
+                
+        }
+        
+      
+    }
+    
+    func converter()
+    {
+        for (key,_):(String, JSON) in domains!
+        {
+            
+        //    self.domain_names.append(key) //getDomainNames
+            var myArray = [String]()
+            
+            for i in 0...domains![key].count
+            {
+                if let some = domains![key][i].string
+                {
+                    myArray.append(some)
+                }
+            }
+            
+            self.to_be_sent[key] = myArray
+            
+         //   print(self.global_JSON)
+            
+        }
+    }
+    
+    
 }

@@ -20,10 +20,14 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     @IBOutlet weak var domainsCollectionView: UICollectionView!
     
     //<--------------------------NEtwork data------------------------------->
+    
+    
+    
      var domain_names = [String]() //Domain Names here from the internet
     var global_JSON = [String:[String]]()
     var global_Event_Detail:JSON!
-    
+    var global_domain_JSON:JSON?
+    var json:JSON?
     var selected:String!
     var dummyImage = UIImage()
     //<--------------------------NEtwork data------------------------------->
@@ -43,16 +47,21 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
     }
     
+  
     
     
     override func viewDidLoad()
     {
+        
+       
+
+     //   print(global_Event_Detail)
         self.navigationItem.title = "Domains"
          navigationController?.delegate = RZTransitionsManager.shared()
         
-        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Loading", mode: .IndeterminateSmallDefault, animated: true)
+  
         getData()
-        getData1()
+    
         
         
         
@@ -64,7 +73,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         domainsCollectionView.registerNib(UINib(nibName: "SixSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s6);
         domainsCollectionView.delegate = self;
         domainsCollectionView.dataSource = self;
-        self.domainsCollectionView.hidden = true
+    
     }
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1;
@@ -160,81 +169,48 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
     }
     
+    
     func getData()
-    {
+    {/*
+        global_domain_JSON = self.json
         
-        let url = "http://aaruush.net/testing123/eventData/eventNames.json"
+        for(key,_):(String,JSON) in self.json!{
+            
+            self.domain_names.append(key)
+            
+        }*/
         
-        Alamofire.request(.GET, url).validate().responseJSON
-            { response in
-            switch response.result
+        
+        
+        
+        for (key,_):(String, JSON) in json!
+        {
+            
+              self.domain_names.append(key) //getDomainNames
+            var myArray = [String]()
+            
+            for i in 0...json![key].count
             {
-            case .Success:
-                if let value = response.result.value
+                if let some = json![key][i].string
                 {
-                    
-              
-                    let json = JSON(value)
-                    for (key,_):(String, JSON) in json
-                    {
-
-                        self.domain_names.append(key) //getDomainNames
-                        var myArray = [String]()
-                        
-                        for i in 0...json[key].count
-                        {
-                            if let some = json[key][i].string
-                            {
-                                myArray.append(some)
-                            }
-                        }
-                     
-                        self.global_JSON[key] = myArray
-                    
-                     
-                    }
-                  
-                    
-                    
-                    
-                    
+                    myArray.append(some)
                 }
-            case .Failure(let error):
-                
-                print(error)
-                
-                
             }
-                
+            
+            self.global_JSON[key] = myArray
+            
+           // print(self.global_JSON)
+            
         }
+   //     print(self.global_JSON)
+      //  self.domainsCollectionView.reloadData()
+
+      //  self.domainsCollectionView.hidden = false;
+      
      
         
     }
     
-    func getData1()
-    {
-        
-        let url = "http://aaruush.net/testing123/eventData/eventData.json"
-        Alamofire.request(.GET, url).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-                   self.global_Event_Detail = JSON(value)
-  
-                 
-                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true);
-                    
-                    self.domainsCollectionView.reloadData()
-                    
-                    self.domainsCollectionView.hidden = false;
-                }
-            case .Failure(let error):
-                print(error)
-                MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true);
-                MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Network Error", mode: .Cross, animated: true)
-            }
-        }
-    }
-
+   
 
 }

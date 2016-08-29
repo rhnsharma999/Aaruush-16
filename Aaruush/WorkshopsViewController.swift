@@ -18,8 +18,8 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     
     //<--------------------------NEtwork data------------------------------->
   
-    var global_json:JSON!
-    var titles = [""]
+     var global_json:JSON!
+    var titles = [String]()
     //<--------------------------NEtwork data------------------------------->
     
     
@@ -68,13 +68,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         
         
         
-        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Loading", mode: .IndeterminateSmallDefault, animated: true)
-        
-        self.workshopInfo.hidden = true;
-        self.workshopCarousel.hidden = true;
-        self.workshopLabel.hidden = true;
-        self.backgroundForCarousel.hidden = true
-        
+      
        
         if(UIScreen.mainScreen().bounds.height == 568)
         {
@@ -189,38 +183,15 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         workshopInfo.attributedText = nsAttributedString(localWorkshopInfo)
     }
     
-    func getData()
+    func getData() 
     {
-        let url = "http://aaruush.net/testing123/eventData/workshop.json"
-        Alamofire.request(.GET, url).validate().responseJSON
-            { response in
-                switch response.result
-                {
-                case .Success:
-                    if let value = response.result.value
-                    {
-                        self.global_json = JSON(value)
-                        
-                        self.titles.popLast()
-                        for (key,_):(String,JSON) in self.global_json
-                        {
-                            self.titles.append(key)
-                        }
-                         self.setInitial()
-                        self.workshopCarousel.reloadData()
-                        self.workshopInfo.hidden = false;
-                        self.workshopCarousel.hidden = false;
-                        self.workshopLabel.hidden = false;
-                        self.backgroundForCarousel.hidden = false
-                        MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
-                    }
-                case .Failure(let error):
-                    print(error)
-                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
-                    MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Network Error", mode: .Cross, animated: true)
-                    self.navigationController?.navigationBar.hidden = false;
-                }
+        //self.titles.popLast()
+        for (key,_):(String,JSON) in self.global_json
+        {
+            self.titles.append(key)
         }
+        self.setInitial()
+        self.workshopCarousel.reloadData()
     }
 
 }
