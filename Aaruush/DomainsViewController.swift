@@ -26,7 +26,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
      var domain_names = [String]() //Domain Names here from the internet
     var global_JSON = [String:[String]]()
     var global_Event_Detail:JSON!
-    var global_domain_JSON:JSON?
+  
     var json:JSON?
     var selected:String!
     var dummyImage = UIImage()
@@ -171,37 +171,40 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     
     func getData()
-    {/*
-        global_domain_JSON = self.json
+    {
         
-        for(key,_):(String,JSON) in self.json!{
-            
-            self.domain_names.append(key)
-            
-        }*/
-        
-        
-        
-        
-        for (key,_):(String, JSON) in json!
+        if(json != nil)
         {
             
-              self.domain_names.append(key) //getDomainNames
-            var myArray = [String]()
-            
-            for i in 0...json![key].count
+            for (key,_):(String, JSON) in json!
             {
-                if let some = json![key][i].string
+                
+                self.domain_names.append(key) //getDomainNames
+                var myArray = [String]()
+                
+                for i in 0...json![key].count
                 {
-                    myArray.append(some)
+                    if let some = json![key][i].string
+                    {
+                        myArray.append(some)
+                    }
                 }
+                
+                self.global_JSON[key] = myArray
+                
+                
+                
+                
+                
+                // print(self.global_JSON)
+                
             }
             
-            self.global_JSON[key] = myArray
-            
-           // print(self.global_JSON)
-            
         }
+        
+        
+        
+        
    //     print(self.global_JSON)
       //  self.domainsCollectionView.reloadData()
 

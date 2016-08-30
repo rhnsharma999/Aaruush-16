@@ -14,9 +14,9 @@ import MRProgress
 class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
 
     //-------------to be sent to next views--------->
-    var workshops:JSON!
-    var domains:JSON!
-    var domainDetail:JSON!
+    var workshops:JSON?
+    var domains:JSON?
+    var domainDetail:JSON?
     var to_be_sent = [String:[String]]()
     //<------------to be sent to the next views----->
     
@@ -82,12 +82,14 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         {
             let vc = segue.destinationViewController as! WorkshopsViewController
             vc.global_json = self.workshops
+          
         }
         else if(segue.identifier == Reusable.MAIN_TO_DOMAINS)
         {
             let vc = segue.destinationViewController as! DomainsViewController
             vc.global_Event_Detail = self.domainDetail
             vc.json = self.domains
+          
         }
         
         
@@ -318,7 +320,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                         
                        self.domains = JSON(value)
                          MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
-                      self.converter()
+                      
                         
                         print(self.to_be_sent)
                       
@@ -337,28 +339,6 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
       
     }
     
-    func converter()
-    {
-        for (key,_):(String, JSON) in domains!
-        {
-            
-        //    self.domain_names.append(key) //getDomainNames
-            var myArray = [String]()
-            
-            for i in 0...domains![key].count
-            {
-                if let some = domains![key][i].string
-                {
-                    myArray.append(some)
-                }
-            }
-            
-            self.to_be_sent[key] = myArray
-            
-         //   print(self.global_JSON)
-            
-        }
-    }
-    
+  
     
 }

@@ -18,7 +18,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     
     //<--------------------------NEtwork data------------------------------->
   
-     var global_json:JSON!
+     var global_json:JSON?
     var titles = [String]()
     //<--------------------------NEtwork data------------------------------->
     
@@ -76,9 +76,10 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         }
         
         
-        
-        getData()
-        
+        if(global_json != nil)
+        {
+            getData()
+        }
         
         
         
@@ -121,32 +122,37 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         
-        let heading = titles[carousel.currentItemIndex]
-        workshopLabel.text = heading
-        
         var localWorkshopInfo = ""
         
-        if let info = global_json[heading]["description"].string
+        if(global_json != nil)
         {
-            localWorkshopInfo = info
+            let heading = titles[carousel.currentItemIndex]
+            workshopLabel.text = heading
             
-        }
-        if let info = global_json[heading]["team"].string
-        {
-            localWorkshopInfo += info
             
-        }
-        if let info = global_json[heading]["date"].string
-        {
-           localWorkshopInfo += info
-        }
-        if let info = global_json[heading]["cost"].string
-        {
-            localWorkshopInfo += info
-        }
-        if let info = global_json[heading]["time"].string
-        {
-            localWorkshopInfo += info
+            
+            if let info = global_json?[heading]["description"].string
+            {
+                localWorkshopInfo = info
+                
+            }
+            if let info = global_json?[heading]["team"].string
+            {
+                localWorkshopInfo += info
+                
+            }
+            if let info = global_json?[heading]["date"].string
+            {
+                localWorkshopInfo += info
+            }
+            if let info = global_json?[heading]["cost"].string
+            {
+                localWorkshopInfo += info
+            }
+            if let info = global_json?[heading]["time"].string
+            {
+                localWorkshopInfo += info
+            }
         }
         
         workshopInfo.attributedText = nsAttributedString(localWorkshopInfo)
@@ -160,23 +166,23 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         workshopLabel.text = heading
         var localWorkshopInfo = ""
         
-        if let info = global_json[heading]["description"].string
+        if let info = global_json?[heading]["description"].string
         {
                 localWorkshopInfo = info
         }
-        if let info = global_json[heading]["team"].string
+        if let info = global_json?[heading]["team"].string
         {
             localWorkshopInfo += info
         }
-        if let info = global_json[heading]["date"].string
+        if let info = global_json?[heading]["date"].string
         {
             localWorkshopInfo += info
         }
-        if let info = global_json[heading]["cost"].string
+        if let info = global_json?[heading]["cost"].string
         {
             localWorkshopInfo += info
         }
-        if let info = global_json[heading]["time"].string
+        if let info = global_json?[heading]["time"].string
         {
                 localWorkshopInfo += info
         }
@@ -186,12 +192,15 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     func getData() 
     {
         //self.titles.popLast()
-        for (key,_):(String,JSON) in self.global_json
+        if(global_json != nil)
         {
-            self.titles.append(key)
+            for (key,_):(String,JSON) in self.global_json!
+            {
+                self.titles.append(key)
+            }
+            self.setInitial()
+            self.workshopCarousel.reloadData()
         }
-        self.setInitial()
-        self.workshopCarousel.reloadData()
     }
 
 }
