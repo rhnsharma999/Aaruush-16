@@ -164,7 +164,9 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         let svc = segue.destinationViewController as! ArchViewController
         
         svc.receivedData = global_JSON[selected]!
-        svc.allData = global_Event_Detail
+       svc.allData = global_Event_Detail
+      //  svc.allData = nil;
+        
         
         
     }
@@ -201,6 +203,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             }
             
         }
+        self.domain_names = self.domain_names.sort()
         
         
         

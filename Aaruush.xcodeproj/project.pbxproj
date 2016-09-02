@@ -22,6 +22,7 @@
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
 		DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5666BB1D6E03B3000F608C /* ArchViewController.swift */; };
 		DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5666C31D6E0ED5000F608C /* iCarousel.m */; };
+		DE5E33EB1D79A1E800BECAF1 /* xirod.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5E33EA1D79A0FF00BECAF1 /* xirod.ttf */; };
 		DE6149001D74726200F3A6A4 /* InternetCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6148FF1D74726200F3A6A4 /* InternetCheck.swift */; };
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aaruush-Bridging-Header.h"; sourceTree = "<group>"; };
 		DE5666C21D6E0ED5000F608C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		DE5666C31D6E0ED5000F608C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		DE5E33EA1D79A0FF00BECAF1 /* xirod.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xirod.ttf; sourceTree = "<group>"; };
 		DE6148FF1D74726200F3A6A4 /* InternetCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetCheck.swift; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */,
 				DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */,
 				DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */,
+				DE5E33EA1D79A0FF00BECAF1 /* xirod.ttf */,
 			);
 			name = "custom cells";
 			path = Aaruush;
@@ -400,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5E33EB1D79A1E800BECAF1 /* xirod.ttf in Resources */,
 				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
 				DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,

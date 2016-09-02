@@ -14,11 +14,17 @@ class AaruushViewController: UIViewController {
  
     
     @IBOutlet var aboutInfo: UITextView!
+    @IBOutlet var aaruushLogo: UILabel!
+    @IBOutlet var towardsInfinity:UILabel!
+    
     var gesture:UISwipeGestureRecognizer!
     
 
     override func viewDidLoad() {
         
+        
+        aaruushLogo.font = UIFont(name: "xirod", size: 25)
+        towardsInfinity.font = UIFont(name: "xirod", size: 15)
         
         aboutInfo.alpha = 0.0
         

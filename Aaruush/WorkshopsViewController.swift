@@ -201,6 +201,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
             self.setInitial()
             self.workshopCarousel.reloadData()
         }
+        self.titles = self.titles.sort()
     }
 
 }

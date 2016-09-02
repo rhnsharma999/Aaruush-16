@@ -27,8 +27,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     var facebookString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.performSegueWithIdentifier("toLogin", sender: self);//Remove this
+        if(FBSDKAccessToken.currentAccessToken() != nil){
+            self.performSegueWithIdentifier("toLogin", sender: self)
+        }
         
         
         
