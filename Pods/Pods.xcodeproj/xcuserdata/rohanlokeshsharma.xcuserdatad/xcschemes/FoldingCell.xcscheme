@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '13E4AA187AE8962DE03858E7'
+               BlueprintIdentifier = '19C6408386A98ED8AA7D0ED7'
                BlueprintName = 'FoldingCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FoldingCell.framework'>

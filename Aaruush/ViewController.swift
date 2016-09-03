@@ -27,6 +27,13 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     var facebookString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(UIScreen.mainScreen().bounds.height == 568)
+        {
+            firstLogo.font = UIFont(name: "xirod", size: 15);
+            secondLogo.font = UIFont(name: "xirod", size: 12);
+            
+        }
         if(FBSDKAccessToken.currentAccessToken() != nil){
             self.performSegueWithIdentifier("toLogin", sender: self)
         }

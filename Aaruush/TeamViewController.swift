@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import MRProgress
+import ImageLoader
+import RZTransitions
 
 class TeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
-  //  let transition = ZoomAnimator()
+    var team:JSON?
+    var names = [String]()
+    
+    var selected = -1
     
     
     
-    var selectedImage:String!
+    
 
     @IBOutlet var myCollection: UICollectionView!
     
@@ -23,6 +31,11 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     override func viewDidLoad() {
         
+        navigationController?.delegate = RZTransitionsManager.shared()
+        MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Getting Team list from server", mode: .IndeterminateSmallDefault, animated: true)
+        
+        
+        getTeam();
         
         
         myCollection.backgroundColor = UIColor.clearColor();
@@ -52,7 +65,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count;
+        return names.count
         
     }
     
@@ -69,7 +82,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         if(UIScreen.mainScreen().bounds.height == 568)
         {
             cell1.photo.image = UIImage(named: data[indexPath.row]);
-            cell1.photoTitle.text=data[indexPath.row];
+            cell1.photoTitle.text = team![indexPath.row]["name"].string
             cell1.backgroundColor  = UIColor.clearColor();
             
             
@@ -87,8 +100,11 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         else
         {
-            cell.myImage.image = UIImage(named: data[indexPath.row]);
-            cell.myLabel.text = data[indexPath.row];
+            let imgURL = "http://aaruush.net/testing123/images/team/" + team![indexPath.row]["imgSource"].string!;
+            
+            cell.myImage.load(imgURL);
+            
+            cell.myLabel.text = team![indexPath.row]["name"].string
             cell.backgroundColor  = UIColor.clearColor();
             
             
@@ -110,6 +126,15 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
+        selected = indexPath.row;
+        
+        
+        RZTransitionsManager.shared().setAnimationController(RZZoomPushAnimationController(),
+                                                             fromViewController:self.dynamicType,
+                                                             toViewController:ProfileViewController.self,forAction:.PushPop)
+        
+        self.performSegueWithIdentifier(Reusable.TEAM_TO_PROFILE, sender: self);
+        
         
         
     }
@@ -126,18 +151,65 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if(segue.identifier == "details")
+        
+        if(segue.identifier == Reusable.TEAM_TO_PROFILE)
         {
-            let vc = segue.destinationViewController as! ProfileViewController
-          //  vc.transitioningDelegate = self;
+            var vc = segue.destinationViewController as! ProfileViewController
+            vc.pos = team![selected]["pos"].string!
+            vc.name = names[selected]
             
-            vc.image = selectedImage;
+            let s = "http://aaruush.net/testing123/images/team/" + team![selected]["imgSource"].string!
+            vc.profile = s;
+            
+            
+            
+            
+            //vc.profile = team![selected]["imgSource"].string!;
             
         }
         
     }
 
    
+    func getTeam()
+    {
+        
+        let url = "http://aaruush.net/testing123/eventData/teamData.json"
+        Alamofire.request(.GET, url).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let some = JSON(value)
+                    if(some != nil)
+                    {
+                        self.team = some;
+                        
+                        for i in 0...some.count-1
+                        {
+                            
+                            self.names.append(some[i]["name"].string!);
+                            
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    print(some.count);
+                    
+                    
+                    self.myCollection.reloadData()
+                    
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true);
+                    
+                    
+                }
+            case .Failure(let error):
+                print("FAIL")
+            }
+        }
+        
+    }
  
 
 }

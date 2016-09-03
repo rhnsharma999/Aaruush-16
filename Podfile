@@ -13,6 +13,7 @@ pod 'Alamofire', '~> 3.4'
 pod 'SwiftyJSON'
 pod 'EZLoadingActivity'
 pod 'MRProgress'
+pod 'ImageLoader'
 end
 
 target 'AaruushTests' do

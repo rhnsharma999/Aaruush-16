@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1915E26367C859011965F17032F5F951</key>
+		<key>02E87578DEDFA6E97EF10620EA9110A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0AB61A905F9D03E291EC873CA522C88B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F1BAA30DA8748C094BB34F28DE4242B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2FEC7F965DCBED9B67FE51A75D2B3D5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,11 +93,6 @@
 			<true/>
 		</dict>
 		<key>44D04613A7591446E9F604C26C55657F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6A2B0C4E49B53E8CB4FC82B66B0D27CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B00C06539466DAD85E8B4B908DF701DF</key>
+		<key>AD53FFE97D4F26A2958E3F6E5CFCD830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6A3003F9CE259CAFE870F00709762B1</key>
+		<key>EC1DC91232A5FA985E91882C17D8485C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C842EAC3660C5FFA31A1C71FC08DEFCA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F94C0E8F7D646E89A37CC4EE93969983</key>
+		<key>F5C1788D4C4DC1FBC0E31EEC2502E0EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

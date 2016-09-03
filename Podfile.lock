@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.1)
   - EZLoadingActivity (0.8)
   - FoldingCell (1.0.0)
+  - ImageLoader (0.9.0)
   - LTMorphingLabel (0.2.1)
   - MRProgress (0.8.3):
     - MRProgress/ActivityIndicator (= 0.8.3)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - EZLoadingActivity
   - FoldingCell
+  - ImageLoader
   - LTMorphingLabel
   - MRProgress
   - RZTransitions
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
+  ImageLoader: bb709e5b2708158da405760f42c75e7e52b561b5
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd

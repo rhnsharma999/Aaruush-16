@@ -10,6 +10,8 @@
         <mutableArray key="xirod.ttf">
             <string>Xirod-Regular</string>
             <string>Xirod-Regular</string>
+            <string>Xirod-Regular</string>
+            <string>Xirod-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -476,6 +478,81 @@
             </objects>
             <point key="canvasLocation" x="5132.5" y="3182.5"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="g8w-Pj-B62">
+            <objects>
+                <viewController id="kla-Eq-Nkm" customClass="ProfileViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HZY-tE-ZQR"/>
+                        <viewControllerLayoutGuide type="bottom" id="kJw-7v-AcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KhF-WV-4Ub">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lol1" translatesAutoresizingMaskIntoConstraints="NO" id="8sA-yw-HZd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTv-x3-DNw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="UW3-gi-Ne7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1" translatesAutoresizingMaskIntoConstraints="NO" id="f3r-iP-cWM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Raviteja Potla" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a47-be-WYo">
+                                            <rect key="frame" x="8" y="313" width="359" height="37"/>
+                                            <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="23"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SECRETARY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YcY-kd-8I6">
+                                            <rect key="frame" x="8" y="353" width="359" height="37"/>
+                                            <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-K2-7qg">
+                                            <rect key="frame" x="57" y="577" width="60" height="60"/>
+                                            <state key="normal" image="fbIcon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vez-Jc-pyb">
+                                            <rect key="frame" x="243" y="569" width="73" height="75"/>
+                                            <state key="normal" image="mail"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oP-Uu-qbx">
+                                            <rect key="frame" x="153" y="573" width="68" height="68"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <state key="normal" image="call icon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZb-JS-IvC">
+                                            <rect key="frame" x="41" y="505" width="103" height="30"/>
+                                            <state key="normal" title="Back FOr NOW"/>
+                                            <connections>
+                                                <action selector="goBack:" destination="kla-Eq-Nkm" eventType="touchUpInside" id="KzY-DY-XMg"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="a47-be-WYo" id="efn-dJ-mAX"/>
+                        <outlet property="posLabel" destination="YcY-kd-8I6" id="gdJ-7h-GYf"/>
+                        <outlet property="profileImage" destination="f3r-iP-cWM" id="Ntp-ql-W0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rE-Up-uEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5599.5" y="3182.5"/>
+        </scene>
         <!--Aaruush View Controller-->
         <scene sceneID="WfB-Zk-1Lu">
             <objects>
@@ -787,85 +864,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myCollection" destination="j3d-5s-ChV" id="I4Y-rx-uUk"/>
-                        <segue destination="ysG-aE-JCc" kind="presentation" identifier="details" id="6ZD-Mi-tPP"/>
+                        <segue destination="kla-Eq-Nkm" kind="show" identifier="profile" id="9er-fI-e6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSe-oK-oDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5599.5" y="2353.5"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="0rs-Bm-Haw">
-            <objects>
-                <viewController storyboardIdentifier="profile" id="ysG-aE-JCc" customClass="ProfileViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tMB-lB-Wba"/>
-                        <viewControllerLayoutGuide type="bottom" id="2iQ-ry-2GE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mmb-7H-fr2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lol1" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-WC-jXv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfs-NU-xuH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XPO-eF-fdz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-5e-Pic">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Some name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMi-yP-mje">
-                                            <rect key="frame" x="8" y="397" width="367" height="53"/>
-                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Q3-Az-1UT">
-                                            <rect key="frame" x="149" y="458" width="46" height="30"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="goBack:" destination="ysG-aE-JCc" eventType="touchUpInside" id="M3W-AW-eLh"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="rMi-yP-mje" secondAttribute="trailing" id="H7f-jf-7Z4"/>
-                                        <constraint firstItem="rMi-yP-mje" firstAttribute="leading" secondItem="XPO-eF-fdz" secondAttribute="leading" constant="8" id="I7c-yw-m8D"/>
-                                        <constraint firstAttribute="trailing" secondItem="gTS-5e-Pic" secondAttribute="trailing" id="LFw-nn-qhD"/>
-                                        <constraint firstItem="gTS-5e-Pic" firstAttribute="top" secondItem="XPO-eF-fdz" secondAttribute="top" id="Obl-AZ-1MY"/>
-                                        <constraint firstAttribute="bottom" secondItem="rMi-yP-mje" secondAttribute="bottom" constant="217" id="h0w-0c-5VC"/>
-                                        <constraint firstItem="gTS-5e-Pic" firstAttribute="leading" secondItem="XPO-eF-fdz" secondAttribute="leading" id="r7o-ZS-qrr"/>
-                                        <constraint firstItem="rMi-yP-mje" firstAttribute="top" secondItem="gTS-5e-Pic" secondAttribute="bottom" constant="43" id="yQt-2o-riF"/>
-                                    </constraints>
-                                </view>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2iQ-ry-2GE" firstAttribute="top" secondItem="0fg-WC-jXv" secondAttribute="bottom" id="8LF-dM-jYV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0fg-WC-jXv" secondAttribute="trailing" constant="-20" id="Snh-hp-xsD"/>
-                            <constraint firstItem="0fg-WC-jXv" firstAttribute="leading" secondItem="Mmb-7H-fr2" secondAttribute="leadingMargin" constant="-20" id="Ufk-Ui-bDD"/>
-                            <constraint firstItem="0fg-WC-jXv" firstAttribute="top" secondItem="Mmb-7H-fr2" secondAttribute="topMargin" id="Uog-LW-SaK"/>
-                            <constraint firstItem="Mfs-NU-xuH" firstAttribute="leading" secondItem="Mmb-7H-fr2" secondAttribute="leadingMargin" constant="-20" id="Wob-tA-Nb1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mfs-NU-xuH" secondAttribute="trailing" constant="-20" id="gjo-gb-66k"/>
-                            <constraint firstItem="Mfs-NU-xuH" firstAttribute="top" secondItem="Mmb-7H-fr2" secondAttribute="topMargin" id="mm7-Sh-7Qy"/>
-                            <constraint firstItem="2iQ-ry-2GE" firstAttribute="top" secondItem="Mfs-NU-xuH" secondAttribute="bottom" id="zzC-1U-acw"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="name" destination="rMi-yP-mje" id="Ohz-gE-AdS"/>
-                        <outlet property="profileImage" destination="gTS-5e-Pic" id="224-jl-8cC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CgV-Sk-ETZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5599.5" y="3182.5"/>
         </scene>
         <!--Events Table View Controller-->
         <scene sceneID="UFO-hq-5zt">
@@ -1454,16 +1458,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2-1" width="448" height="299"/>
         <image name="aaruush" width="300" height="150"/>
         <image name="bigballoon" width="56" height="81"/>
         <image name="bigcloud" width="85" height="52"/>
         <image name="bob the builder" width="189" height="267"/>
+        <image name="call icon" width="400" height="400"/>
         <image name="dark" width="1920" height="1200"/>
+        <image name="fbIcon" width="128" height="128"/>
         <image name="header" width="700" height="112"/>
         <image name="hills" width="1600" height="141"/>
         <image name="infinity" width="495" height="47"/>
         <image name="littlecloud" width="76" height="30"/>
         <image name="lol1" width="1080" height="1920"/>
+        <image name="mail" width="514" height="514"/>
         <image name="monu" width="518" height="200"/>
         <image name="smallballoon" width="26" height="39"/>
         <image name="sun" width="676" height="676"/>
