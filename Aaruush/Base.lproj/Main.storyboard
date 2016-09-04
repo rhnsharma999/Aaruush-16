@@ -517,6 +517,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-K2-7qg">
                                             <rect key="frame" x="57" y="577" width="60" height="60"/>
                                             <state key="normal" image="fbIcon"/>
+                                            <connections>
+                                                <action selector="openFB:" destination="kla-Eq-Nkm" eventType="touchUpInside" id="70I-Uk-pSl"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vez-Jc-pyb">
                                             <rect key="frame" x="243" y="569" width="73" height="75"/>

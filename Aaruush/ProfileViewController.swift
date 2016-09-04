@@ -14,7 +14,9 @@ class ProfileViewController: UIViewController {
     var profile:String!;
     var name:String!
     var pos:String!;
+    var fbURL:String!
     
+    var testString:String!
     
 
     @IBOutlet var profileImage: UIImageView!
@@ -26,6 +28,12 @@ class ProfileViewController: UIViewController {
         
         nameLabel.text = name;
         posLabel.text = pos;
+        
+      
+        testString =  String(fbURL.characters.dropFirst(25))
+        print(testString)
+        
+        
         
         super.viewDidLoad()
 
@@ -48,6 +56,21 @@ class ProfileViewController: UIViewController {
     @IBAction func goBack(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true);
         
+    }
+    @IBAction func openFB(sender: AnyObject) {
+        
+        let link = "fb://profile/" + testString
+        let url = NSURL(string: link);
+        
+        
+        if(UIApplication.sharedApplication().canOpenURL(url!))
+        {
+            UIApplication.sharedApplication().openURL(url!)
+        }
+        else{
+            UIApplication.sharedApplication().openURL(NSURL(string: fbURL)!)
+            
+        }
     }
 
     /*

@@ -12,6 +12,7 @@ import SwiftyJSON
 import MRProgress
 import ImageLoader
 import RZTransitions
+import KFSwiftImageLoader
 
 class TeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -101,9 +102,9 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         else
         {
             let imgURL = "http://aaruush.net/testing123/images/team/" + team![indexPath.row]["imgSource"].string!;
-            
+            let url = NSURL(string: imgURL)
             cell.myImage.load(imgURL);
-            
+           // cell.myImage.loadImageFromURL(url!)
             cell.myLabel.text = team![indexPath.row]["name"].string
             cell.backgroundColor  = UIColor.clearColor();
             
@@ -154,9 +155,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         if(segue.identifier == Reusable.TEAM_TO_PROFILE)
         {
-            var vc = segue.destinationViewController as! ProfileViewController
+            let vc = segue.destinationViewController as! ProfileViewController
             vc.pos = team![selected]["pos"].string!
             vc.name = names[selected]
+            vc.fbURL = team![selected]["fb"].string!
             
             let s = "http://aaruush.net/testing123/images/team/" + team![selected]["imgSource"].string!
             vc.profile = s;

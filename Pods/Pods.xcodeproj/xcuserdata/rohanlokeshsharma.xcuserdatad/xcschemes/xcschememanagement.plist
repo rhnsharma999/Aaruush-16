@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KFSwiftImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,26 +72,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02E87578DEDFA6E97EF10620EA9110A5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0AB61A905F9D03E291EC873CA522C88B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2F1BAA30DA8748C094BB34F28DE4242B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2FEC7F965DCBED9B67FE51A75D2B3D5C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +82,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5307AD7AEC528AA42611D7B84E89671B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>89B5EECAC67AC172434FD60CE5B66F8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>912C9F5C0A7837FFAAEA412E5B3B4B99</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92E93C738FBACFE5DF23174DB7F57681</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>935868B02D678B72AAD39DDD2E0FCF7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC1DC91232A5FA985E91882C17D8485C</key>
+		<key>E2F96C1977C2C24C1E55E2CC1BBAADDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5C1788D4C4DC1FBC0E31EEC2502E0EA</key>
+		<key>F439754B8D7EB4C8E35E3529385D86F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
