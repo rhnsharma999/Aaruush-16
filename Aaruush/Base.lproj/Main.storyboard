@@ -529,6 +529,9 @@
                                             <rect key="frame" x="153" y="573" width="68" height="68"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <state key="normal" image="call icon"/>
+                                            <connections>
+                                                <action selector="call:" destination="kla-Eq-Nkm" eventType="touchUpInside" id="rQV-fC-T96"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZb-JS-IvC">
                                             <rect key="frame" x="41" y="505" width="103" height="30"/>

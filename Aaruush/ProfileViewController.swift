@@ -15,8 +15,9 @@ class ProfileViewController: UIViewController {
     var name:String!
     var pos:String!;
     var fbURL:String!
+    var phoneNumber:String!
     
-    var testString:String!
+   // var testString:String!
     
 
     @IBOutlet var profileImage: UIImageView!
@@ -30,8 +31,8 @@ class ProfileViewController: UIViewController {
         posLabel.text = pos;
         
       
-        testString =  String(fbURL.characters.dropFirst(25))
-        print(testString)
+      //  testString =  String(fbURL.characters.dropFirst(25))
+       // print(testString)
         
         
         
@@ -59,7 +60,7 @@ class ProfileViewController: UIViewController {
     }
     @IBAction func openFB(sender: AnyObject) {
         
-        let link = "fb://profile/" + testString
+        let link = "fb://profile/" + String(fbURL.characters.dropFirst(25))
         let url = NSURL(string: link);
         
         
@@ -73,6 +74,25 @@ class ProfileViewController: UIViewController {
         }
     }
 
+    @IBAction func call(sender: AnyObject) {
+        
+        
+        
+        let alert = UIAlertController(title: "Call Number", message: "Call "+name + "?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Call", style: UIAlertActionStyle.Default, handler: { action in
+        
+            let url = "tel://" + "+91" + self.phoneNumber;
+            print(url)
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        
+        
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        
+        
+    }
     /*
     // MARK: - Navigation
 

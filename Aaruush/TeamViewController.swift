@@ -102,7 +102,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         else
         {
             let imgURL = "http://aaruush.net/testing123/images/team/" + team![indexPath.row]["imgSource"].string!;
-            let url = NSURL(string: imgURL)
+          //  let url = NSURL(string: imgURL)
             cell.myImage.load(imgURL);
            // cell.myImage.loadImageFromURL(url!)
             cell.myLabel.text = team![indexPath.row]["name"].string
@@ -159,6 +159,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
             vc.pos = team![selected]["pos"].string!
             vc.name = names[selected]
             vc.fbURL = team![selected]["fb"].string!
+            vc.phoneNumber = team![selected]["contact"].string!
             
             let s = "http://aaruush.net/testing123/images/team/" + team![selected]["imgSource"].string!
             vc.profile = s;
