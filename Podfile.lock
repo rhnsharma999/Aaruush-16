@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.4.1)
+  - Alamofire (3.4.2)
   - EZLoadingActivity (0.8)
   - FoldingCell (1.0.0)
   - ImageLoader (0.9.0)
@@ -34,6 +34,11 @@ PODS:
   - MRProgress/Stopable (0.8.3):
     - MRProgress/Helper
   - PureLayout (3.0.2)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
   - RZTransitions (1.2.1)
   - StarWars (1.0)
   - SwiftyButton (0.4.0):
@@ -50,13 +55,14 @@ DEPENDENCIES:
   - KFSwiftImageLoader (~> 2.0)
   - LTMorphingLabel
   - MRProgress
+  - RealmSwift
   - RZTransitions
   - StarWars (~> 1.0)
   - SwiftyButton
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
   ImageLoader: bb709e5b2708158da405760f42c75e7e52b561b5
@@ -64,9 +70,13 @@ SPEC CHECKSUMS:
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 1dbd0d7bb432bef401cacb95fcd8aafe32676462
+
+COCOAPODS: 1.0.1

@@ -19,7 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KFSwiftImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MRProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,7 +92,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>163DAAF0709341FB76829F0C9EA9FE2E</key>
+		<key>2249B460421C0D02D79DC53A24A52546</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A31DA4F57F9AFDF2BE60BB8C708CD84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CC97728357E78BB4BECFEDEED6796BE</key>
+		<key>79A7D856F9DE0C3C09A66EEC718D91B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +127,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE54E212E4C2AFE03FBA207C1F159DFF</key>
+		<key>935868B02D678B72AAD39DDD2E0FCF7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA4123C4AFB56BE0FAD3900B54C24AF8</key>
+		<key>970A52E1F8D08128D80A50DD31C98F8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C92F14358C5CDC8141053484A498E70D</key>
+		<key>98DA098856A98E4342C39FAF807CC369</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CAAB2A1855182D992E2945796B03B4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CF7B0815C870BC420184423C59C56C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD53FFE97D4F26A2958E3F6E5CFCD830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,22 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD110DEFDF0B78726C657FDA0DAD5672</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DDF9E350E97CC314F06BA4354D523B2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F69815BC208167CCF01E359D020A56B1</key>
+		<key>F04B48796E5F1ACE1CEF7854E6AC0687</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F886330999DA597BB24417E550B85008</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFEE7F8411FD4B3B4E0DA7AE0A7A9183</key>
 		<dict>
 			<key>primary</key>
 			<true/>

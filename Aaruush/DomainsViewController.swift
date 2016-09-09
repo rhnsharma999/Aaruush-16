@@ -12,6 +12,7 @@ import SwiftyJSON
 import EZLoadingActivity
 import MRProgress
 import RZTransitions
+import RealmSwift
 
 
 class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

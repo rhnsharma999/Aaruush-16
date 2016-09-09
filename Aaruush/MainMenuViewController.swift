@@ -11,6 +11,7 @@ import RZTransitions
 import SwiftyJSON
 import Alamofire
 import MRProgress
+import RealmSwift
 class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate {
 
     //-------------to be sent to next views--------->
@@ -21,7 +22,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     //<------------to be sent to the next views----->
     
     
-    
+    var savedData = NSData()
+    var fetchedValues : Results<eventJson>!
     
     var photos = [String]()
     @IBOutlet var myCollection: UICollectionView!
@@ -262,7 +264,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     {
          MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
         
-        let url = "http://aaruush.net/testing123/eventData/workshop.json"
+        let url = Reusable.WORKSHOPS_URL
         Alamofire.request(.GET, url).validate().responseJSON
             { response in
                 switch response.result
@@ -277,7 +279,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                   
                    
                 case .Failure(let error):
-                    print("EORRRRORORROORRORO")
+                    print(error)
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
                     
                 }
         }
@@ -287,7 +290,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     func getDomains()
     {
         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
-        let url = "http://aaruush.net/testing123/eventData/eventData.json"
+            let url = Reusable.EVENT_DATA_URL
         Alamofire.request(.GET, url).validate().responseJSON { response in
             switch response.result {
             case .Success:
@@ -298,7 +301,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                   
                 }
             case .Failure(let error):
-                 print("EORRRRORORROORRORO")
+                print(error)
+                MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
             }
         }
         
@@ -307,9 +311,9 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     
     func getDomainDetails()
     {
-         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
-        let url = "http://aaruush.net/testing123/eventData/eventNames.json"
         
+         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Fetching Fresh Data", mode: .IndeterminateSmallDefault, animated: true)
+            let url = Reusable.EVENT_TITLE_URL
         Alamofire.request(.GET, url).validate().responseJSON
             { response in
                 switch response.result
@@ -319,19 +323,48 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                     {
                         
                        self.domains = JSON(value)
+                        let RealmData = eventJson()
+                        
+                        RealmData.eventTitles = self.savedData
+
+                        do{
+                            let realm = try! Realm()
+                            let something = realm.objects(eventJson.self)
+                            print(something.count)
+                            print(something[0])
+                            let saved = try self.domains?.rawData()
+                            print(JSON(saved!))l;
+                            self.savedData = saved!
+                            try realm.write({
+                                realm.add(RealmData)
+                                print("saved")
+                                self.fetchedValues = realm.objects(eventJson)
+                                print(self.fetchedValues[0])
+                                
+                                
+                            })
+                        }
+                        catch{
+                            
+                        }
+                    
                          MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
                       
+                        
+                        
+                        
+                        ///////////
+                        
+                       
+                       
                         
                         print(self.to_be_sent)
                       
                         
                     }
-                    
                 case .Failure(let error):
-                    
-                    print("EORRRRORORROORRORO")
-                    
-                    
+                    print(error)
+                    MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
                 }
                 
         }
