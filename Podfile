@@ -4,7 +4,6 @@
 use_frameworks!
 
 target 'Aaruush' do
-pod 'RealmSwift'
 pod 'StarWars', '~> 1.0'
 pod 'LTMorphingLabel'
 pod 'SwiftyButton'

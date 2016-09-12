@@ -12,7 +12,6 @@ import SwiftyJSON
 import EZLoadingActivity
 import MRProgress
 import RZTransitions
-import RealmSwift
 
 
 class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -99,7 +98,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         if(UIScreen.mainScreen().bounds.height == 568)
         {
             //cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
-            cell1.photo.image = dummyImage
+            cell1.photo.image = UIImage(named: "image")
             cell1.photoTitle.text=domain_names[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
             
@@ -119,8 +118,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             
         else
         {
-            cell.myImage.image = dummyImage
-            //cell.myImage.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate threa
+            cell.myImage.image = UIImage(named: "image")
             cell.myLabel.text = domain_names[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
             
