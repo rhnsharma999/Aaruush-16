@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="xirod.ttf">
@@ -20,13 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nsU-L6-hot">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsU-L6-hot">
                         <rect key="frame" x="25" y="8" width="150" height="150"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="nsU-L6-hot" secondAttribute="height" multiplier="1:1" id="Rva-Fb-ooZ"/>
-                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-RZ-1in">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-RZ-1in">
                         <rect key="frame" x="8" y="171" width="184" height="21"/>
                         <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="16"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,14 +32,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstItem="nsU-L6-hot" firstAttribute="top" secondItem="Ufx-1p-SvP" secondAttribute="top" constant="8" id="4Lw-jq-HsK"/>
-                <constraint firstItem="nsU-L6-hot" firstAttribute="leading" secondItem="Ufx-1p-SvP" secondAttribute="leading" constant="25" id="RWL-Qk-rJq"/>
-                <constraint firstAttribute="trailing" secondItem="8qf-RZ-1in" secondAttribute="trailing" constant="8" id="VRF-jv-T0q"/>
-                <constraint firstAttribute="trailing" secondItem="nsU-L6-hot" secondAttribute="trailing" constant="25" id="YpM-yB-a89"/>
-                <constraint firstItem="8qf-RZ-1in" firstAttribute="top" secondItem="nsU-L6-hot" secondAttribute="bottom" constant="13" id="e9y-Sr-SFg"/>
-                <constraint firstItem="8qf-RZ-1in" firstAttribute="leading" secondItem="Ufx-1p-SvP" secondAttribute="leading" constant="8" id="h5H-u6-hyT"/>
-            </constraints>
             <size key="customSize" width="415" height="414"/>
             <connections>
                 <outlet property="myImage" destination="nsU-L6-hot" id="hb9-s9-bUB"/>
