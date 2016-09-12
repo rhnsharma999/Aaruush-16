@@ -36,6 +36,8 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Getting Team list from server", mode: .IndeterminateSmallDefault, animated: true)
         
         
+        
+        
         getTeam();
         
         
@@ -82,7 +84,9 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         if(UIScreen.mainScreen().bounds.height == 568)
         {
-            cell1.photo.image = UIImage(named: data[indexPath.row]);
+            let imgURL = "http://aaruush.net/images/team/" + team![indexPath.row]["imgSource"].string!;
+
+            cell1.photo.load(imgURL)
             cell1.photoTitle.text = team![indexPath.row]["name"].string
             cell1.backgroundColor  = UIColor.clearColor();
             
@@ -101,7 +105,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         else
         {
-            let imgURL = "http://aaruush.net/testing123/images/team/" + team![indexPath.row]["imgSource"].string!;
+            let imgURL = "http://aaruush.net/images/team/" + team![indexPath.row]["imgSource"].string!;
           //  let url = NSURL(string: imgURL)
             cell.myImage.load(imgURL);
            // cell.myImage.loadImageFromURL(url!)
@@ -161,7 +165,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
             vc.fbURL = team![selected]["fb"].string!
             vc.phoneNumber = team![selected]["contact"].string!
             
-            let s = "http://aaruush.net/testing123/images/team/" + team![selected]["imgSource"].string!
+            let s = "http://aaruush.net/images/team/" + team![selected]["imgSource"].string!
             vc.profile = s;
             
             
@@ -177,7 +181,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     func getTeam()
     {
         
-        let url = "http://aaruush.net/testing123/eventData/teamData.json"
+        let url = "http://aaruush.net/eventData/teamData.json"
         Alamofire.request(.GET, url).validate().responseJSON { response in
             switch response.result {
             case .Success:

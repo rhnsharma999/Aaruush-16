@@ -108,7 +108,10 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.workshopCarousel.center.x, self.workshopCarousel.center.y, self.view.bounds.width - 100, 200))
-        myView.image = UIImage(named: "accelerobotics")
+        
+        let url = "http://aaruush.net/images/workshop/" + global_json![titles[index]]["imgSource"].string!
+        myView.load(url)
+      
         
         
         
