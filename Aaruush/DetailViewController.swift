@@ -22,14 +22,17 @@ class DetailViewController: UIViewController {
         
         photo.layer.masksToBounds = true;
         
+      
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
         photo.layer.cornerRadius = photo.bounds.size.width/2;
         photo.layer.borderWidth = 1.0;
         photo.layer.borderColor = UIColor.whiteColor().CGColor
         
         
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

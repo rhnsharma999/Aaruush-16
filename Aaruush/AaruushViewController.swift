@@ -26,6 +26,12 @@ class AaruushViewController: UIViewController {
         aaruushLogo.font = UIFont(name: "xirod", size: 25)
         towardsInfinity.font = UIFont(name: "xirod", size: 15)
         
+        if(UIScreen.mainScreen().bounds.size.height == 568)
+        {
+          
+            aboutInfo.font = .systemFontOfSize(14)
+        }
+        
         aboutInfo.alpha = 0.0
         
         super.viewDidLoad()

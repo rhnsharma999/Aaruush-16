@@ -212,6 +212,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
                     
                 }
             case .Failure(let error):
+                MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: false);
+                MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Network Error", mode: .Cross, animated: true);
+                
+                
                 print("FAIL")
             }
         }
