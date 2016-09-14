@@ -39,6 +39,7 @@
 		DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */; };
 		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
 		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
+		DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */; };
 		DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */; };
 		DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */; };
 		DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */; };
@@ -111,6 +112,7 @@
 		DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		DEAF0F1F1D65E8B0002923C1 /* SixSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixSWalaCell.xib; sourceTree = "<group>"; };
 		DEAF0F211D65E92C002923C1 /* SixSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixSWalaCell.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */,
 				DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
@@ -302,6 +305,7 @@
 				DE720C891CEF9C7E00097862 /* Resources */,
 				102256CEDF6BCB7D05A7F65E /* [CP] Embed Pods Frameworks */,
 				431894ED8F6A04CD709D28C8 /* [CP] Copy Pods Resources */,
+				FA4F00C1BD03B350E31E20CB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,7 +369,7 @@
 				TargetAttributes = {
 					DE720C8A1CEF9C7E00097862 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DF8NGUWUSH;
+						DevelopmentTeam = QH78WYZE35;
 					};
 					DE720CA11CEF9C7F00097862 = {
 						CreatedOnToolsVersion = 7.3;
@@ -548,6 +552,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FA4F00C1BD03B350E31E20CB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -558,6 +577,7 @@
 				DEAF0F1E1D65E83B002923C1 /* TeamViewController.swift in Sources */,
 				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
+				DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */,
 				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
 				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
 				1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */,
@@ -729,7 +749,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Webarch.Aaruush16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";
@@ -752,7 +772,7 @@
 				);
 				INFOPLIST_FILE = Aaruush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Webarch-Aaruush16";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Webarch.Aaruush16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/Aaruush-Bridging-Header.h";

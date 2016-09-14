@@ -12,12 +12,15 @@ public var fr = CGRectMake(0, 0, 0, 0);
 
 class SixSWalaCell: UICollectionViewCell {
     
+    @IBOutlet var activity: UIActivityIndicatorView!
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myImage: UIImageView!
     
     
     
     override func layoutSubviews() {
+        
+        activity.startAnimating()
         myImage.layer.cornerRadius = myImage.bounds.width/2;
         myImage.layer.masksToBounds = true;
         myImage.layer.borderColor = UIColor.whiteColor().CGColor;

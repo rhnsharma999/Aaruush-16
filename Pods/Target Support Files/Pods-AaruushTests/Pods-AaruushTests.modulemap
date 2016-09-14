@@ -1,6 +1,0 @@
-framework module Pods_AaruushTests {
-  umbrella header "Pods-AaruushTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

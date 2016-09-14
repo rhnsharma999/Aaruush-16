@@ -25,7 +25,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet var posLabel: UILabel!
     override func viewDidLoad() {
         
-        profileImage.load(profile)
+      //  profileImage.load(profile)
+        
+        
+        
+        profileImage.kf_setImageWithURL(NSURL(string: profile)!,
+                                       placeholderImage: UIImage(named:"placeholder"),
+                                       optionsInfo: nil,
+                                       progressBlock: { (receivedSize, totalSize) -> () in
+                                        print("Download Progress: \(receivedSize)/\(totalSize)")
+            },
+                                       completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                        print("Downloaded and set!")
+                                       // cell1.activity.hidden = true;
+                                        
+            }
+        )
+        
         
         nameLabel.text = name;
         posLabel.text = pos;

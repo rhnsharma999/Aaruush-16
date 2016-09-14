@@ -91,7 +91,7 @@ class ArchViewController: UIViewController,iCarouselDataSource,iCarouselDelegate
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
-        myView.image = UIImage(named: "1");
+        myView.image = UIImage(named: "placeholder");
         return myView
     }
     

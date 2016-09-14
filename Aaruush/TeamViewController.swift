@@ -12,7 +12,8 @@ import SwiftyJSON
 import MRProgress
 import ImageLoader
 import RZTransitions
-import KFSwiftImageLoader
+import Kingfisher
+
 
 class TeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -28,9 +29,15 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
 
     @IBOutlet var myCollection: UICollectionView!
     
-    let data = ["krishna","sai_teja","vishnu","nandu","vijay","mahesh","anvesh","jaswanth","aditya","sridhar","aman","avinash","abhilash","udit","govinda","jagadeesh","ashok","vamsinath","veda","yeshwanth","vinitha","kirtika","vinayak","ankit","anusha","rahul","vijayanurag","sai_kishore","pranshu","harish","koti","avinash2", "bharath","palash","harshit","harshad","shashank","aman_johri"]
-    
-    override func viewDidLoad() {
+       override func viewDidLoad() {
+        
+        
+        
+        //temp
+        
+        
+        
+        
         
         navigationController?.delegate = RZTransitionsManager.shared()
         MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Getting Team list from server", mode: .IndeterminateSmallDefault, animated: true)
@@ -86,7 +93,24 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         {
             let imgURL = "http://aaruush.net/images/team/" + team![indexPath.row]["imgSource"].string!;
 
-            cell1.photo.load(imgURL)
+           // cell1.photo.load(imgURL)
+            
+            cell1.photo.kf_setImageWithURL(NSURL(string: imgURL)!,
+                                         placeholderImage: UIImage(named:"placeholder"),
+                                         optionsInfo:[.Transition(ImageTransition.Fade(1))],
+                                         progressBlock: { (receivedSize, totalSize) -> () in
+                                            print("Download Progress: \(receivedSize)/\(totalSize)")
+                },
+                                         completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                            print("Downloaded and set!")
+                                            cell1.activity.hidden = true;
+                                            
+                }
+            )
+            
+            
+            
+            
             cell1.photoTitle.text = team![indexPath.row]["name"].string
             cell1.backgroundColor  = UIColor.clearColor();
             
@@ -106,9 +130,24 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         else
         {
             let imgURL = "http://aaruush.net/images/team/" + team![indexPath.row]["imgSource"].string!;
-          //  let url = NSURL(string: imgURL)
-            cell.myImage.load(imgURL);
-           // cell.myImage.loadImageFromURL(url!)
+         
+            
+            cell.myImage.kf_setImageWithURL(NSURL(string: imgURL)!,
+                                           placeholderImage: UIImage(named:"placeholder"),
+                                           optionsInfo: nil,
+                                           progressBlock: { (receivedSize, totalSize) -> () in
+                                            print("Download Progress: \(receivedSize)/\(totalSize)")
+                },
+                                           completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                            print("Downloaded and set!")
+                                            cell.activity.hidden = true;
+                                            
+                }
+            )
+            
+            
+            
+           // cell.myImage.load(imgURL);
             cell.myLabel.text = team![indexPath.row]["name"].string
             cell.backgroundColor  = UIColor.clearColor();
             

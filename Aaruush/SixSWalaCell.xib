@@ -28,16 +28,20 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-fU-N8S">
+                        <rect key="frame" x="90" y="78" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="415" height="414"/>
             <connections>
+                <outlet property="activity" destination="TTZ-fU-N8S" id="dlK-Md-vR3"/>
                 <outlet property="myImage" destination="nsU-L6-hot" id="hb9-s9-bUB"/>
                 <outlet property="myLabel" destination="8qf-RZ-1in" id="kZd-Fq-CI7"/>
             </connections>
-            <point key="canvasLocation" x="282" y="322"/>
+            <point key="canvasLocation" x="440" y="271"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -14,7 +14,7 @@ pod 'SwiftyJSON'
 pod 'EZLoadingActivity'
 pod 'MRProgress'
 pod 'ImageLoader'
-pod 'KFSwiftImageLoader', '~> 2.0'
+pod 'Kingfisher', '~> 2.4'
 end
 
 target 'AaruushTests' do

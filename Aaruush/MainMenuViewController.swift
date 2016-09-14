@@ -122,6 +122,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             fiveScell.photo.image = UIImage(named: photos[indexPath.row]);
             fiveScell.photoTitle.text = photos[indexPath.row];
             fiveScell.backgroundColor = UIColor.clearColor();
+            fiveScell.activity.hidden = true;
+            
             
             UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
                 
@@ -139,7 +141,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             sixScell.myImage.image = UIImage(named:photos[indexPath.row]);
             sixScell.myLabel.text = photos[indexPath.row];
             sixScell.backgroundColor = UIColor.clearColor();
-            
+            sixScell.activity.hidden = true;
             
             UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
                 

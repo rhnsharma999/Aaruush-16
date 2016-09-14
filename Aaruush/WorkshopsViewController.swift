@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import MRProgress
+import Kingfisher
 
 
 class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataSource {
@@ -66,6 +67,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     
     override func viewDidLoad() {
         
+    
         
         
       
@@ -108,9 +110,34 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.workshopCarousel.center.x, self.workshopCarousel.center.y, self.view.bounds.width - 100, 200))
+
+        
+        
+        let activity = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        myView.addSubview(activity);
+        activity.startAnimating();
+        activity.center.x = myView.bounds.width/2;
+        activity.center.y = myView.bounds.height/2
+        
         
         let url = "http://aaruush.net/images/workshop/" + global_json![titles[index]]["imgSource"].string!
-        myView.load(url)
+        
+        
+        
+        myView.kf_setImageWithURL(NSURL(string: url),
+                                        placeholderImage: UIImage(named:"placeholder"),
+                                        optionsInfo: nil,
+                                        progressBlock: { (receivedSize, totalSize) -> () in
+                                            print("Download Progress: \(receivedSize)/\(totalSize)")
+            },
+                                        completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                           // print("Downloaded and set!")
+                                            activity.hidden = true;
+                                            
+            }
+        )
+        
+      //  myView.load(url)
       
         
         

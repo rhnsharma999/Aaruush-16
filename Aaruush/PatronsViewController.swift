@@ -60,6 +60,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell1.photoTitle.text=titles[indexPath.row];
             cell1.photoTitle.font = cell1.photoTitle.font.fontWithSize(11)
             cell1.backgroundColor  = UIColor.clearColor();
+            cell1.activity.hidden = true;
             
             
             //Animate to pop
@@ -80,6 +81,7 @@ class PatronsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell.myLabel.text = titles[indexPath.row];
              cell.myLabel.font =  cell.myLabel.font.fontWithSize(15)
             cell.backgroundColor  = UIColor.clearColor();
+            cell.activity.hidden = true;
             
             
             //Animate to pop

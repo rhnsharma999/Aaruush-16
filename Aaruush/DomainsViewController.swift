@@ -101,6 +101,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell1.photo.image = UIImage(named: domain_names[indexPath.row])
             cell1.photoTitle.text=domain_names[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
+            cell1.activity.hidden = true;
             
             UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
                 
@@ -121,7 +122,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             cell.myImage.image = UIImage(named: domain_names[indexPath.row])
             cell.myLabel.text = domain_names[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
-            
+            cell.activity.hidden = true;
             
             UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
                 

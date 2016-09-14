@@ -28,12 +28,16 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXo-iD-Otp">
                         <rect key="frame" x="25" y="8" width="110" height="110"/>
                     </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6R2-zD-urb">
+                        <rect key="frame" x="70" y="55" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="451" height="463"/>
             <connections>
+                <outlet property="activity" destination="6R2-zD-urb" id="6KR-Mt-GxE"/>
                 <outlet property="photo" destination="GXo-iD-Otp" id="J8M-1Y-oP7"/>
                 <outlet property="photoTitle" destination="zTT-J2-7if" id="hqI-ah-CG9"/>
             </connections>
