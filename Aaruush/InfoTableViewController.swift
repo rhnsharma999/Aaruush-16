@@ -7,13 +7,25 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarouselDelegate {
+    
+    @IBOutlet var goBackButton: UIButton!
+    
 
+    
+    var receivedData = [String]()
+    var allData: JSON?
+    var recImage:String?
+    
     @IBOutlet var myCarousel: iCarousel!
     override func viewDidLoad()
     {
-        
+        if(!receivedData.isEmpty)
+        {
+            receivedData = receivedData.sort()
+            
+        }
         myCarousel.dataSource = self;
         myCarousel.delegate = self;
         myCarousel.type = .CoverFlow
@@ -28,7 +40,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         imageView.image = UIImage(named: "lol1");
         
         
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
         
         visualEffectView.frame = imageView.bounds
         
@@ -42,11 +54,20 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
 
    
     }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true;
+        
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false;
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   
 
     // MARK: - Table view data source
 
@@ -67,14 +88,40 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         
         
         cell.details.scrollEnabled = false;
-       if(indexPath.section==0)
-       {
-         cell.details.text = "Some random shit Some random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shit"
+        var data = "";
+        var title = ""
+        
+        if(!receivedData.isEmpty)
+        {
+            title = receivedData[myCarousel.currentItemIndex]
         }
-        else
-       {
-         cell.details.text = "Some rand"
+        
+        
+        
+        
+        if(allData != nil)
+        {
+            switch indexPath.section {
+            case 0:
+                data = title;
+            case 1:
+                data = allData![title]["desc"].string!
+            case 2:
+                data = allData![title]["rounds"].string!
+            case 3:
+                data = allData![title]["coords"].string!
+            case 4:
+                data = allData![title]["rules"].string!
+                
+            default:
+                data = ""
+            }
+            
         }
+       
+        data = removeTags(data)
+        
+        cell.details.text = data;
         
         cell.backgroundColor = UIColor.clearColor();
         cell.details.textColor = UIColor.whiteColor();
@@ -110,9 +157,31 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("cell1") as! headerTableViewCell
         
-        headerCell.title.text = "Some"
+        
+        var headTitle = "";
+        
+        switch section {
+        case 0:
+            headTitle = "Event"
+        case 1:
+            headTitle = "Description"
+        case 2:
+            headTitle = "Rounds"
+        case 3:
+            headTitle = "Co-Ordinators"
+        case 4:
+            headTitle = "Rules"
+            
+        default:
+            headTitle = "Info"
+        }
+        
+        
+        
+        headerCell.title.text = headTitle
         headerCell.title.textColor = .whiteColor()
-        headerCell.backgroundColor = UIColor.clearColor()
+        headerCell.backgroundColor = UIColor.grayColor()
+        headerCell.backgroundView?.alpha = 0.5
         
         return headerCell;
         
@@ -124,7 +193,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     
 
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return 5;
+        return receivedData.count
         
     }
     
@@ -132,8 +201,23 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
-        myView.image = UIImage(named: "placeholder");
+        myView.image = UIImage(named: recImage!);
+        
+        myView.bringSubviewToFront(self.goBackButton)
         return myView
+        
     }
 
+    func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
+        self.tableView.reloadData()
+    }
+    
+    func removeTags(inputString: String) -> String
+    {
+        return inputString.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "\n", options: .RegularExpressionSearch, range: nil)
+    }
+
+    @IBAction func goBack(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }

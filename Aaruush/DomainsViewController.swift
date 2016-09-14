@@ -144,7 +144,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         RZTransitionsManager.shared().setAnimationController(RZZoomPushAnimationController(),
                                                               fromViewController:self.dynamicType,
-                                                              toViewController:ArchViewController.self,forAction:.PushPop)
+                                                              toViewController:InfoTableViewController.self,forAction:.PushPop)
         
         
         self.performSegueWithIdentifier(Reusable.MAIN_DOMAIN_TO_ARCH, sender: self)
@@ -161,10 +161,12 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let svc = segue.destinationViewController as! ArchViewController
+        let svc = segue.destinationViewController as! InfoTableViewController
         
         svc.receivedData = global_JSON[selected]!
        svc.allData = global_Event_Detail
+        svc.recImage = selected
+        
       //  svc.allData = nil;
         
         

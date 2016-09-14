@@ -255,12 +255,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="domainsCollectionView" destination="4x0-6h-NgZ" id="x3g-UL-lzs"/>
-                        <segue destination="vsk-sd-AMU" kind="show" identifier="domainEvent" id="vDw-iD-As7"/>
+                        <segue destination="vsk-sd-AMU" kind="show" identifier="" id="vDw-iD-As7"/>
+                        <segue destination="Med-Nr-dAG" kind="show" identifier="domainEvent" id="aNw-UI-HuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzN-eJ-5tn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5132.5" y="2353.5"/>
+            <point key="canvasLocation" x="5054.5" y="2338.5"/>
         </scene>
         <!--Workshops View Controller-->
         <scene sceneID="mIb-Oj-N68">
@@ -863,6 +864,17 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QJR-lJ-5ME">
+                            <rect key="frame" x="0.0" y="445" width="375" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="X">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="goBack:" destination="Med-Nr-dAG" eventType="touchUpInside" id="3q5-0n-Nh3"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="IsW-1n-Wjw" customClass="detailTableViewCell" customModule="Aaruush" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="294" width="375" height="111"/>
@@ -920,14 +932,16 @@
                             <outlet property="delegate" destination="Med-Nr-dAG" id="kdk-9U-3Hm"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="goBackButton" destination="QJR-lJ-5ME" id="Svc-iF-cCI"/>
                         <outlet property="myCarousel" destination="Axu-C4-sTc" id="vhG-SQ-Ycr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA0-zU-anX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6820.5" y="2451.5"/>
+            <point key="canvasLocation" x="4697.5" y="3214.5"/>
         </scene>
         <!--Team View Controller-->
         <scene sceneID="2Ox-Kb-xOd">
