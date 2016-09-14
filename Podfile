@@ -15,6 +15,7 @@ pod 'EZLoadingActivity'
 pod 'MRProgress'
 pod 'ImageLoader'
 pod 'Kingfisher', '~> 2.4'
+pod 'OneSignal'
 end
 
 target 'AaruushTests' do

@@ -33,6 +33,7 @@ PODS:
   - MRProgress/ProgressBaseClass (0.8.3)
   - MRProgress/Stopable (0.8.3):
     - MRProgress/Helper
+  - OneSignal (2.1.9)
   - PureLayout (3.0.2)
   - RZTransitions (1.2.1)
   - StarWars (1.0)
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - Kingfisher (~> 2.4)
   - LTMorphingLabel
   - MRProgress
+  - OneSignal
   - RZTransitions
   - StarWars (~> 1.0)
   - SwiftyButton
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   Kingfisher: d84c5fd176ea86cc7b8aac65fd55feda6f70f130
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
+  OneSignal: 5753115f46e2e317dd161ea5107070054a3ef98d
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014

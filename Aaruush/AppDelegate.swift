@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import FBSDKCoreKit
 import FBSDKLoginKit
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "d2ce6f0b-c005-4c54-9467-573c190b12e8")
+        
+       
+        
         
     
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
