@@ -8,16 +8,39 @@
 
 import UIKit
 
-class InfoTableViewController: UITableViewController {
+class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarouselDelegate {
 
-    override func viewDidLoad() {
+    @IBOutlet var myCarousel: iCarousel!
+    override func viewDidLoad()
+    {
+        
+        myCarousel.dataSource = self;
+        myCarousel.delegate = self;
+        myCarousel.type = .CoverFlow
+        myCarousel.backgroundColor = .clearColor()
+        myCarousel.pagingEnabled = true;
+        myCarousel.contentMode = .ScaleAspectFill
+        
+        
+        //<-----DANGER DO NOT TOUCH THIS STUFF OR THE APP LOOKS UGLY--->
+        
+        let imageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height));
+        imageView.image = UIImage(named: "lol1");
+        
+        
+        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        
+        visualEffectView.frame = imageView.bounds
+        
+        imageView.addSubview(visualEffectView);
+        tableView.backgroundView = imageView
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
+        //<-----DANGER DO NOT TOUCH THIS STUFF OR THE APP LOOKS UGLY--->
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+   
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +63,24 @@ class InfoTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! detailTableViewCell
         
-        cell.textLabel?.text = "Sample";
+        
+        cell.details.scrollEnabled = false;
+       if(indexPath.section==0)
+       {
+         cell.details.text = "Some random shit Some random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shitSome random shit"
+        }
+        else
+       {
+         cell.details.text = "Some rand"
+        }
+        
+        cell.backgroundColor = UIColor.clearColor();
+        cell.details.textColor = UIColor.whiteColor();
+        cell.details.backgroundColor = UIColor.clearColor();
+        
+        
         
 
         // Configure the cell...
@@ -50,7 +88,7 @@ class InfoTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  /*  override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         
         var title = "";
@@ -68,51 +106,34 @@ class InfoTableViewController: UITableViewController {
         return title
         
     }
+    */
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("cell1") as! headerTableViewCell
+        
+        headerCell.title.text = "Some"
+        headerCell.title.textColor = .whiteColor()
+        headerCell.backgroundColor = UIColor.clearColor()
+        
+        return headerCell;
+        
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
+        return 5;
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
+        
+        let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
+        myView.image = UIImage(named: "placeholder");
+        return myView
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

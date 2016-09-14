@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3735" y="255"/>
+            <point key="canvasLocation" x="3656" y="157"/>
         </scene>
         <!--Patrons View Controller-->
         <scene sceneID="CxW-SP-CCD">
@@ -854,23 +854,65 @@
         <scene sceneID="sUs-40-sPk">
             <objects>
                 <tableViewController id="Med-Nr-dAG" customClass="InfoTableViewController" customModule="Aaruush" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tTt-pf-0jZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="tTt-pf-0jZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Axu-C4-sTc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Axu-C4-sTc" customClass="iCarousel">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="IsW-1n-Wjw">
-                                <rect key="frame" x="0.0" y="251" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="IsW-1n-Wjw" customClass="detailTableViewCell" customModule="Aaruush" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="294" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IsW-1n-Wjw" id="OwD-ur-sdC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AoC-wb-ccQ">
+                                            <rect key="frame" x="8" y="8" width="359" height="94.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AoC-wb-ccQ" firstAttribute="leading" secondItem="OwD-ur-sdC" secondAttribute="leadingMargin" id="1d9-Ae-laG"/>
+                                        <constraint firstItem="AoC-wb-ccQ" firstAttribute="bottom" secondItem="OwD-ur-sdC" secondAttribute="bottomMargin" id="JW6-gd-6Yy"/>
+                                        <constraint firstItem="AoC-wb-ccQ" firstAttribute="top" secondItem="OwD-ur-sdC" secondAttribute="topMargin" id="i4D-TS-HaX"/>
+                                        <constraint firstItem="AoC-wb-ccQ" firstAttribute="trailing" secondItem="OwD-ur-sdC" secondAttribute="trailingMargin" id="jwB-bN-Y0V"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="details" destination="AoC-wb-ccQ" id="vDM-eg-EJh"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="40" id="zIo-J8-wRY" customClass="headerTableViewCell" customModule="Aaruush" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="405" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zIo-J8-wRY" id="RdW-R9-E2U">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo9-ll-cCo">
+                                            <rect key="frame" x="8" y="10" width="240" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wo9-ll-cCo" firstAttribute="top" secondItem="RdW-R9-E2U" secondAttribute="topMargin" id="Sm4-l3-uHb"/>
+                                        <constraint firstItem="wo9-ll-cCo" firstAttribute="leading" secondItem="RdW-R9-E2U" secondAttribute="leadingMargin" id="kEM-hK-N7W"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wo9-ll-cCo" secondAttribute="bottom" id="wN2-Oj-JbI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="wo9-ll-cCo" id="50o-fc-7Q0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -879,6 +921,9 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myCarousel" destination="Axu-C4-sTc" id="vhG-SQ-Ycr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA0-zU-anX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
