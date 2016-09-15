@@ -16,6 +16,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     
     var receivedData = [String]()
     var allData: JSON?
+    var JSONkeys = [String]()
     var recImage:String?
     
     @IBOutlet var myCarousel: iCarousel!
@@ -50,6 +51,8 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         tableView.estimatedRowHeight = 140
         
         //<-----DANGER DO NOT TOUCH THIS STUFF OR THE APP LOOKS UGLY--->
+        
+        
         super.viewDidLoad()
 
    
@@ -98,20 +101,32 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         
         
         
-        
+     
         if(allData != nil)
         {
             switch indexPath.section {
             case 0:
                 data = title;
             case 1:
-                data = allData![title]["desc"].string!
+                if let some = allData![title]["desc"].string
+                {
+                    data = some
+                }
             case 2:
-                data = allData![title]["rounds"].string!
+                if let some = allData![title]["rounds"].string
+                {
+                    data = some;
+                }
             case 3:
-                data = allData![title]["coords"].string!
+                if let some = allData![title]["coords"].string
+                {
+                    data = some
+                }
             case 4:
-                data = allData![title]["rules"].string!
+                if let some = allData![title]["rules"].string
+                {
+                    data = some;
+                }
                 
             default:
                 data = ""
@@ -219,6 +234,8 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     {
         return inputString.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "\n", options: .RegularExpressionSearch, range: nil)
     }
+    
+    
 
     @IBAction func goBack(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)

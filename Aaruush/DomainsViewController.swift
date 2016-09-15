@@ -163,6 +163,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         let svc = segue.destinationViewController as! InfoTableViewController
         
+     
         svc.receivedData = global_JSON[selected]!
        svc.allData = global_Event_Detail
         svc.recImage = selected
