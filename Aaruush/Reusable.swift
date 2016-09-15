@@ -20,6 +20,7 @@ class Reusable
     static let MAIN_DOMAIN_TO_ARCH = "domainEvent"
     static let MAIN_TO_WORKSHOPS = "toWorkshops"
     static let TEAM_TO_PROFILE = "profile"
+    static let MAIN_TO_HIGHLIGHTS = "toHighlights"
     static let EVENT_TITLE_URL = "http://aaruush.net/eventData/eventNames.json"
     static let EVENT_DATA_URL = "http://aaruush.net/eventData/eventData.json"
     static let WORKSHOPS_URL = "http://aaruush.net/eventData/workshop.json"

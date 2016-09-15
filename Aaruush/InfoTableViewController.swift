@@ -142,7 +142,11 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         if(indexPath.section==0)
         {
             cell.details.font = UIFont(name: "xirod", size: 22)
-            cell.details.textAlignment = NSTextAlignment.Center
+            
+        }
+        else
+        {
+                cell.details.font = .systemFontOfSize(17)
         }
         
         cell.backgroundColor = UIColor.clearColor();
@@ -150,7 +154,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         cell.details.backgroundColor = UIColor.clearColor();
         cell.contentView.backgroundColor = UIColor.clearColor()
      
-       
+       cell.details.textAlignment = NSTextAlignment.Center
       
         
         
@@ -238,7 +242,18 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
-        myView.image = UIImage(named: recImage!);
+        
+        
+        if(UIImage(named: recImage!) != nil)
+        {
+            myView.image = UIImage(named: recImage!);
+        }
+        else
+        {
+            myView.image = UIImage(named: "dark")
+        }
+    
+        
         
         return myView
         

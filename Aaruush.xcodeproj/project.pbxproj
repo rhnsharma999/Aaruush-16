@@ -17,6 +17,7 @@
 		A70A22E0148D2586841D8E97 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD945853310B9489B3C223D /* Pods_Aaruush.framework */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
 		DE206AC51D8AA98E00304FE1 /* WorkshopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */; };
+		DE206AC71D8ACACF00304FE1 /* highlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
@@ -85,6 +86,7 @@
 		BD2F46A3DCAC7EDE2DF7B223 /* Pods-AaruushUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsTableViewController.swift; sourceTree = "<group>"; };
+		DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = highlightsViewController.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */,
 				DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */,
 				DEA35C591D89992900BF1F6C /* detailTableViewCell.swift */,
 				DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */,
@@ -614,6 +617,7 @@
 				DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */,
 				DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */,
 				DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */,
+				DE206AC71D8ACACF00304FE1 /* highlightsViewController.swift in Sources */,
 				DE720CC31CEF9D5200097862 /* Stars.swift in Sources */,
 				1BFECAA41D6EFFA000282D2E /* WorkshopsViewController.swift in Sources */,
 				DEA35C5A1D89992900BF1F6C /* detailTableViewCell.swift in Sources */,

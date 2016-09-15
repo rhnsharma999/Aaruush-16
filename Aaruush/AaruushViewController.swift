@@ -32,7 +32,7 @@ class AaruushViewController: UIViewController {
             aboutInfo.font = .systemFontOfSize(14)
         }
         
-        aboutInfo.alpha = 0.0
+       
         
         super.viewDidLoad()
       
@@ -47,6 +47,7 @@ class AaruushViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -88,30 +89,27 @@ class AaruushViewController: UIViewController {
         self.performSegueWithIdentifier("someSegue", sender:self)
     }
     
-    @IBAction func showAbout(sender: AnyObject) {
-        
-        UIView.animateWithDuration(0.5, animations: {
-            
-           if(self.aboutInfo.alpha==1.0)
-           {
-            self.aboutInfo.alpha=0.0
-            }
-            else
-           {
-             self.aboutInfo.alpha=1.0
-            
-            }
-            
-            
-            }, completion: nil);
-        
-    }
+    
     
     @IBAction func Logout(sender: AnyObject) {
         print("user logged out...")
         let loginManager : FBSDKLoginManager = FBSDKLoginManager()
         loginManager.logOut()
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func shareButtonPressed(sender: AnyObject) {
+        
+        let message = "Message goes here."
+        //Set the link to share.
+        if let link = NSURL(string: "http://yoururl.com")
+        {
+            let objectsToShare = [message,link]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+        
+        
     }
     
     /*

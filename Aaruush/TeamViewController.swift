@@ -200,9 +200,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
             vc.fbURL = team![selected]["fb"].string!
             vc.phoneNumber = team![selected]["contact"].string!
             
+            
             let s = "http://aaruush.net/images/team/" + team![selected]["imgSource"].string!
             vc.profile = s;
-            
+            vc.mail = team![selected]["email"].string!
             
             
             

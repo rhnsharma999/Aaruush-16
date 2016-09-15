@@ -98,7 +98,19 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         if(UIScreen.mainScreen().bounds.height == 568)
         {
             //cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
-            cell1.photo.image = UIImage(named: domain_names[indexPath.row])
+            
+            
+            if(UIImage(named: domain_names[indexPath.row]) == nil)
+            {
+                cell1.photo.image = UIImage(named: "dark")
+            }
+            else
+            {
+                //cell.myImage.image = UIImage(named: domain_names[indexPath.row])
+                cell1.photo.image = UIImage(named: domain_names[indexPath.row])
+            }
+            
+            
             cell1.photoTitle.text=domain_names[indexPath.row];
             cell1.backgroundColor  = UIColor.clearColor();
             cell1.activity.hidden = true;
@@ -119,7 +131,15 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
             
         else
         {
-            cell.myImage.image = UIImage(named: domain_names[indexPath.row])
+            if(UIImage(named: domain_names[indexPath.row]) == nil)
+            {
+                cell.myImage.image = UIImage(named: "dark")
+            }
+            else
+            {
+                cell.myImage.image = UIImage(named: domain_names[indexPath.row])
+            }
+            
             cell.myLabel.text = domain_names[indexPath.row];
             cell.backgroundColor  = UIColor.clearColor();
             cell.activity.hidden = true;

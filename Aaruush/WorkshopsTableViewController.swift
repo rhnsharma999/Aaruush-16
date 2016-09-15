@@ -13,6 +13,7 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
     
     @IBOutlet var myCarousel: iCarousel!
     
+   
 
     var global_data:JSON?
     var titles = [String]()
@@ -270,10 +271,12 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
             },
                                   completionHandler: { (image, error, cacheType, imageURL) -> () in
                                     // print("Downloaded and set!")
+                                    
                                     activity.hidden = true;
                                     
             }
         )
+        
         
         
         
@@ -282,6 +285,12 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
     }
     
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
+        
+        
+        
+        
+        
+        
         self.tableView.reloadData()
     }
 
@@ -331,4 +340,8 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
         
     }
 
+    @IBAction func goBack(sender: AnyObject) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }

@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController {
     var pos:String!;
     var fbURL:String!
     var phoneNumber:String!
+    var mail:String!
+    
     
    // var testString:String!
     
@@ -23,6 +25,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var posLabel: UILabel!
+    @IBOutlet var backButton: UIButton!
     override func viewDidLoad() {
         
       //  profileImage.load(profile)
@@ -57,6 +60,14 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidLayoutSubviews() {
+        
+        self.backButton.layer.borderWidth = 2
+        self.backButton.layer.borderColor = UIColor.whiteColor().CGColor
+        self.backButton.backgroundColor = UIColor.redColor()
+        self.backButton.layer.cornerRadius = self.backButton.bounds.width/2;
+        
+    }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true;
         
@@ -113,7 +124,11 @@ class ProfileViewController: UIViewController {
         
         
     }
-    
+    @IBAction func mailthisGuy(sender: AnyObject)
+    {
+        print(mail)
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:" + mail)!)
+    }
     /*
     // MARK: - Navigation
 

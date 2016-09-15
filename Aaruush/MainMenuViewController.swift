@@ -38,7 +38,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         
         
         navigationController?.delegate = RZTransitionsManager.shared()
-        photos = ["highlights","domains","workshops","patrons1","team","wa"];
+        photos = ["highlights","domains","workshops","patrons1","team","WebArch"];
         
         
         self.myCollection?.registerNib(UINib(nibName: "FiveSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
@@ -77,11 +77,15 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         {
             let vc = segue.destinationViewController as! DetailViewController
             vc.nameToShow = "Powered By Webarch";
-            vc.photoToShow = "wa"
+            vc.photoToShow = "WebArch"
         }
         else if(segue.identifier == Reusable.MAIN_TO_WORKSHOPS)
         {
             let vc = segue.destinationViewController as! WorkshopsTableViewController
+            if(workshops == nil)
+            {
+                print("yes it is nil")
+            }
             vc.global_data = self.workshops
           
         }
@@ -227,8 +231,13 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   toViewController:WorkshopsTableViewController.self,forAction:.PushPop)
             performSegueWithIdentifier(Reusable.MAIN_TO_WORKSHOPS, sender: self)
         }
-        else //under construction, to be removed
+        else if(indexPath.row==0)
         {
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:highlightsViewController.self,forAction:.PushPop)
+            
+            performSegueWithIdentifier(Reusable.MAIN_TO_HIGHLIGHTS, sender: self)
             
             
             
