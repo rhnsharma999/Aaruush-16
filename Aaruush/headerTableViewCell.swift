@@ -11,6 +11,7 @@ import UIKit
 class headerTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
+        title.alpha = 0.5
         super.awakeFromNib()
         // Initialization code
     }

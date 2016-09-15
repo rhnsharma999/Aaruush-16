@@ -126,6 +126,10 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         cell.backgroundColor = UIColor.clearColor();
         cell.details.textColor = UIColor.whiteColor();
         cell.details.backgroundColor = UIColor.clearColor();
+     
+       
+      
+        
         
         
         
@@ -181,7 +185,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         headerCell.title.text = headTitle
         headerCell.title.textColor = .whiteColor()
         headerCell.backgroundColor = UIColor.grayColor()
-        headerCell.backgroundView?.alpha = 0.5
+        //headerCell.backgroundView?.alpha = 0.5
         
         return headerCell;
         
@@ -203,7 +207,6 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
         myView.image = UIImage(named: recImage!);
         
-        myView.bringSubviewToFront(self.goBackButton)
         return myView
         
     }
@@ -219,5 +222,9 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
 
     @IBAction func goBack(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+        
     }
 }

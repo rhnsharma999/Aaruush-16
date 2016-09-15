@@ -69,6 +69,10 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+        
+    }
     
     @IBAction func goBack(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true);
@@ -109,6 +113,7 @@ class ProfileViewController: UIViewController {
         
         
     }
+    
     /*
     // MARK: - Navigation
 

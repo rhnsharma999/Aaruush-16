@@ -26,7 +26,11 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         
         
+        
+        
+        
         self.navigationItem.title = "Aaruush 16"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "xirod", size: 18)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         myCollection.delegate = self;
         myCollection.dataSource = self;
@@ -34,7 +38,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         
         
         navigationController?.delegate = RZTransitionsManager.shared()
-        photos = ["highlights","domains","workshops","sponsors","patrons1","team","wa"];
+        photos = ["highlights","domains","workshops","patrons1","team","wa"];
         
         
         self.myCollection?.registerNib(UINib(nibName: "FiveSWalaCell",bundle: nil), forCellWithReuseIdentifier: Reusable.s5);
@@ -48,8 +52,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         {
             
             getDomains()
-            getDomainDetails()
-            getWorkshops()
+          //  getDomainDetails()
+          //  getWorkshops()
   
             
             //print(self.domains)
@@ -177,7 +181,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         
         
         
-        if(indexPath.row==5)
+        if(indexPath.row==4)
         {
             
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
@@ -186,7 +190,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                                                                   forAction:.PushPop)
             performSegueWithIdentifier(Reusable.MAIN_TO_TEAM, sender: self);
         }
-        else if(indexPath.row==6)
+        else if(indexPath.row==5)
         {
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
@@ -211,7 +215,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
             
             
         }
-        else if(indexPath.row == 4){
+        else if(indexPath.row == 3){
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:PatronsViewController.self,forAction:.PushPop)
@@ -294,6 +298,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                 if let value = response.result.value {
                     self.domainDetail = JSON(value)
                     MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                    self.getDomainDetails()
                    
                   
                 }
@@ -322,6 +327,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
                        self.domains = JSON(value)
                         MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
                         print(self.to_be_sent)
+                        self.getWorkshops()
                     
                     }
                 case .Failure(let error):

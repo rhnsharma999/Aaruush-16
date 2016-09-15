@@ -31,12 +31,8 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
     
        override func viewDidLoad() {
         
-        
-        
-        //temp
-        
-        
-        
+        self.navigationItem.title = "Team"
+
         
         
         navigationController?.delegate = RZTransitionsManager.shared()

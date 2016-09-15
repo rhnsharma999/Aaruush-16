@@ -231,7 +231,6 @@
 				DEAF0F1D1D65E83B002923C1 /* TeamViewController.swift */,
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
-				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
 				DEA35C591D89992900BF1F6C /* detailTableViewCell.swift */,
 				DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */,
@@ -239,6 +238,7 @@
 				DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
+				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
 				DE720C9D1CEF9C7F00097862 /* Info.plist */,
 				DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */,
 			);
