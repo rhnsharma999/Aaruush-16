@@ -16,6 +16,7 @@
 		5B7BE314B4F4AC791F0B4A67 /* Pods_AaruushUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F139151CF864A5036A13A9E /* Pods_AaruushUITests.framework */; };
 		A70A22E0148D2586841D8E97 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD945853310B9489B3C223D /* Pods_Aaruush.framework */; };
 		DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */; };
+		DE206AC51D8AA98E00304FE1 /* WorkshopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
 		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		B5250DDAEA075384463265BD /* Pods-AaruushTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushTests/Pods-AaruushTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD2F46A3DCAC7EDE2DF7B223 /* Pods-AaruushUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AaruushUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AaruushUITests/Pods-AaruushUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopsTableViewController.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
 		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
+				DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */,
 				DEA35C591D89992900BF1F6C /* detailTableViewCell.swift */,
 				DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */,
 				DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */,
@@ -594,6 +597,7 @@
 				DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */,
 				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
 				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
+				DE206AC51D8AA98E00304FE1 /* WorkshopsTableViewController.swift in Sources */,
 				1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */,
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,

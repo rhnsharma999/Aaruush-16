@@ -11,6 +11,8 @@ import UIKit
 class detailTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
+        
+        
       //  details.alpha = 0.5
         super.awakeFromNib()
         // Initialization code

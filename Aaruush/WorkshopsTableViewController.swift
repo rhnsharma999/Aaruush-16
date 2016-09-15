@@ -1,32 +1,28 @@
 //
-//  InfoTableViewController.swift
+//  WorkshopsTableViewController.swift
 //  Aaruush
 //
-//  Created by Rohan Lokesh Sharma on 14/09/16.
+//  Created by Rohan Lokesh Sharma on 15/09/16.
 //  Copyright © 2016 rohan. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
-class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarouselDelegate {
-    
-    @IBOutlet var goBackButton: UIButton!
-    
-
-    
-    var receivedData = [String]()
-    var allData: JSON?
-    
-    var recImage:String?
+import Kingfisher
+class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iCarouselDelegate {
     
     @IBOutlet var myCarousel: iCarousel!
-    override func viewDidLoad()
-    {
-        if(!receivedData.isEmpty)
-        {
-            receivedData = receivedData.sort()
-            
-        }
+    
+
+    var global_data:JSON?
+    var titles = [String]()
+    
+    override func viewDidLoad() {
+        
+        generateTitle()
+        super.viewDidLoad()
+        
+        
         myCarousel.dataSource = self;
         myCarousel.delegate = self;
         myCarousel.type = .CoverFlow
@@ -51,11 +47,8 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         tableView.estimatedRowHeight = 140
         
         //<-----DANGER DO NOT TOUCH THIS STUFF OR THE APP LOOKS UGLY--->
-        
-        
-        super.viewDidLoad()
 
-   
+
     }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true;
@@ -64,76 +57,98 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-   
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 8
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-    
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! detailTableViewCell
         
-        
         cell.details.scrollEnabled = false;
-        var data = "";
         var title = ""
         
-        if(!receivedData.isEmpty)
+        
+        if(global_data != nil)
         {
-            title = receivedData[myCarousel.currentItemIndex]
-        }
-        
-        
-        
-     
-        if(allData != nil)
-        {
-            switch indexPath.section {
-            case 0:
-                data = title;
-            case 1:
-                if let some = allData![title]["desc"].string
-                {
-                    data = some
-                }
-            case 2:
-                if let some = allData![title]["rounds"].string
-                {
-                    data = some;
-                }
-            case 3:
-                if let some = allData![title]["coords"].string
-                {
-                    data = some
-                }
-            case 4:
-                if let some = allData![title]["rules"].string
-                {
-                    data = some;
-                }
-                
-            default:
-                data = ""
-            }
+            title = titles[myCarousel.currentItemIndex];
             
         }
-       
+        var data = ""
+        
+        
+       if let json = global_data
+       {
+            switch indexPath.section {
+            case 0:
+                data = title
+            case 1:
+                if let some = json[title]["description"].string
+                {
+                    data = some;
+                    
+                }
+            case 2:
+                if let some = json[title]["team"].string
+                {
+                    data = some;
+                    
+                }
+            case 3:
+                if let some = json[title]["date"].string
+                {
+                    data = some;
+                    data = dateFix(data)
+                    
+                    
+                }
+            case 4:
+                if let some = json[title]["cost"].string
+                {
+                    data = some;
+                    
+                }
+            case 5:
+                if let some = json[title]["time"].string
+                {
+                    data = some;
+                    
+                }
+            case 6:
+                if let some = json[title]["company_name"].string
+                {
+                    data = some;
+                    
+                }
+            case 7:
+                if let some = json[title]["coords"].string
+                {
+                    data = some;
+                    
+                }
+            default:
+                data = "";
+            
+        }
+        
+       }
+
+   
         data = removeTags(data)
         
         
@@ -144,43 +159,23 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
             cell.details.font = UIFont(name: "xirod", size: 22)
             cell.details.textAlignment = NSTextAlignment.Center
         }
+        else
+        {
+            cell.details.font = .systemFontOfSize(17)
+            
+        }
         
         cell.backgroundColor = UIColor.clearColor();
         cell.details.textColor = UIColor.whiteColor();
         cell.details.backgroundColor = UIColor.clearColor();
         cell.contentView.backgroundColor = UIColor.clearColor()
-     
+        cell.details.textAlignment = NSTextAlignment.Center
+        
        
-      
-        
-        
-        
-        
-
-        // Configure the cell...
-
         return cell
     }
     
-  /*  override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        
-        var title = "";
-        
-        
-        switch section {
-        case 0:
-            title = "Name"
-        case 1:
-            title = "Some other"
-        default:
-            "default"
-        }
-        
-        return title
-        
-    }
-    */
+    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("cell1") as! headerTableViewCell
         
@@ -193,12 +188,18 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         case 1:
             headTitle = "Description"
         case 2:
-            headTitle = "Rounds"
+            headTitle = "Team"
         case 3:
-            headTitle = "Co-Ordinators"
+            headTitle = "Date"
         case 4:
-            headTitle = "Rules"
-            
+            headTitle = "Cost"
+        case 5:
+            headTitle = "Time"
+        case 6:
+            headTitle = "Company Name"
+        case 7:
+            headTitle = "Co-Ordinators"
+       
         default:
             headTitle = "Info"
         }
@@ -228,9 +229,8 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         return 35
     }
     
-
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return receivedData.count
+        return titles.count
         
     }
     
@@ -238,28 +238,97 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         let myView = UIImageView(frame: CGRectMake(self.myCarousel.center.x, self.myCarousel.center.y, self.view.bounds.width - 100, 200));
-        myView.image = UIImage(named: recImage!);
+        
+        myView.image = UIImage(named: "placeholder");
+        let activity = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        myView.addSubview(activity);
+        activity.startAnimating();
+        activity.center.x = myView.bounds.width/2;
+        activity.center.y = myView.bounds.height/2
+        
+        var url = ""
+        if let some = global_data
+        {
+            if let url1 = some[titles[index]]["imgSource"].string
+            {
+                url = Reusable.IMAGES + "workshop/" + url1;
+                
+            }
+            
+        }
+        
+        
+        url = removeSpaces(url)
+      
+        
+        print(url)
+        myView.kf_setImageWithURL(NSURL(string: url),
+                                  placeholderImage: UIImage(named:"placeholder"),
+                                  optionsInfo: nil,
+                                  progressBlock: { (receivedSize, totalSize) -> () in
+                                   // print("Download Progress: \(receivedSize)/\(totalSize)")
+            },
+                                  completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                    // print("Downloaded and set!")
+                                    activity.hidden = true;
+                                    
+            }
+        )
+        
+        
         
         return myView
         
     }
-
+    
     func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         self.tableView.reloadData()
     }
-    
+
     func removeTags(inputString: String) -> String
     {
         return inputString.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "\n", options: .RegularExpressionSearch, range: nil)
     }
     
+    func generateTitle()
+    {
+        
+        
+        
+        if let something = global_data
+        {
+            for(key,_):(String,JSON) in something
+            {
+                self.titles.append(key)
+            }
+            self.myCarousel.reloadData();
+            self.tableView.reloadData();
+            
+        }
     
-
-    @IBAction func goBack(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.titles = self.titles.sort()
+        
     }
+    
+    func removeSpaces(url:String) -> String
+    {
+        
+        return url.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: .RegularExpressionSearch, range: nil)
+        
+    }
+    func dateFix(inputString:String) -> String{
+        
+        var other = inputString.stringByReplacingOccurrencesOfString("<sup>", withString: "", options: .RegularExpressionSearch, range: nil)
+        
+        other = other.stringByReplacingOccurrencesOfString("</sup>", withString: "", options: .RegularExpressionSearch, range: nil)
+        
+        return other;
+        
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true;
         
     }
+
 }

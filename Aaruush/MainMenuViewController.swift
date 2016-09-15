@@ -81,8 +81,8 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         }
         else if(segue.identifier == Reusable.MAIN_TO_WORKSHOPS)
         {
-            let vc = segue.destinationViewController as! WorkshopsViewController
-            vc.global_json = self.workshops
+            let vc = segue.destinationViewController as! WorkshopsTableViewController
+            vc.global_data = self.workshops
           
         }
         else if(segue.identifier == Reusable.MAIN_TO_DOMAINS)
@@ -224,7 +224,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         else if(indexPath.row == 2){
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
-                                                                  toViewController:WorkshopsViewController.self,forAction:.PushPop)
+                                                                  toViewController:WorkshopsTableViewController.self,forAction:.PushPop)
             performSegueWithIdentifier(Reusable.MAIN_TO_WORKSHOPS, sender: self)
         }
         else //under construction, to be removed

@@ -23,6 +23,7 @@ class Reusable
     static let EVENT_TITLE_URL = "http://aaruush.net/eventData/eventNames.json"
     static let EVENT_DATA_URL = "http://aaruush.net/eventData/eventData.json"
     static let WORKSHOPS_URL = "http://aaruush.net/eventData/workshop.json"
+    static let IMAGES = "http://aaruush.net/images/"
     
     
 }
