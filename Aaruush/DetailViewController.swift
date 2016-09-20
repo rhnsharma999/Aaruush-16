@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     var photoToShow:String!
     var nameToShow:String!
     override func viewDidLoad() {
-        
+        self.navigationItem.title = "Credits"
         nameLabel.text = nameToShow
         photo.image = UIImage(named: photoToShow);
         

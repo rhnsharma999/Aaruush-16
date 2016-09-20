@@ -20,12 +20,13 @@
 		DE206AC71D8ACACF00304FE1 /* highlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */; };
 		DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */; };
 		DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */; };
-		DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */; };
 		DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5666BB1D6E03B3000F608C /* ArchViewController.swift */; };
 		DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5666C31D6E0ED5000F608C /* iCarousel.m */; };
 		DE5A63081D7B5875000D84E9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */; };
 		DE5E33EB1D79A1E800BECAF1 /* xirod.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5E33EA1D79A0FF00BECAF1 /* xirod.ttf */; };
 		DE6149001D74726200F3A6A4 /* InternetCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6148FF1D74726200F3A6A4 /* InternetCheck.swift */; };
+		DE650BD61D9199CF00DD946F /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE650BD51D9199CF00DD946F /* FeedTableViewController.swift */; };
+		DE650BD81D919C5100DD946F /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE650BD71D919C5100DD946F /* FeedTableViewCell.swift */; };
 		DE720C8F1CEF9C7F00097862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */; };
 		DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C921CEF9C7F00097862 /* Main.storyboard */; };
 		DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE720C951CEF9C7F00097862 /* Aaruush.xcdatamodeld */; };
@@ -33,13 +34,12 @@
 		DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */; };
 		DE720CA71CEF9C7F00097862 /* AaruushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CA61CEF9C7F00097862 /* AaruushTests.swift */; };
 		DE720CB21CEF9C7F00097862 /* AaruushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */; };
-		DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CBF1CEF9D5200097862 /* SecondViewController.swift */; };
 		DE720CC31CEF9D5200097862 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC01CEF9D5200097862 /* Stars.swift */; };
 		DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE720CC11CEF9D5200097862 /* ViewController.swift */; };
 		DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0AB1D4401740005804A /* AaruushViewController.swift */; };
 		DE7FC0B41D449D190005804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC0B31D449D190005804A /* DetailViewController.swift */; };
+		DE814B2B1D915E4600238D1C /* NSDate extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE814B2A1D915E4600238D1C /* NSDate extension.swift */; };
 		DE843B771D66FDB900E0AA17 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */; };
-		DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */; };
 		DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA12BCB1D6612790058EE4D /* Reusable.swift */; };
 		DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */; };
 		DEA35C581D8998B000BF1F6C /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */; };
@@ -89,7 +89,6 @@
 		DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = highlightsViewController.swift; sourceTree = "<group>"; };
 		DE2C7A761D43DA590061FFA8 /* FiveSWalaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveSWalaCell.xib; sourceTree = "<group>"; };
 		DE2C7A781D43DA700061FFA8 /* FiveSWalaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSWalaCell.swift; sourceTree = "<group>"; };
-		DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		DE5666BB1D6E03B3000F608C /* ArchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchViewController.swift; sourceTree = "<group>"; };
 		DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aaruush-Bridging-Header.h"; sourceTree = "<group>"; };
 		DE5666C21D6E0ED5000F608C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -97,6 +96,8 @@
 		DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE5E33EA1D79A0FF00BECAF1 /* xirod.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xirod.ttf; sourceTree = "<group>"; };
 		DE6148FF1D74726200F3A6A4 /* InternetCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetCheck.swift; sourceTree = "<group>"; };
+		DE650BD51D9199CF00DD946F /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		DE650BD71D919C5100DD946F /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		DE720C8B1CEF9C7E00097862 /* Aaruush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aaruush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720C8E1CEF9C7F00097862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE720C931CEF9C7F00097862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,13 +111,12 @@
 		DE720CAD1CEF9C7F00097862 /* AaruushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaruushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE720CB11CEF9C7F00097862 /* AaruushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AaruushUITests.swift; sourceTree = "<group>"; };
 		DE720CB31CEF9C7F00097862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE720CBF1CEF9D5200097862 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DE720CC01CEF9D5200097862 /* Stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		DE720CC11CEF9D5200097862 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE7FC0AB1D4401740005804A /* AaruushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AaruushViewController.swift; sourceTree = "<group>"; };
 		DE7FC0B31D449D190005804A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE814B2A1D915E4600238D1C /* NSDate extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate extension.swift"; sourceTree = "<group>"; };
 		DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
-		DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		DEA12BCB1D6612790058EE4D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,7 +204,6 @@
 				DE3499511D66FA9E003EF897 /* custom cells */,
 				DEAF0F231D65EBB8002923C1 /* toBeDeleted */,
 				DE7FC0AA1D43FE740005804A /* Tools */,
-				DE7FC0A91D43FE430005804A /* Extras (for now) */,
 				DE720CA51CEF9C7F00097862 /* AaruushTests */,
 				DE720CB01CEF9C7F00097862 /* AaruushUITests */,
 				DE720C8C1CEF9C7E00097862 /* Products */,
@@ -242,6 +241,8 @@
 				DEA35C571D8998B000BF1F6C /* headerTableViewCell.swift */,
 				DEA35C551D898F1200BF1F6C /* InfoTableViewController.swift */,
 				DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */,
+				DE650BD51D9199CF00DD946F /* FeedTableViewController.swift */,
+				DE650BD71D919C5100DD946F /* FeedTableViewCell.swift */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
 				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
@@ -269,17 +270,6 @@
 			path = AaruushUITests;
 			sourceTree = "<group>";
 		};
-		DE7FC0A91D43FE430005804A /* Extras (for now) */ = {
-			isa = PBXGroup;
-			children = (
-				DE3F7B721D372B64007BA09E /* EventsTableViewCell.swift */,
-				DE8F5DDE1D33DD3200D3079A /* EventsTableViewController.swift */,
-				DE720CBF1CEF9D5200097862 /* SecondViewController.swift */,
-			);
-			name = "Extras (for now)";
-			path = Aaruush;
-			sourceTree = "<group>";
-		};
 		DE7FC0AA1D43FE740005804A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +280,7 @@
 				DE5666C31D6E0ED5000F608C /* iCarousel.m */,
 				DE843B761D66FDB900E0AA17 /* ZoomAnimator.swift */,
 				DE1D6C111D1AF535004D7D24 /* ColorExtension.swift */,
+				DE814B2A1D915E4600238D1C /* NSDate extension.swift */,
 				DE5666C11D6E0ED4000F608C /* Aaruush-Bridging-Header.h */,
 			);
 			name = Tools;
@@ -598,19 +589,19 @@
 				1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */,
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
 				DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */,
+				DE650BD61D9199CF00DD946F /* FeedTableViewController.swift in Sources */,
 				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
 				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
 				DE206AC51D8AA98E00304FE1 /* WorkshopsTableViewController.swift in Sources */,
 				1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */,
+				DE650BD81D919C5100DD946F /* FeedTableViewCell.swift in Sources */,
 				DEA12BCC1D6612790058EE4D /* Reusable.swift in Sources */,
 				DE7FC0AC1D4401740005804A /* AaruushViewController.swift in Sources */,
-				DE8F5DDF1D33DD3200D3079A /* EventsTableViewController.swift in Sources */,
 				DE2C7A791D43DA700061FFA8 /* FiveSWalaCell.swift in Sources */,
+				DE814B2B1D915E4600238D1C /* NSDate extension.swift in Sources */,
 				DEAF0F221D65E92C002923C1 /* SixSWalaCell.swift in Sources */,
 				DEA35C581D8998B000BF1F6C /* headerTableViewCell.swift in Sources */,
-				DE720CC21CEF9D5200097862 /* SecondViewController.swift in Sources */,
 				DE720C971CEF9C7F00097862 /* Aaruush.xcdatamodeld in Sources */,
-				DE3F7B731D372B64007BA09E /* EventsTableViewCell.swift in Sources */,
 				DE1D6C121D1AF535004D7D24 /* ColorExtension.swift in Sources */,
 				DE5A63081D7B5875000D84E9 /* ProfileViewController.swift in Sources */,
 				DE6149001D74726200F3A6A4 /* InternetCheck.swift in Sources */,

@@ -12,15 +12,22 @@ import LTMorphingLabel
 import RZTransitions
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GlitchLabel
 
-class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
+class ViewController: UIViewController{
     
     
     var a = 1;
     
     var show = "no"
     
-    
+    @IBOutlet var countDownTopConstraint: NSLayoutConstraint!
+    @IBOutlet var countdownConstraint:NSLayoutConstraint!
+    @IBOutlet var countdownConstraint1:NSLayoutConstraint!
+    @IBOutlet var countdownConstraint2:NSLayoutConstraint!
+
+    @IBOutlet var liveFeedButton: UIButton!
+    @IBOutlet var countDown: GlitchLabel!
     @IBOutlet var aboutAaruush: UITextView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var firstLogo: LTMorphingLabel!
@@ -35,9 +42,67 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         
         super.viewDidLoad()
         
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "xirod", size: 18)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
+
+        
+        
+     /*   if(UIScreen.mainScreen().bounds.height >= 667.0)
+        {*/
+            countDown.font = UIFont(name: "xirod", size: 20)
+            countDown.textAlignment = NSTextAlignment.Center
+            countDown.sizeToFit()
+            var date = NSDate()
+        
+        
+            
+            let format = NSDateFormatter()
+        
+            format.dateFormat = "dd-MM-yyyy"
+       // date = format.dateFromString("27-09-2016")!
+            let aaruush = format.dateFromString("27-09-2016");
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day], fromDate: date, toDate: aaruush!, options: [])
+            var time = components.day
+            if(time == 0 && components.minute == 0)
+            {
+                time = -1;
+                
+            }
+            else if(time == 0 && components.minute != 0)
+            {
+                time = -2;
+            }
+        if(time > 0)
+        {
+            countDown.text = "\(time) days to go"
+            
+        }
+        else if(date.isEqualToDate(aaruush!))
+        {
+            countDown.text = "    Live Now"
+        }
+        
+        
+     /*  }
+        else
+        {
+           // countDown.hidden = true
+        }
+       */
+        
+        
+        
+        
+        
+        
+        
+        
         navigationController?.delegate = RZTransitionsManager.shared()
-      //  signInButton.hidden = true;
+    
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
+        
+      
         
         if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
@@ -66,9 +131,11 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         applyMotionEffect(toView: aboutAaruush, mangnitude: -20)
         applyMotionEffect(toView: shareButton, mangnitude: -20)
         applyMotionEffect(toView: exploreButton, mangnitude: -20)
+        applyMotionEffect(toView: liveFeedButton, mangnitude: -20)
         //-------------------parallax effect---------------------------->
 }
     
+   
     
 // MARK:  Facebook login methods
     
@@ -100,6 +167,13 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
    
     override func viewWillAppear(animated: Bool)
     {
+        if(UIScreen.mainScreen().bounds.height<568)
+        {
+            self.aboutAaruush.scrollEnabled = true
+            self.countDown.hidden = true
+            
+        }
+        
         self.navigationController?.navigationBar.hidden = true;
         
     //making all elements transparent so that they are hidden.
@@ -112,17 +186,33 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
             aboutAaruush.alpha = 0.0;
             self.shareButton.alpha = 0.0
             self.exploreButton.alpha = 0.0
+            self.countDown.alpha = 0.0
+            self.liveFeedButton.alpha = 0.0
             show = "yes"
+            firstLogo.morphingEffect = .Scale //workaround for a bug
+            firstLogo.text = "Aaruush"         //because of bug, intially label is hidden, this prevents it.
         }
         
         
         
-        firstLogo.morphingEffect = .Scale //workaround for a bug
-       firstLogo.text = "Aaruush"         //because of bug, intially label is hidden, this prevents it.
+       
         
     }
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
+    }
+    
+    override func viewDidLayoutSubviews() {
+        shareButton.layer.cornerRadius = 8
+        shareButton.layer.borderColor = UIColor.yellowColor().CGColor
+        shareButton.layer.borderWidth = 1
+        exploreButton.layer.cornerRadius = 8
+        exploreButton.layer.borderColor = UIColor.yellowColor().CGColor
+        exploreButton.layer.borderWidth = 1
+        liveFeedButton.layer.borderColor = UIColor.yellowColor().CGColor
+        liveFeedButton.layer.borderWidth = 1
+        liveFeedButton.layer.cornerRadius = 8
+        
     }
     override func viewDidAppear(animated: Bool)
     {
@@ -167,9 +257,13 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
                                     self.aboutAaruush.alpha = 1.0
                                         self.shareButton.alpha = 1.0
                                         self.exploreButton.alpha = 1.0
+                                        self.liveFeedButton.alpha = 1.0
+                                   
                                      
                                     
-                                }, completion: nil)
+                                    }, completion: {(value: Bool) in
+                                
+                                self.countDown.alpha = 1.0})
                      })
                  })
             })
@@ -205,16 +299,28 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let vc = segue.destinationViewController;
+       // let vc = segue.destinationViewController;
         
         let backButton = UIBarButtonItem()
         backButton.title = "";
         self.navigationItem.backBarButtonItem = backButton
         
+        if(segue.identifier == "feed")
+        {
+            RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                                  fromViewController:self.dynamicType,
+                                                                  toViewController:FeedTableViewController.self,
+                                                                  forAction:.PushPop)
+            
+        }
+        else if(segue.identifier == "explore")
+        {
         RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                               fromViewController:self.dynamicType,
                                                               toViewController:MainMenuViewController.self,
                                                               forAction:.PushPop)
+        }
+        
         
         
        // vc.transitioningDelegate = self; //for fallapart dismiss transition
@@ -267,5 +373,12 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    @IBAction func goToLiveFeed(sender: AnyObject) {
+        self.performSegueWithIdentifier("feed", sender: self)
+    }
 }
 

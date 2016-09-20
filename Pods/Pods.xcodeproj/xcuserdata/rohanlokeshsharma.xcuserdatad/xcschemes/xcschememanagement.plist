@@ -9,17 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EZLoadingActivity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FoldingCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImageLoader.xcscheme</key>
+		<key>GlitchLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,22 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RZTransitions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>StarWars.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3140A8A1EE674E8DD9F8F4714BE78A4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D04613A7591446E9F604C26C55657F</key>
+		<key>6BACB30ACD533124D550C8180CC4A52B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<key>82A830F44DDC79A7A8D0256A1F4AA591</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,37 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD53FFE97D4F26A2958E3F6E5CFCD830</key>
+		<key>ED62E380A1629D9BA0922E008982882C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8CB2E2B03C26A479286E4662D060A33</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3B92BD4D85A174E6E2F0767AC2F8766</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DBE88423CA6B2B1E9027C3F68FD01770</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9E59DE2C770888A074CBA7C4570F897</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F732B43C3E7B2E48CE0985963F7B7AB4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC1B50AED529E631E33D91FBA6CBCBEE</key>
+		<key>F25D20DF278BA8DF96CD6AB1E1807A33</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -147,5 +147,68 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aaruush/ViewController.swift"
+            timestampString = "496076991.644908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aaruush.ViewController.countdownConstraint.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSLayoutConstraint&gt;"
+                  moduleName = "Aaruush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rohanlokeshsharma/Desktop/Aaruush-16/Aaruush/ViewController.swift"
+                  timestampString = "496077054.893234"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aaruush.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Aaruush.ViewController"
+                  moduleName = "Aaruush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rohanlokeshsharma/Desktop/Aaruush-16/Aaruush/ViewController.swift"
+                  timestampString = "496077054.893412"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "329">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aaruush.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Aaruush.ViewController&gt;"
+                  moduleName = "Aaruush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rohanlokeshsharma/Desktop/Aaruush-16/Aaruush/ViewController.swift"
+                  timestampString = "496077054.89354"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "235">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

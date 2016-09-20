@@ -6,16 +6,14 @@ use_frameworks!
 target 'Aaruush' do
 pod 'StarWars', '~> 1.0'
 pod 'LTMorphingLabel'
-pod 'SwiftyButton'
-pod 'FoldingCell'
 pod 'RZTransitions'
 pod 'Alamofire', '~> 3.4'
 pod 'SwiftyJSON'
-pod 'EZLoadingActivity'
 pod 'MRProgress'
-pod 'ImageLoader'
 pod 'Kingfisher', '~> 2.4'
 pod 'OneSignal'
+pod "GlitchLabel"
+
 end
 
 target 'AaruushTests' do

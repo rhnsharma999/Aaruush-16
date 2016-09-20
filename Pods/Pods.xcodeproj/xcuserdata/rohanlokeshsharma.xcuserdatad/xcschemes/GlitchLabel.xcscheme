@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A038B17BDA0A5C5C9A1905E7'
-               BlueprintName = 'MRProgress'
+               BlueprintIdentifier = '58F469B4EFA03A39E66843C4'
+               BlueprintName = 'GlitchLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'MRProgress.framework'>
+               BuildableName = 'GlitchLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
