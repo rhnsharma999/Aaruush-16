@@ -52,11 +52,16 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
 
     }
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true;
+        self.navigationController?.hidesBarsOnSwipe = true;
+        
+        self.navigationController?.navigationBar.hidden = false;
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationItem.title = "Workshops"
         
     }
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
+        self.navigationController?.hidesBarsOnSwipe = false
     }
     
 
@@ -335,7 +340,7 @@ class WorkshopsTableViewController: UITableViewController,iCarouselDataSource,iC
         
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+   override func prefersStatusBarHidden() -> Bool {
         return true;
         
     }

@@ -13,25 +13,37 @@ import RZTransitions
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBSDKLoginButtonDelegate{
+class ViewController: UIViewController,UIViewControllerTransitioningDelegate{
     
     
     var a = 1;
     
+    var show = "no"
     
+    
+    @IBOutlet var aboutAaruush: UITextView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var firstLogo: LTMorphingLabel!
      @IBOutlet var secondLogo: UILabel!
      @IBOutlet var signInButton: UIButton!
     
+    @IBOutlet var shareButton: UIButton!
+    @IBOutlet var exploreButton: UIButton!
     var facebookString = ""
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
-        if(UIScreen.mainScreen().bounds.height == 568)
+        navigationController?.delegate = RZTransitionsManager.shared()
+      //  signInButton.hidden = true;
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
+        
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
             firstLogo.font = UIFont(name: "xirod", size: 15);
             secondLogo.font = UIFont(name: "xirod", size: 12);
+           aboutAaruush.font =  .systemFontOfSize(14)
             
         }
         if(FBSDKAccessToken.currentAccessToken() != nil){
@@ -41,9 +53,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         
         
         //rounded edges
-        signInButton.layer.borderWidth = 2;
-        signInButton.layer.borderColor = UIColor.yellowColor().CGColor
-        signInButton.layer.cornerRadius = 10;
+    //    signInButton.layer.borderWidth = 2;
+    //    signInButton.layer.borderColor = UIColor.yellowColor().CGColor
+    //    signInButton.layer.cornerRadius = 10;
         // added parallax effect here
         
         //-------------------parallax effect---------------------------->
@@ -51,14 +63,16 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         applyMotionEffect(toView: imageView, mangnitude: -20)
         applyMotionEffect(toView: firstLogo, mangnitude: -20)
         applyMotionEffect(toView: secondLogo, mangnitude: -20)
-        applyMotionEffect(toView: signInButton, mangnitude: -20)
+        applyMotionEffect(toView: aboutAaruush, mangnitude: -20)
+        applyMotionEffect(toView: shareButton, mangnitude: -20)
+        applyMotionEffect(toView: exploreButton, mangnitude: -20)
         //-------------------parallax effect---------------------------->
 }
     
     
 // MARK:  Facebook login methods
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+ /*   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if(facebookString == ""){
             
         }
@@ -70,12 +84,12 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
                 self.facebookString = "Welcome, \(strFirstName) \(strLastName)"
             }
         }
-    }
+    }*/
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+ /*   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
        
     }
-    
+    */
     
 
     
@@ -89,17 +103,25 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         self.navigationController?.navigationBar.hidden = true;
         
     //making all elements transparent so that they are hidden.
-        imageView.alpha = 0.0;
-        firstLogo.alpha = 0.0;
-        secondLogo.alpha = 0.0;
-        signInButton.alpha = 0.0;
+        if(show=="no")
+        {
+            imageView.alpha = 0.0;
+            firstLogo.alpha = 0.0;
+            secondLogo.alpha = 0.0;
+            //   signInButton.alpha = 0.0;
+            aboutAaruush.alpha = 0.0;
+            self.shareButton.alpha = 0.0
+            self.exploreButton.alpha = 0.0
+            show = "yes"
+        }
+        
         
         
         firstLogo.morphingEffect = .Scale //workaround for a bug
        firstLogo.text = "Aaruush"         //because of bug, intially label is hidden, this prevents it.
         
     }
-    override func viewDidDisappear(animated: Bool) {
+    override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
     }
     override func viewDidAppear(animated: Bool)
@@ -142,7 +164,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
                                         self.firstLogo.morphingEffect = .Anvil
                                         
                                         self.firstLogo.text = "Aaruush 10th Edition"
-                                    self.signInButton.alpha = 1.0
+                                    self.aboutAaruush.alpha = 1.0
+                                        self.shareButton.alpha = 1.0
+                                        self.exploreButton.alpha = 1.0
                                      
                                     
                                 }, completion: nil)
@@ -157,7 +181,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     @IBAction func signIn(sender: AnyObject)
     {
         
-      UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
+    //  UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
     UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
         if(FBSDKAccessToken.currentAccessToken() != nil){
             performSegueWithIdentifier("toLogin", sender: self)
@@ -182,7 +206,18 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let vc = segue.destinationViewController;
-        vc.transitioningDelegate = self; //for fallapart dismiss transition
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "";
+        self.navigationItem.backBarButtonItem = backButton
+        
+        RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
+                                                              fromViewController:self.dynamicType,
+                                                              toViewController:MainMenuViewController.self,
+                                                              forAction:.PushPop)
+        
+        
+       // vc.transitioningDelegate = self; //for fallapart dismiss transition
         
         
         
@@ -212,5 +247,25 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,FBS
         view.addMotionEffect(group)
         
     }
+    
+    
+    @IBAction func shareAaruush(sender: AnyObject) {
+        
+        let message = "Check out Aaruush 16, SRM University"
+        //Set the link to share.
+        if let link = NSURL(string: "http://www.aaruush.net/")
+        {
+            let objectsToShare = [message,link]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func goForwaard(sender: AnyObject) {
+        performSegueWithIdentifier("explore", sender: self);
+        
+    }
+    
 }
 

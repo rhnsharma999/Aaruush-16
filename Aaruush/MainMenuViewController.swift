@@ -46,21 +46,11 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         myCollection.backgroundColor = UIColor.clearColor();
         
         
+        startDownload()
         
         
-        if(internetCheck()) //fetch fresh data
-        {
-            
-            getDomains()
-          //  getDomainDetails()
-          //  getWorkshops()
-  
-            
-            //print(self.domains)
-            //print(self.workshops)
-            
-            
-        }
+        
+       
 
 
     }
@@ -73,6 +63,12 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "";
+        self.navigationItem.backBarButtonItem = backButton
+        
         if(segue.identifier == "credits")
         {
             let vc = segue.destinationViewController as! DetailViewController
@@ -125,7 +121,7 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         
         
         
-        if(UIScreen.mainScreen().bounds.height == 568)
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
             fiveScell.photo.image = UIImage(named: photos[indexPath.row]);
             fiveScell.photoTitle.text = photos[indexPath.row];
@@ -347,6 +343,41 @@ class MainMenuViewController: UIViewController,UICollectionViewDelegateFlowLayou
         }
         
       
+    }
+    func startDownload()
+    {
+        
+        if(internetCheck()) //fetch fresh data
+        {
+            
+            getDomains()
+            //  getDomainDetails()
+            //  getWorkshops()
+            
+            
+            //print(self.domains)
+            //print(self.workshops)
+            
+            
+        }
+        else
+        {
+            let alert = UIAlertController(title: "No Internet", message: "Your device is not Connected to the internet, the app will thus run in offline mode. If the events haven't been downloaded, all the categories will be blank. Please connect to the internet for best use", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.Default, handler: {action in
+            
+            
+                if(!self.internetCheck())
+                {
+                    self.startDownload()
+                
+                }
+            
+            
+            }))
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
     }
     
   

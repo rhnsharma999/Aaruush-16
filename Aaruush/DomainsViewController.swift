@@ -53,6 +53,10 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
     override func viewDidLoad()
     {
         
+        if(json == nil)
+        {
+            print("Checking nilssss")
+        }
        
 
      //   print(global_Event_Detail)
@@ -95,7 +99,7 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         
         
-        if(UIScreen.mainScreen().bounds.height == 568)
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
             //cell1.photo.image = UIImage(named: domainImages[indexPath.row]); //to be moved to a seperate thread
             
@@ -183,10 +187,15 @@ class DomainsViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         let svc = segue.destinationViewController as! InfoTableViewController
         
+        let backButton = UIBarButtonItem()
+        backButton.title = "";
+        self.navigationItem.backBarButtonItem = backButton
+        
      
         svc.receivedData = global_JSON[selected]!
        svc.allData = global_Event_Detail
         svc.recImage = selected
+        
         
       //  svc.allData = nil;
         

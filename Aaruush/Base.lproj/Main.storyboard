@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5rr-Ue-NgN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,8 +8,6 @@
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="xirod.ttf">
-            <string>Xirod-Regular</string>
-            <string>Xirod-Regular</string>
             <string>Xirod-Regular</string>
             <string>Xirod-Regular</string>
             <string>Xirod-Regular</string>
@@ -28,43 +26,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Stars" customModule="Aaruush" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aaruush" translatesAutoresizingMaskIntoConstraints="NO" id="uqy-Qs-tuA">
-                                <rect key="frame" x="71" y="105" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="aaruush" translatesAutoresizingMaskIntoConstraints="NO" id="uqy-Qs-tuA">
+                                <rect key="frame" x="67" y="46" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uqy-Qs-tuA" secondAttribute="height" multiplier="15:8" id="atI-yu-ytT"/>
-                                    <constraint firstAttribute="height" constant="128" id="qrM-ch-DDo"/>
+                                    <constraint firstAttribute="width" secondItem="uqy-Qs-tuA" secondAttribute="height" multiplier="15:8" id="Ufw-Qv-vtO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Towards Infinity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tow-Rb-NGz">
-                                <rect key="frame" x="24" y="297" width="335" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="wta-N7-0z1"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Towards Infinity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tow-Rb-NGz">
+                                <rect key="frame" x="20" y="252" width="335" height="29"/>
                                 <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utq-Dd-u3Q">
-                                <rect key="frame" x="98" y="480" width="187" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="sS0-yx-tuA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7m-wz-lqK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iu4-fc-wow" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="24" y="254" width="335" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="ceC-pr-6LO"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iu4-fc-wow" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="20" y="195" width="335" height="49"/>
                                 <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -74,35 +52,76 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-0G-MgW">
+                                <rect key="frame" x="13" y="626" width="343" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-rR-5TX">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="33"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareAaruush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HG9-Gd-veC"/>
+                                            <action selector="shareButtonPressed:" destination="RpC-eA-Dtv" eventType="touchUpInside" id="oMP-O3-fzn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBp-Ge-0sc">
+                                        <rect key="frame" x="172" y="0.0" width="172" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Explore">
+                                            <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goForwaard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTf-6u-6XY"/>
+                                            <action selector="goToMenu:" destination="RpC-eA-Dtv" eventType="touchUpInside" id="Zv0-FG-ijb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diW-qF-WsV">
+                                <rect key="frame" x="13" y="347" width="335" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Aaruush the annual techno management festival of SRM University, Chennai India.                                      The word "Aaruush" means "in crude terms, The first rays of the sun".This technical fest consists of various science and technology and manangement based competitions, symposia, events, guest lectures, video conferences, exhibitions, demonstrations and workshops. It's rather customary held over four days and four nights during the odd semester at SRM University.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Iu4-fc-wow" firstAttribute="top" secondItem="uqy-Qs-tuA" secondAttribute="bottom" constant="21" id="4K4-Yl-nCX"/>
-                            <constraint firstItem="Iu4-fc-wow" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="76l-2M-ISA"/>
-                            <constraint firstItem="Iu4-fc-wow" firstAttribute="leading" secondItem="tow-Rb-NGz" secondAttribute="leading" id="8f4-mQ-CsQ"/>
-                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GEd-9m-rWm"/>
-                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="centerX" secondItem="Iu4-fc-wow" secondAttribute="centerX" id="H8X-hQ-1np"/>
-                            <constraint firstItem="Iu4-fc-wow" firstAttribute="trailing" secondItem="tow-Rb-NGz" secondAttribute="trailing" id="HUk-nJ-oAB"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="utq-Dd-u3Q" secondAttribute="bottom" constant="58" id="JZe-cO-hFR"/>
-                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="awC-iX-sSe"/>
-                            <constraint firstItem="tow-Rb-NGz" firstAttribute="centerX" secondItem="utq-Dd-u3Q" secondAttribute="centerX" id="biX-Pc-ITC"/>
-                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="jH8-JC-Mey"/>
-                            <constraint firstItem="utq-Dd-u3Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="p9u-98-4zv"/>
-                            <constraint firstItem="tow-Rb-NGz" firstAttribute="top" secondItem="uqy-Qs-tuA" secondAttribute="bottom" constant="64" id="vZa-Aj-yxR"/>
+                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="1iK-gP-R5m"/>
+                            <constraint firstItem="Wdh-0G-MgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HOG-DR-zgH"/>
+                            <constraint firstItem="Iu4-fc-wow" firstAttribute="top" secondItem="uqy-Qs-tuA" secondAttribute="bottom" constant="21" id="HQF-E8-0FR"/>
+                            <constraint firstItem="uqy-Qs-tuA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="YLI-74-xJR"/>
+                            <constraint firstItem="tow-Rb-NGz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YXb-kX-bYz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="diW-qF-WsV" secondAttribute="trailing" constant="7" id="YuY-hm-tBX"/>
+                            <constraint firstItem="Wdh-0G-MgW" firstAttribute="top" secondItem="diW-qF-WsV" secondAttribute="bottom" constant="19" id="bBC-Aw-wZb"/>
+                            <constraint firstItem="tow-Rb-NGz" firstAttribute="top" secondItem="Iu4-fc-wow" secondAttribute="bottom" constant="8" id="dcj-fQ-EC1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wdh-0G-MgW" secondAttribute="bottom" constant="8" id="djO-Yt-cf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uqy-Qs-tuA" secondAttribute="trailing" constant="48" id="g1q-hP-ORw"/>
+                            <constraint firstItem="Iu4-fc-wow" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nbk-BF-aGB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wdh-0G-MgW" secondAttribute="trailing" id="rrN-ae-RJq"/>
+                            <constraint firstItem="Iu4-fc-wow" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tfo-bY-6NO"/>
+                            <constraint firstItem="diW-qF-WsV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="xil-XN-Cfp"/>
+                            <constraint firstItem="tow-Rb-NGz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yvb-vN-l0a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ND5-KN-VLK"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="aboutAaruush" destination="diW-qF-WsV" id="8Hq-7H-yud"/>
+                        <outlet property="exploreButton" destination="SBp-Ge-0sc" id="u11-Wp-tIq"/>
                         <outlet property="firstLogo" destination="Iu4-fc-wow" id="2pf-75-rMm"/>
                         <outlet property="imageView" destination="uqy-Qs-tuA" id="33K-vB-J7M"/>
                         <outlet property="secondLogo" destination="tow-Rb-NGz" id="wHr-7l-DCk"/>
-                        <outlet property="signInButton" destination="utq-Dd-u3Q" id="p2C-LK-tpu"/>
-                        <segue destination="8ic-SL-LKH" kind="presentation" identifier="toLogin" id="MAA-kI-g4h"/>
+                        <outlet property="shareButton" destination="7ar-rR-5TX" id="nTm-hX-fo6"/>
+                        <segue destination="q0D-4R-spD" kind="show" identifier="explore" id="wtq-jL-2Q1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3656" y="157"/>
+            <point key="canvasLocation" x="4261.5" y="226.5"/>
         </scene>
         <!--Patrons View Controller-->
         <scene sceneID="CxW-SP-CCD">
@@ -280,18 +299,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zQb-Ye-th7">
-                            <rect key="frame" x="0.0" y="448" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="15"/>
-                            <state key="normal" title="Go Back">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="goBack:" destination="xrd-5M-Bxj" eventType="touchUpInside" id="0xY-6M-wqB"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="l9O-B8-Q2h" customClass="detailTableViewCell" customModule="Aaruush" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="294" width="375" height="111"/>
@@ -821,12 +828,11 @@
                         <outlet property="aaruushLogo" destination="gbp-Fv-LBG" id="Y1k-E5-TrV"/>
                         <outlet property="aboutInfo" destination="w6d-DH-slx" id="ozc-uZ-m0B"/>
                         <outlet property="towardsInfinity" destination="rI7-YG-6K8" id="bNN-S9-CVp"/>
-                        <segue destination="q0D-4R-spD" kind="show" identifier="someSegue" id="RIw-Mm-uuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnu-9o-pRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5456.5" y="316.5"/>
+            <point key="canvasLocation" x="6268.5" y="316.5"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="JMf-hb-NcR">
@@ -920,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzJ-sD-9O9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5456.5" y="1200.5"/>
+            <point key="canvasLocation" x="3938.5" y="1032.5"/>
         </scene>
         <!--Highlights View Controller-->
         <scene sceneID="FE0-8D-O7N">
@@ -1022,18 +1028,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QJR-lJ-5ME">
-                            <rect key="frame" x="0.0" y="448" width="375" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="Xirod-Regular" family="Xirod" pointSize="15"/>
-                            <state key="normal" title="Go Back">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="goBack:" destination="Med-Nr-dAG" eventType="touchUpInside" id="3q5-0n-Nh3"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="IsW-1n-Wjw" customClass="detailTableViewCell" customModule="Aaruush" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="294" width="375" height="111"/>
@@ -1105,7 +1099,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="goBackButton" destination="QJR-lJ-5ME" id="Svc-iF-cCI"/>
                         <outlet property="myCarousel" destination="Axu-C4-sTc" id="vhG-SQ-Ycr"/>
                     </connections>
                 </tableViewController>
@@ -1404,7 +1397,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHd-rf-XOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12314.5" y="317"/>
+            <point key="canvasLocation" x="13126.5" y="317"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="VHx-HL-FQa">
@@ -1600,7 +1593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAh-Ah-YAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12978.5" y="392.5"/>
+            <point key="canvasLocation" x="13790.5" y="392.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mmo-lT-DE2">
@@ -1761,7 +1754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z17-d4-ayd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13389.5" y="392.5"/>
+            <point key="canvasLocation" x="14201.5" y="392.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="owU-gs-Czx">
@@ -1779,7 +1772,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSb-k4-NJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4617" y="316"/>
+            <point key="canvasLocation" x="5429" y="316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ANC-Ex-BVh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5rr-Ue-NgN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Krs-x8-2zH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3eM-BG-rqD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxm-St-cNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3655" y="156"/>
         </scene>
     </scenes>
     <resources>

@@ -72,7 +72,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         
       
        
-        if(UIScreen.mainScreen().bounds.height == 568)
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480)
         {
             self.workshopInfo.font = .systemFontOfSize(13)
         }
@@ -86,7 +86,7 @@ class WorkshopsViewController: UIViewController,iCarouselDelegate,iCarouselDataS
         
         
         super.viewDidLoad()
-        if(UIScreen.mainScreen().bounds.height == 568)
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
             self.workshopLabel.font = .systemFontOfSize(13)
         }

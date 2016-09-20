@@ -13,7 +13,7 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
     @IBOutlet var goBackButton: UIButton!
     
 
-    
+
     var receivedData = [String]()
     var allData: JSON?
     
@@ -52,17 +52,22 @@ class InfoTableViewController: UITableViewController,iCarouselDataSource,iCarous
         
         //<-----DANGER DO NOT TOUCH THIS STUFF OR THE APP LOOKS UGLY--->
         
+        self.navigationItem.title = recImage
         
         super.viewDidLoad()
 
    
     }
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true;
+        self.navigationController?.hidesBarsOnSwipe = true;
+        
+        self.navigationController?.navigationBar.hidden = false;
+        self.navigationController?.navigationBar.translucent = true
         
     }
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
+        self.navigationController?.hidesBarsOnSwipe = false;
     }
 
     override func didReceiveMemoryWarning() {

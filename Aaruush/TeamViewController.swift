@@ -85,7 +85,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
         cell1.transform = CGAffineTransformMakeScale(0.5, 0.5);
         
         
-        if(UIScreen.mainScreen().bounds.height == 568)
+        if(UIScreen.mainScreen().bounds.height == 568 || UIScreen.mainScreen().bounds.height == 480 )
         {
             let imgURL = "http://aaruush.net/images/team/" + team![indexPath.row]["imgSource"].string!;
 

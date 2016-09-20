@@ -99,9 +99,9 @@ class AaruushViewController: UIViewController {
     }
     @IBAction func shareButtonPressed(sender: AnyObject) {
         
-        let message = "Message goes here."
+        let message = "Check out Aaruush 16, SRM University"
         //Set the link to share.
-        if let link = NSURL(string: "http://yoururl.com")
+        if let link = NSURL(string: "http://www.aaruush.net/")
         {
             let objectsToShare = [message,link]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
