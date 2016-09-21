@@ -9,22 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EZLoadingActivity.xcscheme</key>
+		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FoldingCell.xcscheme</key>
+		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ImageLoader.xcscheme</key>
+		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>KFSwiftImageLoader.xcscheme</key>
+		<key>GlitchLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,22 +59,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RZTransitions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>StarWars.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -82,32 +77,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2E303C3CE7513908EE880D9CA833AFAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EFC32472247E43AF6A6DF7A863F885D</key>
+		<key>52E4F9B9B1D4B246B79D65F5DDE5F8AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D04613A7591446E9F604C26C55657F</key>
+		<key>6BACB30ACD533124D550C8180CC4A52B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C12616A0C0DB812B5B640A5ADAAFCDF</key>
+		<key>6D29FAFFD2997567723F8807C749E8B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B5A50EC8A5EF0F5B6CB79835BB17AA8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>76F2B99EFAB4C1A663D174C5E59F7EFC</key>
+		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>903A108934E1A089B76F443DC34C8E54</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>935868B02D678B72AAD39DDD2E0FCF7D</key>
+		<key>9A4B374C830E44415E7A67390515089B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,22 +122,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6C061C179F844C3034FBBF8FD2461B6</key>
+		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD53FFE97D4F26A2958E3F6E5CFCD830</key>
+		<key>A14D8BA6703C474E6BC2E4686663CD68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1843B43A771244E8302F3EB51FB557F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DBC35EFA122B68C633F2C08D78518434</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F3FC36F5644693AD754C72C16EB09783</key>
 		<dict>
 			<key>primary</key>
 			<true/>

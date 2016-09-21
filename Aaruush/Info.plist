@@ -21,18 +21,29 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1026392174082236</string>
+				<string>com.googleusercontent.apps.1059059923353-cte7i9i0m15okgsi66loq0t8ft4lq4ha</string>
+				<string>fb273784879651395</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.Webarch.Aaruush16</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>7</string>
 	<key>FacebookAppID</key>
-	<string>1026392174082236</string>
+	<string>273784879651395</string>
 	<key>FacebookDisplayName</key>
-	<string>Aaruush 16</string>
+	<string>Aaruush</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSApplicationQueriesSchemes</key>

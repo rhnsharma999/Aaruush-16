@@ -11,6 +11,7 @@ import CoreData
 import FBSDKCoreKit
 import FBSDKLoginKit
 import OneSignal
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,13 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         OneSignal.initWithLaunchOptions(launchOptions, appId: "d2ce6f0b-c005-4c54-9467-573c190b12e8")
-        
-       
-        
-        
+        FIRApp.configure()
     
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        return true
+        return FBSDKApplicationDelegate.sharedInstance().application(application,didFinishLaunchingWithOptions:launchOptions)
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

@@ -13,7 +13,9 @@ pod 'MRProgress'
 pod 'Kingfisher', '~> 2.4'
 pod 'OneSignal'
 pod "GlitchLabel"
-
+pod 'Firebase/Auth'
+pod 'FBSDKLoginKit'
+pod 'GoogleSignIn'
 end
 
 target 'AaruushTests' do

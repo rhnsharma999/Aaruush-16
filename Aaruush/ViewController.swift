@@ -13,8 +13,9 @@ import RZTransitions
 import FBSDKCoreKit
 import FBSDKLoginKit
 import GlitchLabel
-
-class ViewController: UIViewController{
+import GoogleSignIn
+import Firebase
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     
     var a = 1;
@@ -36,7 +37,6 @@ class ViewController: UIViewController{
     
     @IBOutlet var shareButton: UIButton!
     @IBOutlet var exploreButton: UIButton!
-    var facebookString = ""
     override func viewDidLoad() {
         
         
@@ -111,13 +111,7 @@ class ViewController: UIViewController{
            aboutAaruush.font =  .systemFontOfSize(14)
             
         }
-        if(FBSDKAccessToken.currentAccessToken() != nil){
-            self.performSegueWithIdentifier("toLogin", sender: self)
-        }
-        
-        
-        
-        //rounded edges
+                //rounded edges
     //    signInButton.layer.borderWidth = 2;
     //    signInButton.layer.borderColor = UIColor.yellowColor().CGColor
     //    signInButton.layer.cornerRadius = 10;
@@ -278,7 +272,7 @@ class ViewController: UIViewController{
     //  UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
     UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
         if(FBSDKAccessToken.currentAccessToken() != nil){
-            performSegueWithIdentifier("toLogin", sender: self)
+            performSegueWithIdentifier("feed", sender: self)
         }
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
@@ -288,7 +282,7 @@ class ViewController: UIViewController{
                 self.presentViewController(alert, animated: true, completion: nil)
             }
             else{
-                self.performSegueWithIdentifier("toLogin", sender: self);
+                self.performSegueWithIdentifier("feed", sender: self);
                 let fbloginresult : FBSDKLoginManagerLoginResult = result
                 print(fbloginresult)
             }
@@ -378,7 +372,85 @@ class ViewController: UIViewController{
     }
     
     @IBAction func goToLiveFeed(sender: AnyObject) {
-        self.performSegueWithIdentifier("feed", sender: self)
+        if(FBSDKAccessToken.currentAccessToken() != nil){
+            self.performSegueWithIdentifier("feed",sender:self)
+        }else{
+        let alertController = UIAlertController(title: "Signin using...", message: nil, preferredStyle:.ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            
+        }
+        let googleSignin = UIAlertAction(title: "Google", style: .Default) { (UIAlertAction) in
+            GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+            GIDSignIn.sharedInstance().uiDelegate = self
+            GIDSignIn.sharedInstance().delegate = self
+            GIDSignIn.sharedInstance().signIn()
+            
+        }
+        let facebookLogin = UIAlertAction(title: "facebook", style: .Default) { (action) in
+            if(FBSDKAccessToken.currentAccessToken() != nil){
+                self.performSegueWithIdentifier("feed", sender: self)
+            }
+            let loginManager = FBSDKLoginManager()
+            loginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if(result.isCancelled) {
+                    print("FBLogin cancelled")
+                } else {
+                    // [START headless_facebook_auth]
+                    let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                    // [END headless_facebook_auth]
+                    self.firebaseLogin(credential)
+                }
+            })
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(googleSignin)
+        alertController.addAction(facebookLogin)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    // [START headless_google_auth]
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError?) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
+                                                                     accessToken: authentication.accessToken)
+        // [START_EXCLUDE]
+        firebaseLogin(credential)
+        // [END_EXCLUDE]
+    }
+    // [END headless_google_auth]
+    func firebaseLogin(credential: FIRAuthCredential) {
+            if let user = FIRAuth.auth()?.currentUser {
+                // [START link_credential]
+                user.linkWithCredential(credential) { (user, error) in
+                    // [START_EXCLUDE]
+
+                        if let error = error {
+                            print(error.localizedDescription)
+                            return
+                        }
+
+                    // [END_EXCLUDE]
+                }
+                // [END link_credential]
+            } else {
+                // [START signin_credential]
+                FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                    // [START_EXCLUDE]
+                        if let error = error {
+                            print(error.localizedDescription)
+                            return
+                        }
+                    // [END_EXCLUDE]
+                }
+                // [END signin_credential]
+            }
     }
 }
 

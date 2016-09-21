@@ -1,6 +1,52 @@
 PODS:
   - Alamofire (3.4.2)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.15.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.15.1):
+    - FBSDKCoreKit
+  - Firebase/Analytics (3.5.2):
+    - FirebaseAnalytics (~> 3.3)
+  - Firebase/Auth (3.5.2):
+    - Firebase/Analytics
+    - FirebaseAuth (= 3.0.4)
+  - FirebaseAnalytics (3.3.1):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseAuth (3.0.4):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleParsingUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseInstanceID (1.0.8)
   - GlitchLabel (1.0.2)
+  - GoogleAppUtilities (1.1.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleAuthUtilities (2.0.1):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleInterchangeUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleNetworkingUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleParsingUtilities (1.1.1):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSignIn (4.0.0):
+    - GoogleAppUtilities (~> 1.1)
+    - GoogleAuthUtilities (~> 2.0)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.3)
+  - GoogleSymbolUtilities (1.1.1)
+  - GoogleUtilities (1.3.1):
+    - GoogleSymbolUtilities (~> 1.0)
   - Kingfisher (2.6.0)
   - LTMorphingLabel (0.2.1)
   - MRProgress (0.8.3):
@@ -38,7 +84,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - FBSDKLoginKit
+  - Firebase/Auth
   - GlitchLabel
+  - GoogleSignIn
   - Kingfisher (~> 2.4)
   - LTMorphingLabel
   - MRProgress
@@ -49,7 +98,22 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
+  FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
+  Firebase: 94e63112efcad75226c0356a8f3032397b8547c9
+  FirebaseAnalytics: d968d4d5f6aeb795cd64144337bcd233e530efc6
+  FirebaseAuth: 26fd291c3b552fc9658420b867520d5ae080421c
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   GlitchLabel: 625ce618b9a4588d3185e5778b4e689547a401d5
+  GoogleAppUtilities: f1730f91f67767b453c289577040dd3f425ffdc7
+  GoogleAuthUtilities: d7a19615cd7627688afcf181737f1011ee8b5a23
+  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
+  GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
+  GoogleParsingUtilities: 30b3896f9ee167dc78747f013d3de157ced1cadf
+  GoogleSignIn: 09036ed61f8e75f1424100d63f7719480b2428c3
+  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
+  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   Kingfisher: d84c5fd176ea86cc7b8aac65fd55feda6f70f130
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
@@ -58,4 +122,6 @@ SPEC CHECKSUMS:
   StarWars: 01f1731789f738f64c6a9533c209213aaf465014
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 83f33d89475c89ab58ad2bfa0dda826106b512f7
+
+COCOAPODS: 1.0.1
