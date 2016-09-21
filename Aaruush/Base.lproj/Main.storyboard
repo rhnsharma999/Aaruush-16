@@ -765,15 +765,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Dqh-oX-gFF">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-2e-McD">
+                                    <rect key="frame" x="8" y="178" width="359" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSV-82-xbf">
+                                    <rect key="frame" x="122" y="40" width="130" height="130"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="lSV-82-xbf" secondAttribute="height" multiplier="1:1" id="gEk-6g-fzg"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Zlr-2e-McD" secondAttribute="bottom" constant="8" id="QZw-z4-uLB"/>
+                                <constraint firstItem="Zlr-2e-McD" firstAttribute="top" secondItem="lSV-82-xbf" secondAttribute="bottom" constant="8" id="b3E-r4-epr"/>
+                                <constraint firstAttribute="trailing" secondItem="lSV-82-xbf" secondAttribute="trailing" constant="123" id="b3b-qT-hzZ"/>
+                                <constraint firstItem="lSV-82-xbf" firstAttribute="leading" secondItem="Dqh-oX-gFF" secondAttribute="leading" constant="122" id="l86-Hj-3Gm"/>
+                            </constraints>
+                        </view>
                         <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="cpu-8H-tXl">
-                            <rect key="frame" x="0.0" y="150" width="375" height="30"/>
+                            <rect key="frame" x="0.0" y="369" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="122" id="QKB-t0-ujN" customClass="FeedTableViewCell" customModule="Aaruush" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="122"/>
+                                <rect key="frame" x="0.0" y="247" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QKB-t0-ujN" id="cpw-sS-V6d">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
@@ -845,12 +870,14 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="profileImage" destination="lSV-82-xbf" id="emy-6h-fj5"/>
+                        <outlet property="profileName" destination="Zlr-2e-McD" id="dAL-Z4-srj"/>
                         <segue destination="oDM-da-pfy" kind="show" identifier="toLogin" id="yw0-Vj-xfh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hu-Mu-GsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4843.5" y="291.5"/>
+            <point key="canvasLocation" x="4855.5" y="244.5"/>
         </scene>
         <!--Signin Page View Controller-->
         <scene sceneID="xPT-uP-XGG">

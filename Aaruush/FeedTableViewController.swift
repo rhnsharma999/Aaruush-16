@@ -11,9 +11,19 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 import MRProgress
+import Firebase
 
 
 class FeedTableViewController: UITableViewController {
+    
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var profileName: UILabel!
+    
+    
+    
+    
     
     var FeedData:JSON?
 
@@ -44,6 +54,12 @@ class FeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let user = FIRAuth.auth()?.currentUser
+        let photoURL = user?.photoURL
+        let data = NSData(contentsOfURL: photoURL!)
+        let image = UIImage(data: data!)
+        self.profileImage.image = image
+        self.profileName.text = user?.displayName
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +82,6 @@ class FeedTableViewController: UITableViewController {
         }
         return 0
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! FeedTableViewCell

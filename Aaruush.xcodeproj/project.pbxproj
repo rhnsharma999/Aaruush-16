@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040D706F345CCE3D56E69A27 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27486FF0B19FFA7C3F2EB5 /* Pods_Aaruush.framework */; };
-		1B007B3D1D91E49C0071FCD1 /* SigninPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B007B3C1D91E49C0071FCD1 /* SigninPageViewController.swift */; };
 		1B229C611D91D99F00F8CBD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B229C601D91D99F00F8CBD2 /* GoogleService-Info.plist */; };
 		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
 		1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */; };
@@ -72,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		0B5DE935C601DCB19B004257 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
-		1B007B3C1D91E49C0071FCD1 /* SigninPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninPageViewController.swift; sourceTree = "<group>"; };
 		1B229C601D91D99F00F8CBD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
 		1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronsViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 				1B779B7F1D69758B00C24929 /* DomainsViewController.swift */,
 				DE7FC0B31D449D190005804A /* DetailViewController.swift */,
 				DE720C921CEF9C7F00097862 /* Main.storyboard */,
-				1B007B3C1D91E49C0071FCD1 /* SigninPageViewController.swift */,
 				DE206AC61D8ACACF00304FE1 /* highlightsViewController.swift */,
 				DE206AC41D8AA98E00304FE1 /* WorkshopsTableViewController.swift */,
 				DEA35C591D89992900BF1F6C /* detailTableViewCell.swift */,
@@ -581,7 +578,6 @@
 				DE720CC41CEF9D5200097862 /* ViewController.swift in Sources */,
 				DEA35C561D898F1200BF1F6C /* InfoTableViewController.swift in Sources */,
 				DE650BD61D9199CF00DD946F /* FeedTableViewController.swift in Sources */,
-				1B007B3D1D91E49C0071FCD1 /* SigninPageViewController.swift in Sources */,
 				DE5666BC1D6E03B3000F608C /* ArchViewController.swift in Sources */,
 				DE5666C41D6E0ED5000F608C /* iCarousel.m in Sources */,
 				DE206AC51D8AA98E00304FE1 /* WorkshopsTableViewController.swift in Sources */,
