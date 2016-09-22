@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         return FBSDKApplicationDelegate.sharedInstance().application(application,didFinishLaunchingWithOptions:launchOptions)
     }
-    
+    @available(iOS 9.0, *)
     func application(application: UIApplication, openURL url: NSURL, options: [String : AnyObject])
         -> Bool {
             return self.application(application,
@@ -38,16 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                                     annotation: [:])
     }
     
-    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         if GIDSignIn.sharedInstance().handleURL(url,
                                                 sourceApplication: sourceApplication,
                                                 annotation: annotation) {
             return true
         }
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+        return FBSDKApplicationDelegate.sharedInstance().application(application,
+                                                                     openURL: url,
+                                                                     sourceApplication: sourceApplication,
+                                                                     annotation: annotation)
     }
-
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

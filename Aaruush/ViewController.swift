@@ -13,10 +13,10 @@ import RZTransitions
 import FBSDKCoreKit
 import FBSDKLoginKit
 import GlitchLabel
-import GoogleSignIn
 import Firebase
 import MRProgress
-class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
+import GoogleSignIn
+class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
     
     
     var a = 1;
@@ -74,32 +74,20 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
             {
                 time = -2;
             }
-        if(time > 0)
-        {
-            countDown.text = "\(time) days to go"
-            
+        if(time > 0){
+            if(time==1){
+                countDown.text = " \(time) day to go"
+            }
+            else{
+                countDown.text = "\(time) days to go"
+            }
         }
-        else if(date.isEqualToDate(aaruush!))
+        
+            else if(date.isEqualToDate(aaruush!))
         {
             countDown.text = "    Live Now"
         }
-        
-        
-     /*  }
-        else
-        {
-           // countDown.hidden = true
-        }
-       */
-        
-        
-        
-        
-        
-        
-        
-        
-        navigationController?.delegate = RZTransitionsManager.shared()
+          navigationController?.delegate = RZTransitionsManager.shared()
     
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
         
@@ -131,30 +119,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
 }
     
    
-    
-// MARK:  Facebook login methods
-    
- /*   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        if(facebookString == ""){
-            
-        }
-        else{
-            FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
-                
-                let strFirstName: String = (result.objectForKey("first_name") as? String)!
-                let strLastName: String = (result.objectForKey("last_name") as? String)!
-                self.facebookString = "Welcome, \(strFirstName) \(strLastName)"
-            }
-        }
-    }*/
-    
- /*   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-       
-    }
-    */
-    
-
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -269,33 +233,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
  
         //-------------------animations---------------------------->
     }
-   
-  
-//    @IBAction func signIn(sender: AnyObject)
-//    {
-//        
-//    //  UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
-//    UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
-//        if(FBSDKAccessToken.currentAccessToken() != nil){
-//            performSegueWithIdentifier("feed", sender: self)
-//        }
-//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-//        fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
-//            if(FBSDKAccessToken.currentAccessToken() == nil){
-//                let alert = UIAlertController(title: "Invalid Credentials!", message: "You must log in to proceed.", preferredStyle: .Alert)
-//                alert.addAction(UIAlertAction(title: "Ok", style: .Cancel ) { _ in })
-//                self.presentViewController(alert, animated: true, completion: nil)
-//            }
-//            else{
-//                self.performSegueWithIdentifier("feed", sender: self);
-//                let fbloginresult : FBSDKLoginManagerLoginResult = result
-//                print(fbloginresult)
-//            }
-//        }
-//    }
-    
-    
-   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
        // let vc = segue.destinationViewController;
@@ -321,20 +258,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                                                               toViewController:MainMenuViewController.self,
                                                               forAction:.PushPop)
         }
-        
-        
-        
-   
-        
-        
-        
-        
-        
     }
-    
-    
-
-    
     func applyMotionEffect(toView view:UIView,mangnitude:Float) //function for reusability parallax effect
     {
         let xMotion = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis);
@@ -352,13 +276,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         view.addMotionEffect(group)
         
     }
-    
-    
     @IBAction func shareAaruush(sender: AnyObject) {
         
         let message = "Check out Aaruush 16, SRM University"
         //Set the link to share.
-        if let link = NSURL(string: "http://www.aaruush.net/")
+        if let link = NSURL(string: "https://appsto.re/in/OqGZeb.i")
         {
             let objectsToShare = [message,link]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
@@ -377,11 +299,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
     
     @IBAction func goToLiveFeed(sender: AnyObject) {
-        
-       
-        
-        
-        
         if(FIRAuth.auth()?.currentUser != nil){
             self.performSegueWithIdentifier("feed",sender:self)
         }
@@ -390,16 +307,14 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
         let googleSignin = UIAlertAction(title: "Google", style: .Default) { (UIAlertAction) in
             GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-            GIDSignIn.sharedInstance().uiDelegate = self
             GIDSignIn.sharedInstance().delegate = self
+            GIDSignIn.sharedInstance().uiDelegate = self
             GIDSignIn.sharedInstance().signIn()
+            print("from google")
             
             
         }
         let facebookLogin = UIAlertAction(title: "facebook", style: .Default) { (action) in
-//            if(FBSDKAccessToken.currentAccessToken() != nil){
-//                self.performSegueWithIdentifier("feed", sender: self)
-//            }
             MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Please wait while we test your patience", mode: .IndeterminateSmallDefault, animated: true)
             
             let loginManager = FBSDKLoginManager()
@@ -415,6 +330,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                     
                     // [END headless_facebook_auth]
                     self.firebaseLogin(credential)
+                    print("from facebook")
                 }
             })
         }
@@ -428,6 +344,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError?) {
         if let error = error {
             print(error.localizedDescription)
+            print("sign in localised")
             return
         }
         
@@ -436,6 +353,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                                                                      accessToken: authentication.accessToken)
         // [START_EXCLUDE]
         firebaseLogin(credential)
+        print("sign in other")
         // [END_EXCLUDE]
     }
     // [END headless_google_auth]
@@ -447,10 +365,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
 
                         if let error = error {
                             print(error.localizedDescription)
+                            print("fir localised")
                             return
                         }
-                    
+                    print("fir other")
                     self.performSegueWithIdentifier("feed", sender: self)
+                
                     // [END_EXCLUDE]
                 }
                 // [END link_credential]
@@ -460,9 +380,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                     // [START_EXCLUDE]
                         if let error = error {
                             print(error.localizedDescription)
+                            print("fir localised 2")
                             return
                         }
                     // [END_EXCLUDE]
+                    print("fir other 2")
                     self.performSegueWithIdentifier("feed", sender: self)
                 }
                 // [END signin_credential]

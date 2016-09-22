@@ -13,9 +13,10 @@ import Kingfisher
 import MRProgress
 import Firebase
 import FBSDKCoreKit
+import GoogleSignIn
 
 
-class FeedTableViewController: UITableViewController {
+class FeedTableViewController: UITableViewController,GIDSignInDelegate {
     
     @IBOutlet var bgImage: UIImageView!
     
@@ -26,7 +27,8 @@ class FeedTableViewController: UITableViewController {
     @IBOutlet var msgField: UITextField!
     
     
-    
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+    }
     
     var FeedData:JSON?
 
@@ -324,8 +326,8 @@ class FeedTableViewController: UITableViewController {
         let action = UIAlertAction(title:"Logout?", style: .Destructive) { (alertaction) in
             let firebaseAuth = FIRAuth.auth()
             do {
-                try FIRAuth.auth()?.signOut()
-            
+                try firebaseAuth?.signOut()
+                GIDSignIn.sharedInstance().signOut()
                 self.navigationController?.popViewControllerAnimated(true)
                 print("is logout working?")
             } catch let signOutError as NSError {
