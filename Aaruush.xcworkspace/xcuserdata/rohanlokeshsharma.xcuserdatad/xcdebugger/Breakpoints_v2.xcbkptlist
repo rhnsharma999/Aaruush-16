@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aaruush/ProfileViewController.swift"
-            timestampString = "496208059.505244"
+            timestampString = "496262511.361376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "mailthisGuy(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aaruush/ViewController.swift"
-            timestampString = "496076991.644908"
+            timestampString = "496261099.798902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>

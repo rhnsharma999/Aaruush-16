@@ -324,7 +324,8 @@ class FeedTableViewController: UITableViewController {
         let action = UIAlertAction(title:"Logout?", style: .Destructive) { (alertaction) in
             let firebaseAuth = FIRAuth.auth()
             do {
-                try firebaseAuth?.signOut()
+                try FIRAuth.auth()?.signOut()
+            
                 self.navigationController?.popViewControllerAnimated(true)
                 print("is logout working?")
             } catch let signOutError as NSError {

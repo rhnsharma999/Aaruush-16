@@ -48,6 +48,20 @@ class ProfileViewController: UIViewController {
         nameLabel.text = name;
         posLabel.text = pos;
         
+        if(UIScreen.mainScreen().bounds.height<=568)
+        {
+            nameLabel.font = UIFont(name: "Marker Felt", size: 25)
+            posLabel.font = UIFont(name: "Marker Felt", size: 17)
+            
+        }
+        else
+        {
+             nameLabel.font = UIFont(name: "Marker Felt", size: 30)
+            posLabel.font = UIFont(name: "Marker Felt", size: 22)
+            
+        }
+        
+        
       
       //  testString =  String(fbURL.characters.dropFirst(25))
        // print(testString)

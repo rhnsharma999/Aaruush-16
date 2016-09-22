@@ -15,6 +15,7 @@ import FBSDKLoginKit
 import GlitchLabel
 import GoogleSignIn
 import Firebase
+import MRProgress
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     
@@ -194,6 +195,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = false;
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -207,6 +209,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         liveFeedButton.layer.borderWidth = 1
         liveFeedButton.layer.cornerRadius = 8
         
+    }
+    override func viewDidDisappear(animated: Bool) {
+       // MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: false)
     }
     override func viewDidAppear(animated: Bool)
     {
@@ -301,6 +306,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
         if(segue.identifier == "feed")
         {
+            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
             RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                                   fromViewController:self.dynamicType,
                                                                   toViewController:FeedTableViewController.self,
@@ -309,6 +315,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         }
         else if(segue.identifier == "explore")
         {
+            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
         RZTransitionsManager.shared().setAnimationController( RZZoomPushAnimationController(),
                                                               fromViewController:self.dynamicType,
                                                               toViewController:MainMenuViewController.self,
@@ -317,7 +324,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
         
         
-       // vc.transitioningDelegate = self; //for fallapart dismiss transition
+   
         
         
         
@@ -325,9 +332,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
     }
     
-     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return StarWarsGLAnimator()
-    }
+    
 
     
     func applyMotionEffect(toView view:UIView,mangnitude:Float) //function for reusability parallax effect
@@ -372,6 +377,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
     
     @IBAction func goToLiveFeed(sender: AnyObject) {
+        
+       
+        
+        
+        
         if(FIRAuth.auth()?.currentUser != nil){
             self.performSegueWithIdentifier("feed",sender:self)
         }
@@ -383,20 +393,26 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
             GIDSignIn.sharedInstance().uiDelegate = self
             GIDSignIn.sharedInstance().delegate = self
             GIDSignIn.sharedInstance().signIn()
+            
+            
         }
         let facebookLogin = UIAlertAction(title: "facebook", style: .Default) { (action) in
 //            if(FBSDKAccessToken.currentAccessToken() != nil){
 //                self.performSegueWithIdentifier("feed", sender: self)
 //            }
+            MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Please wait while we test your patience", mode: .IndeterminateSmallDefault, animated: true)
+            
             let loginManager = FBSDKLoginManager()
             loginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) in
                 if let error = error {
                     print(error.localizedDescription)
                 } else if(result.isCancelled) {
+                   
                     print("FBLogin cancelled")
                 } else {
                     // [START headless_facebook_auth]
                     let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                    
                     // [END headless_facebook_auth]
                     self.firebaseLogin(credential)
                 }
@@ -433,6 +449,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                             print(error.localizedDescription)
                             return
                         }
+                    
                     self.performSegueWithIdentifier("feed", sender: self)
                     // [END_EXCLUDE]
                 }
@@ -450,6 +467,10 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                 }
                 // [END signin_credential]
             }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
     }
 }
 

@@ -104,9 +104,10 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
             )
             
             
-            
+        
             
             cell1.photoTitle.text = team![indexPath.row]["name"].string
+            cell1.photoTitle.font = UIFont(name: "Marker Felt", size: 20)
             cell1.backgroundColor  = UIColor.clearColor();
             
             
@@ -144,6 +145,7 @@ class TeamViewController: UIViewController,UICollectionViewDelegate,UICollection
             
            // cell.myImage.load(imgURL);
             cell.myLabel.text = team![indexPath.row]["name"].string
+            cell.myLabel.font = UIFont(name: "Marker Felt", size: 32)
             cell.backgroundColor  = UIColor.clearColor();
             
             
