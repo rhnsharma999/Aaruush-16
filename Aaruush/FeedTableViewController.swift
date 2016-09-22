@@ -12,6 +12,7 @@ import SwiftyJSON
 import Kingfisher
 import MRProgress
 import Firebase
+import FBSDKCoreKit
 
 
 class FeedTableViewController: UITableViewController {
@@ -30,7 +31,17 @@ class FeedTableViewController: UITableViewController {
     var FeedData:JSON?
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        
+        
+        
+    }
+
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationController?.hidesBarsOnSwipe = true
         let button = UIBarButtonItem(image: UIImage(named:"more"), style: .Plain, target: self, action: #selector(FeedTableViewController.logout))
         self.navigationItem.rightBarButtonItem = button
         
@@ -53,49 +64,40 @@ class FeedTableViewController: UITableViewController {
         
         self.navigationItem.title = "Live Feed"
         
-        super.viewDidLoad()
-
+        
         let user = FIRAuth.auth()?.currentUser
         let photoURL = user?.photoURL
-       
-       
+        
+        
         
         self.profileName.text = user?.displayName
         
         
-            profileImage.kf_setImageWithURL(photoURL,
-                                placeholderImage: UIImage(named:"placeholder"),
-                                optionsInfo:[.Transition(ImageTransition.Fade(1))],
-                                progressBlock: { (receivedSize, totalSize) -> () in
-                                  //  print("Download Progress: \(receivedSize)/\(totalSize)")
-                },
-                                completionHandler: { (image, error, cacheType, imageURL) -> () in
-                                   // print("Downloaded and set!")
-                                   // cell1.activity.hidden = true;
-                                    
-                }
-        )
-        
-        bgImage.kf_setImageWithURL(photoURL,
-                                               placeholderImage: UIImage(named:"placeholder"),
-                                               optionsInfo:[.Transition(ImageTransition.Fade(1))],
-                                               progressBlock: { (receivedSize, totalSize) -> () in
-                                                //  print("Download Progress: \(receivedSize)/\(totalSize)")
+        profileImage.kf_setImageWithURL(photoURL,
+                                        placeholderImage: UIImage(named:"placeholder"),
+                                        optionsInfo:[.Transition(ImageTransition.Fade(1))],
+                                        progressBlock: { (receivedSize, totalSize) -> () in
+                                            //  print("Download Progress: \(receivedSize)/\(totalSize)")
             },
-                                               completionHandler: { (image, error, cacheType, imageURL) -> () in
-                                                // print("Downloaded and set!")
-                                                // cell1.activity.hidden = true;
-                                                
+                                        completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                            // print("Downloaded and set!")
+                                            // cell1.activity.hidden = true;
+                                            
             }
         )
         
-        
-    }
-
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        self.navigationController?.hidesBarsOnSwipe = true
+        bgImage.kf_setImageWithURL(photoURL,
+                                   placeholderImage: UIImage(named:"placeholder"),
+                                   optionsInfo:[.Transition(ImageTransition.Fade(1))],
+                                   progressBlock: { (receivedSize, totalSize) -> () in
+                                    //  print("Download Progress: \(receivedSize)/\(totalSize)")
+            },
+                                   completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                    // print("Downloaded and set!")
+                                    // cell1.activity.hidden = true;
+                                    
+            }
+        )
         
     }
     
@@ -198,7 +200,6 @@ class FeedTableViewController: UITableViewController {
                 }
                 
         }
-        
         
     }
     @IBAction func postMessage(sender: AnyObject)
@@ -316,13 +317,24 @@ class FeedTableViewController: UITableViewController {
         
     }
     
-    
-    
     func logout()
     {
-        
+        let alert = UIAlertController(title: "Live feed", message: nil, preferredStyle: .ActionSheet)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel) { (UIAlertAction) in }
+        let action = UIAlertAction(title:"Logout?", style: .Destructive) { (alertaction) in
+            let firebaseAuth = FIRAuth.auth()
+            do {
+                try firebaseAuth?.signOut()
+                self.navigationController?.popViewControllerAnimated(true)
+                print("is logout working?")
+            } catch let signOutError as NSError {
+                print ("Error signing out: \(signOutError)")
+            }
+        }
+        alert.addAction(action)
+        alert.addAction(actionCancel)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-    
     
 }
 

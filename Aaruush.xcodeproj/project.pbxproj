@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		040D706F345CCE3D56E69A27 /* Pods_Aaruush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D27486FF0B19FFA7C3F2EB5 /* Pods_Aaruush.framework */; };
-		1B229C611D91D99F00F8CBD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B229C601D91D99F00F8CBD2 /* GoogleService-Info.plist */; };
+		1B23D5D81D94456D0007A042 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D5D71D94456D0007A042 /* GoogleService-Info.plist */; };
+		1B23D5D91D94456D0007A042 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D5D71D94456D0007A042 /* GoogleService-Info.plist */; };
+		1B23D5DA1D94456D0007A042 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D5D71D94456D0007A042 /* GoogleService-Info.plist */; };
 		1B779B801D69758B00C24929 /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B779B7F1D69758B00C24929 /* DomainsViewController.swift */; };
 		1BEB677B1D6DAFCA009392EF /* PatronsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */; };
 		1BF2AA1E1D452AB3001545F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */; };
@@ -71,7 +73,8 @@
 
 /* Begin PBXFileReference section */
 		0B5DE935C601DCB19B004257 /* Pods-Aaruush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aaruush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aaruush/Pods-Aaruush.debug.xcconfig"; sourceTree = "<group>"; };
-		1B229C601D91D99F00F8CBD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B23D5D71D94456D0007A042 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B23D5ED1D944E390007A042 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		1B779B7F1D69758B00C24929 /* DomainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
 		1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronsViewController.swift; sourceTree = "<group>"; };
 		1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -199,7 +202,7 @@
 		DE720C821CEF9C7E00097862 = {
 			isa = PBXGroup;
 			children = (
-				1B229C601D91D99F00F8CBD2 /* GoogleService-Info.plist */,
+				1B23D5D71D94456D0007A042 /* GoogleService-Info.plist */,
 				1BF2AA211D45337B001545F5 /* Bolts.framework */,
 				1BF2AA1F1D452ABF001545F5 /* FBSDKLoginKit.framework */,
 				1BF2AA1D1D452AB3001545F5 /* FBSDKCoreKit.framework */,
@@ -246,6 +249,7 @@
 				DE5A63071D7B5875000D84E9 /* ProfileViewController.swift */,
 				DE650BD51D9199CF00DD946F /* FeedTableViewController.swift */,
 				DE650BD71D919C5100DD946F /* FeedTableViewCell.swift */,
+				1B23D5ED1D944E390007A042 /* BridgingHeader.h */,
 				DE720C981CEF9C7F00097862 /* Assets.xcassets */,
 				DE720C9A1CEF9C7F00097862 /* LaunchScreen.storyboard */,
 				1BEB677A1D6DAFCA009392EF /* PatronsViewController.swift */,
@@ -422,10 +426,10 @@
 				DE5E33EB1D79A1E800BECAF1 /* xirod.ttf in Resources */,
 				DE720C9C1CEF9C7F00097862 /* LaunchScreen.storyboard in Resources */,
 				DE2C7A771D43DA590061FFA8 /* FiveSWalaCell.xib in Resources */,
+				1B23D5D81D94456D0007A042 /* GoogleService-Info.plist in Resources */,
 				DE720C991CEF9C7F00097862 /* Assets.xcassets in Resources */,
 				DE720C941CEF9C7F00097862 /* Main.storyboard in Resources */,
 				DEAF0F201D65E8B0002923C1 /* SixSWalaCell.xib in Resources */,
-				1B229C611D91D99F00F8CBD2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B23D5D91D94456D0007A042 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B23D5DA1D94456D0007A042 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,10 +796,13 @@
 			baseConfigurationReference = D087D411750BF786A3B3572D /* Pods-AaruushTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AaruushTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/AaruushTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush";
 			};
 			name = Debug;
@@ -803,10 +812,12 @@
 			baseConfigurationReference = 25DB3465B99D5C4788CC15F3 /* Pods-AaruushTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AaruushTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/AaruushTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aaruush.app/Aaruush";
 			};
 			name = Release;
@@ -815,10 +826,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F31A1CDEF95C1A7544849897 /* Pods-AaruushUITests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AaruushUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/AaruushUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = Aaruush;
 			};
 			name = Debug;
@@ -827,10 +841,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D8D75E744E6651F2720AA8E /* Pods-AaruushUITests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AaruushUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rohan.AaruushUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aaruush/AaruushUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = Aaruush;
 			};
 			name = Release;

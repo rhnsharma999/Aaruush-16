@@ -266,28 +266,28 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
    
   
-    @IBAction func signIn(sender: AnyObject)
-    {
-        
-    //  UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
-    UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
-        if(FBSDKAccessToken.currentAccessToken() != nil){
-            performSegueWithIdentifier("feed", sender: self)
-        }
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
-            if(FBSDKAccessToken.currentAccessToken() == nil){
-                let alert = UIAlertController(title: "Invalid Credentials!", message: "You must log in to proceed.", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .Cancel ) { _ in })
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-            else{
-                self.performSegueWithIdentifier("feed", sender: self);
-                let fbloginresult : FBSDKLoginManagerLoginResult = result
-                print(fbloginresult)
-            }
-        }
-    }
+//    @IBAction func signIn(sender: AnyObject)
+//    {
+//        
+//    //  UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {self.signInButton.backgroundColor = UIColor.yellowColor()}, completion: nil)
+//    UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: {self.signInButton.backgroundColor = UIColor.clearColor()}, completion: {(value :Bool) in})
+//        if(FBSDKAccessToken.currentAccessToken() != nil){
+//            performSegueWithIdentifier("feed", sender: self)
+//        }
+//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+//        fbLoginManager.logInWithReadPermissions(["email","public_profile","user_friends"], fromViewController: self) { (result, error) -> Void in
+//            if(FBSDKAccessToken.currentAccessToken() == nil){
+//                let alert = UIAlertController(title: "Invalid Credentials!", message: "You must log in to proceed.", preferredStyle: .Alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: .Cancel ) { _ in })
+//                self.presentViewController(alert, animated: true, completion: nil)
+//            }
+//            else{
+//                self.performSegueWithIdentifier("feed", sender: self);
+//                let fbloginresult : FBSDKLoginManagerLoginResult = result
+//                print(fbloginresult)
+//            }
+//        }
+//    }
     
     
    
@@ -372,24 +372,22 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
     
     @IBAction func goToLiveFeed(sender: AnyObject) {
-        if(FBSDKAccessToken.currentAccessToken() != nil){
+        if(FIRAuth.auth()?.currentUser != nil){
             self.performSegueWithIdentifier("feed",sender:self)
-        }else{
-        let alertController = UIAlertController(title: "Signin using...", message: nil, preferredStyle:.ActionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            
         }
+        else{
+        let alertController = UIAlertController(title: "Signin using...", message: nil, preferredStyle:.ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
         let googleSignin = UIAlertAction(title: "Google", style: .Default) { (UIAlertAction) in
             GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
             GIDSignIn.sharedInstance().uiDelegate = self
             GIDSignIn.sharedInstance().delegate = self
             GIDSignIn.sharedInstance().signIn()
-            
         }
         let facebookLogin = UIAlertAction(title: "facebook", style: .Default) { (action) in
-            if(FBSDKAccessToken.currentAccessToken() != nil){
-                self.performSegueWithIdentifier("feed", sender: self)
-            }
+//            if(FBSDKAccessToken.currentAccessToken() != nil){
+//                self.performSegueWithIdentifier("feed", sender: self)
+//            }
             let loginManager = FBSDKLoginManager()
             loginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) in
                 if let error = error {
@@ -435,7 +433,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                             print(error.localizedDescription)
                             return
                         }
-
+                    self.performSegueWithIdentifier("feed", sender: self)
                     // [END_EXCLUDE]
                 }
                 // [END link_credential]
@@ -448,6 +446,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                             return
                         }
                     // [END_EXCLUDE]
+                    self.performSegueWithIdentifier("feed", sender: self)
                 }
                 // [END signin_credential]
             }
