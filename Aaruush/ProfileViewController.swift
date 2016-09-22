@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ImageLoader
 
 class ProfileViewController: UIViewController {
     

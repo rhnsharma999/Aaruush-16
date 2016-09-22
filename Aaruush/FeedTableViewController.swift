@@ -16,11 +16,13 @@ import Firebase
 
 class FeedTableViewController: UITableViewController {
     
+    @IBOutlet var bgImage: UIImageView!
     
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var profileName: UILabel!
     
+    @IBOutlet var msgField: UITextField!
     
     
     
@@ -49,19 +51,50 @@ class FeedTableViewController: UITableViewController {
         
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         let user = FIRAuth.auth()?.currentUser
         let photoURL = user?.photoURL
-        let data = NSData(contentsOfURL: photoURL!)
-        let image = UIImage(data: data!)
-        self.profileImage.image = image
+       
+       
+        
         self.profileName.text = user?.displayName
+        
+        
+            profileImage.kf_setImageWithURL(photoURL,
+                                placeholderImage: UIImage(named:"placeholder"),
+                                optionsInfo:[.Transition(ImageTransition.Fade(1))],
+                                progressBlock: { (receivedSize, totalSize) -> () in
+                                  //  print("Download Progress: \(receivedSize)/\(totalSize)")
+                },
+                                completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                   // print("Downloaded and set!")
+                                   // cell1.activity.hidden = true;
+                                    
+                }
+        )
+        
+        bgImage.kf_setImageWithURL(photoURL,
+                                               placeholderImage: UIImage(named:"placeholder"),
+                                               optionsInfo:[.Transition(ImageTransition.Fade(1))],
+                                               progressBlock: { (receivedSize, totalSize) -> () in
+                                                //  print("Download Progress: \(receivedSize)/\(totalSize)")
+            },
+                                               completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                                // print("Downloaded and set!")
+                                                // cell1.activity.hidden = true;
+                                                
+            }
+        )
+        
+        
     }
 
+    
+    override func viewDidLayoutSubviews() {
+        self.profileImage.layer.cornerRadius = self.profileImage.bounds.width/2;
+        self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profileImage.layer.borderWidth = 2;
+        self.profileImage.layer.masksToBounds = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -139,7 +172,7 @@ class FeedTableViewController: UITableViewController {
                     if let value = response.result.value {
                         let json = JSON(value)
                         self.FeedData = json
-                        print("JSON: \(json)")
+                    //    print("JSON: \(json)")
                         MRProgressOverlayView.dismissAllOverlaysForView(self.tableView, animated: true)
                         
                         self.tableView.reloadData()
@@ -156,4 +189,44 @@ class FeedTableViewController: UITableViewController {
         
         
     }
+    @IBAction func postMessage(sender: AnyObject)
+    {
+        var parameter = [String:String]()
+        
+        let user = FIRAuth.auth()?.currentUser
+        
+        
+        let action : FIRAuthTokenCallback = {(token,error) in
+                        if let error = error{
+                                print(error.localizedDescription)
+                            }
+                       // tok = token
+            parameter = ["token":token!,
+                         "uid":(user?.uid)!,
+                         "post_text":self.msgField.text!]
+                        print(token)
+                    }
+                FIRAuth.auth()?.currentUser?.getTokenForcingRefresh(true, completion: action)
+        
+       
+        
+        
+        
+   
+        
+        
+        Alamofire.request(.POST, "http://aaruush.net/AaruushFeed/add_feed.php", parameters: parameter)
+            .response { request, response, JSON, error in
+                print(response)
+                
+                if(error == nil)
+                {
+                    self.getFeed()
+                }
+        }
+        
+     
+        
+    }
+    
 }

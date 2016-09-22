@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import MRProgress
-import ImageLoader
 import RZTransitions
 import Kingfisher
 

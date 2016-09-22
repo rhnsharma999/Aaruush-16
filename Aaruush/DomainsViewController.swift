@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import EZLoadingActivity
 import MRProgress
 import RZTransitions
 
