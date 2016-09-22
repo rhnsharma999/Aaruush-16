@@ -31,6 +31,10 @@ class FeedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         
+        let button = UIBarButtonItem(image: UIImage(named:"more"), style: .Plain, target: self, action: #selector(FeedTableViewController.logout))
+        self.navigationItem.rightBarButtonItem = button
+        
+        
         MRProgressOverlayView.showOverlayAddedTo(self.tableView, title: "Slow Day, isn't it?", mode: .IndeterminateSmallDefault, animated: true)
         
         
@@ -89,6 +93,15 @@ class FeedTableViewController: UITableViewController {
     }
 
     
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationController?.hidesBarsOnSwipe = true
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.hidesBarsOnSwipe = false
+    }
     override func viewDidLayoutSubviews() {
         self.profileImage.layer.cornerRadius = self.profileImage.bounds.width/2;
         self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
@@ -172,11 +185,10 @@ class FeedTableViewController: UITableViewController {
                     if let value = response.result.value {
                         let json = JSON(value)
                         self.FeedData = json
-                    //    print("JSON: \(json)")
                         MRProgressOverlayView.dismissAllOverlaysForView(self.tableView, animated: true)
                         
                         self.tableView.reloadData()
-                    print(value)
+                    //print(value)
                     }
                 case .Failure(let error):
                     MRProgressOverlayView.dismissAllOverlaysForView(self.tableView, animated: false)
@@ -191,42 +203,140 @@ class FeedTableViewController: UITableViewController {
     }
     @IBAction func postMessage(sender: AnyObject)
     {
-        var parameter = [String:String]()
+        if(msgField.text?.characters.count == 0)
+        {
+            
+            msgField.shake()
+            
+        }
+        else if(msgField.text?.characters.count > 100)
+        {
+            
+            let some = msgField.text?.characters.dropLast((msgField.text?.characters.count)! - 100)
+            msgField.text = String(some!)
+          
+            
+        }
+        else if(internetCheck())
+        {
+            
+            
+            MRProgressOverlayView.showOverlayAddedTo(self.tableView, title: "Posting", mode: .IndeterminateSmallDefault, animated: true)
+            
+            let urlPath :String = "http://aaruush.net/AaruushFeed/add_feed.php"
+            
+            let user = FIRAuth.auth()?.currentUser
+            
+            
+            let action : FIRAuthTokenCallback = {(token,error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                }
+                // tok = token
+                
+                Alamofire.request(.POST, urlPath, parameters: ["token":token!,
+                    "uid":(user?.uid)!,
+                    "post_text":self.msgField.text!])
+                    .response { request, response, data, error in
+                        print(request)
+                        print(response)
+                        print(error)
+                        print(data)
+                        
+                        if(error == nil)
+                        {
+                            print("Yeah")
+                            self.getFeed()
+                            self.msgField.text = ""
+                        }
+                        else
+                        {
+                            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: false)
+                            let alert = UIAlertController(title: "Error", message: "Could not post, please try again later", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            
+                            
+                        }
+                        
+                        
+                }
+                
+                
+                
+            }
+            FIRAuth.auth()?.currentUser?.getTokenForcingRefresh(true, completion: action)
+            
+            
+            
+            
+        }
+        else if(!internetCheck())
+        {
+            let alert = UIAlertController(title: "No Internet", message: "Make sure your device is connected to the internet for posting", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
         
-        let user = FIRAuth.auth()?.currentUser
+   
         
-        
-        let action : FIRAuthTokenCallback = {(token,error) in
-                        if let error = error{
-                                print(error.localizedDescription)
-                            }
-                       // tok = token
-            parameter = ["token":token!,
-                         "uid":(user?.uid)!,
-                         "post_text":self.msgField.text!]
-                        print(token)
-                    }
-                FIRAuth.auth()?.currentUser?.getTokenForcingRefresh(true, completion: action)
         
        
         
         
         
-   
         
-        
-        Alamofire.request(.POST, "http://aaruush.net/AaruushFeed/add_feed.php", parameters: parameter)
-            .response { request, response, JSON, error in
-                print(response)
-                
-                if(error == nil)
-                {
-                    self.getFeed()
-                }
-        }
         
      
         
     }
     
+    
+    func internetCheck() ->Bool
+    {
+        let status = Reach().connectionStatus()
+        
+        switch status
+        {
+        case .Offline:
+            return false;
+            
+        case .Online(.WWAN):
+            return true;
+            
+        case .Online(.WiFi):
+            return true;
+            
+            
+        default:
+            return false;
+            
+        }
+        
+    }
+    
+    
+    
+    func logout()
+    {
+        
+    }
+    
+    
 }
+
+extension UIView {
+    
+    func shake() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = NSValue(CGPoint: CGPointMake(self.center.x - 5, self.center.y))
+        animation.toValue = NSValue(CGPoint: CGPointMake(self.center.x + 5, self.center.y))
+        self.layer.addAnimation(animation, forKey: "position")
+    }
+    
+}
+

@@ -60,7 +60,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
             format.dateFormat = "dd-MM-yyyy"
        // date = format.dateFromString("27-09-2016")!
-            let aaruush = format.dateFromString("27-09-2016");
+            let aaruush = format.dateFromString("28-09-2016");
             let calendar = NSCalendar.currentCalendar()
             let components = calendar.components([.Day], fromDate: date, toDate: aaruush!, options: [])
             var time = components.day
