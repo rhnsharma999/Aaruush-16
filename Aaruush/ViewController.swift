@@ -20,6 +20,7 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
     
     
     var a = 1;
+    var loginManager : FBSDKLoginManager! = nil
     
     var show = "no"
     
@@ -126,6 +127,7 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
    
     override func viewWillAppear(animated: Bool)
     {
+        loginManager = FBSDKLoginManager()
         if(UIScreen.mainScreen().bounds.height<568)
         {
             self.aboutAaruush.scrollEnabled = true
@@ -306,33 +308,36 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
         let alertController = UIAlertController(title: "Signin using...", message: nil, preferredStyle:.ActionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
         let googleSignin = UIAlertAction(title: "Google", style: .Default) { (UIAlertAction) in
+            MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Please wait while we test your patience", mode: .IndeterminateSmallDefault, animated: true)
             GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
             GIDSignIn.sharedInstance().delegate = self
             GIDSignIn.sharedInstance().uiDelegate = self
             GIDSignIn.sharedInstance().signIn()
             print("from google")
-            
-            
-        }
-        let facebookLogin = UIAlertAction(title: "facebook", style: .Default) { (action) in
-            MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Please wait while we test your patience", mode: .IndeterminateSmallDefault, animated: true)
-            
-            let loginManager = FBSDKLoginManager()
-            loginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else if(result.isCancelled) {
-                   
-                    print("FBLogin cancelled")
-                } else {
-                    // [START headless_facebook_auth]
-                    let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
-                    
-                    // [END headless_facebook_auth]
-                    self.firebaseLogin(credential)
-                    print("from facebook")
-                }
-            })
+            }
+        let facebookLogin = UIAlertAction(title: "Facebook", style: .Default) { (AlertAction) in
+                MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Please wait while we test your patience", mode: .IndeterminateSmallDefault, animated: true)
+                self.loginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) in
+                    print("ho rha hai kya?")
+                    if let error = error {
+                        print(error.localizedDescription)
+                        print("for facebook")
+                    } else if(result.isCancelled) {
+                        MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                        let alert = UIAlertController(title: "Error", message: "FBLogin cancelled", preferredStyle: .Alert)
+                        let action = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in })
+                        alert.addAction(action)
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        print("FBLogin cancelled")
+                    } else {
+                        // [START headless_facebook_auth]
+                        let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                        
+                        // [END headless_facebook_auth]
+                        self.firebaseLogin(credential)
+                        print("from facebook")
+                    }
+                })
         }
         alertController.addAction(cancelAction)
         alertController.addAction(googleSignin)
@@ -345,6 +350,11 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
         if let error = error {
             print(error.localizedDescription)
             print("sign in localised")
+            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in })
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
             return
         }
         
@@ -366,6 +376,11 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
                         if let error = error {
                             print(error.localizedDescription)
                             print("fir localised")
+                            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
+                            let action = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in })
+                            alert.addAction(action)
+                            self.presentViewController(alert, animated: true, completion: nil)
                             return
                         }
                     print("fir other")
