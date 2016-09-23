@@ -381,6 +381,11 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
                         if let error = error {
                             print(error.localizedDescription)
                             print("fir localised 2")
+                            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+                            let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)\nTry other login", preferredStyle: .Alert)
+                            let action = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in })
+                            alert.addAction(action)
+                            self.presentViewController(alert, animated: true, completion: nil)
                             return
                         }
                     // [END_EXCLUDE]

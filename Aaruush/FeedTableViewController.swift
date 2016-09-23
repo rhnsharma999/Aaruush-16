@@ -16,7 +16,7 @@ import FBSDKCoreKit
 import GoogleSignIn
 
 
-class FeedTableViewController: UITableViewController,GIDSignInDelegate {
+class FeedTableViewController: UITableViewController,GIDSignInDelegate,UITextFieldDelegate {
     
     @IBOutlet var bgImage: UIImageView!
     
@@ -34,12 +34,20 @@ class FeedTableViewController: UITableViewController,GIDSignInDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        msgField.delegate = self
+        let tapgestureRecogniser = UITapGestureRecognizer(target: self, action: #selector (FeedTableViewController.dismisskeyboard))
+        view.addGestureRecognizer(tapgestureRecogniser)
         
         
     }
-
+    func dismisskeyboard(){
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     override func viewWillAppear(animated: Bool) {
         
