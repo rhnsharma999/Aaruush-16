@@ -51,43 +51,22 @@ class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
         
      /*   if(UIScreen.mainScreen().bounds.height >= 667.0)
         {*/
-            countDown.font = UIFont(name: "xirod", size: 20)
+            countDown.font = UIFont(name: "xirod", size: 16)
             countDown.textAlignment = NSTextAlignment.Center
             countDown.sizeToFit()
-            var date = NSDate()
+            let date = NSDate()
+        print(date)
+        print("\\\\\\\\")
         
         
             
-            let format = NSDateFormatter()
+        // countDown.text = "be back next year"
         
-            format.dateFormat = "dd-MM-yyyy"
-       // date = format.dateFromString("27-09-2016")!
-            let aaruush = format.dateFromString("28-09-2016");
-            let calendar = NSCalendar.currentCalendar()
-            let components = calendar.components([.Day], fromDate: date, toDate: aaruush!, options: [])
-            var time = components.day
-            if(time == 0 && components.minute == 0)
-            {
-                time = -1;
-                
-            }
-            else if(time == 0 && components.minute != 0)
-            {
-                time = -2;
-            }
-        if(time > 0){
-            if(time==1){
-                countDown.text = " \(time) day to go"
-            }
-            else{
-                countDown.text = "\(time) days to go"
-            }
-        }
         
-            else if(date.isEqualToDate(aaruush!))
-        {
-            countDown.text = "    Live Now"
-        }
+        
+        
+        
+        
           navigationController?.delegate = RZTransitionsManager.shared()
     
         self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent

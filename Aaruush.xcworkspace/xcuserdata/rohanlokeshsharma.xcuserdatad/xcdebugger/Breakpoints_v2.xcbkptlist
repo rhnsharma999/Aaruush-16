@@ -210,5 +210,51 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aaruush/AppDelegate.swift"
+            timestampString = "496609467.3391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Aaruush.AppDelegate.init () -&gt; Aaruush.AppDelegate"
+                  moduleName = "Aaruush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rohanlokeshsharma/Desktop/Aaruush-16/Aaruush/AppDelegate.swift"
+                  timestampString = "496609542.969091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Aaruush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rohanlokeshsharma/Desktop/Aaruush-16/Aaruush/AppDelegate.swift"
+                  timestampString = "496609542.969271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
