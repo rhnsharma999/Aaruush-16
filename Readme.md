@@ -2,7 +2,8 @@
 # Aaruush 16
 The official Aaruush 16 College Fest App.
 
-p.s this is a gif, may take a while to load.
+[Imgur](http://i.imgur.com/Oka92EY.jpg)
+
 
 
 ## Details
@@ -12,7 +13,7 @@ Also consists (may or may not work now) of a live feed for posting comments.
 
 ## Usage
 download->build->run
-this is a `swift 3.0` project
+this is a `swift 2.3` project
 
 ## Contributing
 1. Fork it!
