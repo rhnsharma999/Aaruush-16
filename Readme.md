@@ -2,7 +2,7 @@
 # Aaruush 16
 The official Aaruush 16 College Fest App.
 
-[Imgur](http://i.imgur.com/Oka92EY.jpg)
+![screenshot](http://i.imgur.com/Oka92EY.jpg)
 
 
 
